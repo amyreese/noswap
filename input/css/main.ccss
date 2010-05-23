@@ -1,0 +1,31 @@
+
+text_color = #222222
+
+sans_family = "DejaVu Sans", sans-serif
+serif_family = georgia, serif
+
+body:
+	color: $text_color
+	font-family: $sans_family
+	font-size: 0.8em
+
+div#header h1:
+	line-height: 50%
+	padding: 0 0 0 1em
+
+div#header h1 a:
+	color: $text_color
+	text-decoration: none
+	font-family: $serif_family
+	font-size: 4em
+	letter-spacing: 1px
+
+div#tagline:
+	padding: 0 0 0 1em
+	font-family: $serif_family
+	font-size: 1.1em
+	line-height: 120%
+
+div#footer:
+	text-align: center
+
