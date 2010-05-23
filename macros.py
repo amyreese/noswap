@@ -1,5 +1,7 @@
 
 page = {
+	"logo": "LeetCode.net",
+	"logo-url": "/",
 	"tagline": "open source software engineering",
 	}
 

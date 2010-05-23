@@ -14,7 +14,7 @@ div#header h1:
 	padding: 0 0 0 1em
 
 div#header h1 a:
-	color: $text_color
+	color: #0D1117
 	text-decoration: none
 	font-family: $serif_family
 	font-size: 4em
@@ -24,7 +24,14 @@ div#tagline:
 	padding: 0 0 0 1em
 	font-family: $serif_family
 	font-size: 1.1em
-	line-height: 120%
+	line-height: 140%
+
+div#content:
+	text-align: justify
+	line-height: 150%
+
+div#content p:
+	margin-top: 1em;
 
 div#footer:
 	text-align: center

@@ -1,5 +1,5 @@
 
-menu_width = 16em
+menu_width = 18em
 divider_color = #CCD0D6
 
 body:
@@ -7,7 +7,7 @@ body:
 	padding: 0
 
 div#wrapper:
-	margin: 5em 3em 3em 5em
+	margin: 5em 4em 3em 7em
 
 div#main:
 	float: left
@@ -22,12 +22,12 @@ div#header h1:
 	border-bottom: 0.4em solid $divider_color
 
 div#content:
-	padding: 2em 1.5em 0 1em
+	padding: 2em 2.2em 0 1em
 
 div#sidebar:
 	overflow: hidden
 	border-left: 1px solid $divider_color
-	padding: 3em 0 3em 2em
+	padding: 3em 0 3em 2.2em
 
 div#main, div#sidebar:
 	margin-bottom: 2em

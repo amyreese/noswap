@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <title>LeetCode.net{% if page["title"]: print " - %s" % page["title"] %}</title>
+    <title>LeetCode.net{% if page.title: print " - %s" % page.title %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={{ __encoding__ }}" />
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.1.1/build/cssreset/reset-min.css">
     <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
@@ -12,8 +12,8 @@
 	<div id="wrapper">
 		<div id="main">
 			<div id="header">
-				<h1><a href="/">LeetCode.net</a></h1>
-				<div id="tagline">{{ page["tagline"] }}</div>
+				<h1><a href="{{ page["logo-url"] }}">{{ page.logo }}</a></h1>
+				<div id="tagline">{{ page.tagline }}</div>
 			</div>
 			<div id="content">
 
@@ -28,7 +28,7 @@
 menupages = [p for p in pages if "menu-position" in p and "menu-title" in p]
 menupages.sort(key=lambda p: int(p.get("menu-position")))
 for p in menupages:
-	print "<li><a href=\"%s\">%s</a></li>" % (p.url, p["menu-title"])
+	print "					<li><a href=\"%s\">%s</a></li>" % (p.url, p["menu-title"])
 %}
 				</ul>
 			</div>
