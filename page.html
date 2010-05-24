@@ -12,7 +12,7 @@
 	<div id="wrapper">
 		<div id="main">
 			<div id="header">
-				<h1><a href="{{ page["logo-url"] }}">{{ page.logo }}</a></h1>
+				<h1><a href="{{ pretty(page["logo-url"]) }}">{{ page.logo }}</a></h1>
 				<div id="tagline">{{ page.tagline }}</div>
 			</div>
 			<div id="content">
@@ -25,10 +25,11 @@
 			<div id="menu">
 				<ul>
 {%
-menupages = [p for p in pages if "menu-position" in p and "menu-title" in p]
+menupages = [p for p in pages if "menu-position" in p]
 menupages.sort(key=lambda p: int(p.get("menu-position")))
 for p in menupages:
-	print "					<li><a href=\"%s\">%s</a></li>" % (p.url, p["menu-title"])
+	title = p["menu-title"] if "menu-title" in p else p.title
+	print "					<li><a href=\"%s\">%s</a></li>" % (pretty(p.url), title)
 %}
 				</ul>
 			</div>
