@@ -16,18 +16,6 @@ page = {
 	"tagline": "open source software engineering",
 	}
 
-### Post Metadata
-
-def metadata(page):
-	timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
-	print """<div class="metadata">"""
-	print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author) 
-
-	if "tags" in page and page.tags:
-		taglist = ", ".join(["""<a href="/blog/tag/%s">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
-		print u"""<span class="tagged">§ Tagged as %s</span>""" % (taglist)
-
-	print """</div>"""
 
 ### Inline another page's content
 
@@ -65,7 +53,16 @@ def inline(page, title=True):
 		print line
 
 	print ""
-	metadata(page)
+
+	timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
+	print """<div class="metadata">"""
+	print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author) 
+
+	if "tags" in page and page.tags:
+		taglist = ", ".join(["""<a href="/blog/tag/%s">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
+		print u"""<span class="tagged">§ Tagged as %s</span>""" % (taglist)
+
+	print """</div>"""
 
 ### Pretty URLs
 
