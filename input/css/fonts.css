@@ -18,3 +18,13 @@
 	font-weight: bold;
 	src: local("DejaVu Serif Bold"), url("http://files.leetcode.net/fonts/DejaVuSerif-Bold.ttf") format("truetype");
 }
+@font-face {
+	font-family: "DejaVu Sans Mono";
+	font-weight: normal;
+	src: local("DejaVu Sans Mono"), url("http://files.leetcode.net/fonts/DejaVuSansMono.ttf") format("truetype");
+}
+@font-face {
+	font-family: "DejaVu Sans Mono";
+	font-weight: bold;
+	src: local("DejaVu Sans Mono Bold"), url("http://files.leetcode.net/fonts/DejaVuSansMono-Bold.ttf") format("truetype");
+}

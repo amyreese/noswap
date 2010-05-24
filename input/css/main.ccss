@@ -3,22 +3,32 @@ text_color = #222222
 
 sans = "DejaVu Sans", sans-serif
 serif = georgia, serif
+monospace = "DejaVu Sans Mono", monospace
 
 body:
 	color: $text_color
 	font-family: $sans
 	font-size: 0.8em
 
-div#header h1:
-	line-height: 50%
-	padding: 0 0 0 1em
-
-div#header h1 a:
-	color: #0D1117
+a:
 	text-decoration: none
-	font-family: $serif
-	font-size: 4em
-	letter-spacing: 1px
+
+	&:hover:
+		text-decoration: underline
+
+div#header:
+	h1:
+		line-height: 50%
+		padding: 0 0 0 1em
+
+		a:
+			color: #0D1117
+			font-family: $serif
+			font-size: 4em
+			letter-spacing: 1px
+
+			&:hover:
+				text-decoration: none
 
 div#tagline:
 	padding: 0 0 0 1em
@@ -30,17 +40,45 @@ div#content:
 	text-align: justify
 	line-height: 150%
 
-div#content h1:
-	margin-top: 1em;
-	font-family: $serif
-	font-size: 2em
+	h1:
+		margin-top: 2em;
+		font-family: $serif
+		font-size: 2em
 
-div#content h1 a:
-	color: #34425B
-	text-decoration: none
+	a:
+		color: #34425B
 
-div#content p:
-	margin-top: 1em
+	p:
+		margin-top: 1em
+		margin-bottom: 1em
+
+	blockquote:
+		background: #EBEDEF
+		margin: 1em 3em
+		padding: 1em 2em
+
+	pre:
+		background: #F6F8FA
+		border-left: 1px solid #AAAAAA
+		border-right: 1px solid #AAAAAA
+		margin: 1em 3em
+		padding: 1em 2em
+		font-size: 1.3em
+		letter-spacing: -1px
+		line-height: 130%
+
+	code:
+		font-family: $monospace
+
+	div.metadata:
+		background: #F6F7F8 
+		border-top: 1px solid #CCD0D6
+		border-bottom: 1px solid #CCD0D6
+		color: #677284
+		text-align: center
+
+		a:
+			color: #34425B
 
 div#footer:
 	text-align: center
