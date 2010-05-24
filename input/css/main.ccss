@@ -1,12 +1,12 @@
 
 text_color = #222222
 
-sans_family = "DejaVu Sans", sans-serif
-serif_family = georgia, serif
+sans = "DejaVu Sans", sans-serif
+serif = georgia, serif
 
 body:
 	color: $text_color
-	font-family: $sans_family
+	font-family: $sans
 	font-size: 0.8em
 
 div#header h1:
@@ -16,13 +16,13 @@ div#header h1:
 div#header h1 a:
 	color: #0D1117
 	text-decoration: none
-	font-family: $serif_family
+	font-family: $serif
 	font-size: 4em
 	letter-spacing: 1px
 
 div#tagline:
 	padding: 0 0 0 1em
-	font-family: $serif_family
+	font-family: $serif
 	font-size: 1.1em
 	line-height: 140%
 
@@ -30,8 +30,17 @@ div#content:
 	text-align: justify
 	line-height: 150%
 
-div#content p:
+div#content h1:
 	margin-top: 1em;
+	font-family: $serif
+	font-size: 2em
+
+div#content h1 a:
+	color: #34425B
+	text-decoration: none
+
+div#content p:
+	margin-top: 1em
 
 div#footer:
 	text-align: center

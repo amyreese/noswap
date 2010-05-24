@@ -16,6 +16,7 @@
 				<div id="tagline">{{ page.tagline }}</div>
 			</div>
 			<div id="content">
+				{% if page.title: print "<h1><a href=\"%s\">%s</a></h1>" % (pretty(page.url), page.title) %}
 
 {{ __content__ }}
 
