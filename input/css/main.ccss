@@ -9,11 +9,13 @@ body:
 	color: $text_color
 	font-family: $sans
 	font-size: 0.8em
+	line-height: 150%
 
 a:
 	text-decoration: none
 
 	&:hover:
+		color: #0D1117 !important
 		text-decoration: underline
 
 div#header:
@@ -39,7 +41,6 @@ div#header:
 
 div#content:
 	text-align: justify
-	line-height: 150%
 
 	h1:
 		margin-top: 2em;
@@ -52,6 +53,10 @@ div#content:
 	p:
 		margin-top: 1em
 		margin-bottom: 1em
+
+		a:
+			text-decoration: underline
+
 
 	blockquote:
 		background: #EBEDEF
@@ -80,6 +85,30 @@ div#content:
 
 		a:
 			color: #34425B
+
+div#sidebar:
+	div:
+		margin: 2em 0 2em 2.2em
+
+		h3:
+			font-family: $serif
+			font-size: 1.4em
+
+		ul:
+			margin-top: 1em
+
+		a:
+			color: #34425B
+			border-bottom: 1px solid #CCD0D6
+			&:hover:
+				border-bottom: 1px solid #0D1117
+				text-decoration: none
+
+	div#credit
+		span:
+			font-size: 0.85em
+		img:
+			border: medium none
 
 div#footer:
 	text-align: center

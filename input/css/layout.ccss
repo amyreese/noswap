@@ -27,7 +27,6 @@ div#content:
 div#sidebar:
 	overflow: hidden
 	border-left: 1px solid $divider_color
-	padding: 3em 0 3em 2.2em
 
 div#main, div#sidebar:
 	margin-bottom: 2em

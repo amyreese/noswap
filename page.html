@@ -24,6 +24,7 @@
 		</div>
 		<div id="sidebar">
 			<div id="menu">
+				<h3>Menu</h3>
 				<ul>
 {%
 menupages = [p for p in pages if "menu-position" in p]
@@ -33,6 +34,12 @@ for p in menupages:
 	print "					<li><a href=\"%s\">%s</a></li>" % (pretty(p.url), title)
 %}
 				</ul>
+			</div>
+			<div id="rss">
+				<span><a href="/feed.xml"><img src="/media/feed-icon-32x32.png" border="0"/></a></span>
+			</div>
+			<div id="credits">
+				<span>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="http://files.leetcode.net/linode.png" alt="Linode"></a></span>
 			</div>
 		</div>
 		<div id="footer">
