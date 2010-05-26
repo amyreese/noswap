@@ -322,7 +322,7 @@ for p in posts:
 					position = "9%d" % menucount
 					menucount += 1
 				else:
-					parent = ""
+					parent = "9"
 					position = ""
 
 				fo = open(monthfile, "w")
