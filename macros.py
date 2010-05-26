@@ -2,14 +2,20 @@
 
 import clevercss
 from datetime import datetime
+import email.utils
 import glob
 import os
 from os import path
 import re
+import time
 
-page = {
+base_url = "http://localhost:8080"
+
+defaults = {
 	"author": "John Reese",
 	"tags": "",
+
+	"time": "12:00:00",
 
 	"menu-parent": "",
 	"menu-position": "",
@@ -19,6 +25,7 @@ page = {
 	"logo-url": "/",
 	"tagline": "open source software engineering",
 	}
+page = dict(defaults)
 
 
 ### Recursive Menu Structure
@@ -128,3 +135,58 @@ def once_htaccess():
 	fo.writelines(fi.readlines())
 	fi.close()
 	fo.close()
+
+### RSS feed generation
+
+_RSS = """<?xml version="1.0"?>
+<rss version="2.0">
+<channel>
+<title>%s</title>
+<link>%s</link>
+<description>%s</description>
+<language>en-us</language>
+<pubDate>%s</pubDate>
+<lastBuildDate>%s</lastBuildDate>
+<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+<generator>Poole</generator>
+%s
+</channel>
+</rss>
+"""
+
+_RSS_ITEM = """
+<item>
+	<title>%s</title>
+	<link>%s</link>
+	<description>%s</description>
+	<pubDate>%s</pubDate>
+	<guid>%s</guid>
+</item>
+"""
+
+def once_rss():
+	items = []
+	posts = [p for p in pages if "date" in p] # get all blog post pages
+	posts.sort(key=lambda p: p.date, reverse=True)
+	for p in posts:
+		title = p.title
+		link = "%s%s" % (base_url, pretty(p.url))
+		desc = p.get("description", "")
+		date = time.mktime(time.strptime("%s %s" % (p.date, p.time), "%Y-%m-%d %H:%M:%S"))
+		date = email.utils.formatdate(date)
+		items.append(_RSS_ITEM % (title, link, desc, date, link))
+
+	items = "".join(items)
+
+	# --- CHANGE THIS --- #
+	title = defaults["logo"]
+	link = "%s/blog/" % base_url
+	desc = defaults["tagline"]
+	date = email.utils.formatdate()
+
+	rss = _RSS % (title, link, desc, date, date, items)
+
+	fp = open(os.path.join(output, "feed.xml"), 'w')
+	fp.write(rss)
+	fp.close()
+
