@@ -91,6 +91,7 @@ div#sidebar:
 		margin: 2em 0 2em 2.2em
 
 		h3:
+			margin-top: 1.5em
 			font-family: $serif
 			font-size: 1.4em
 
@@ -108,8 +109,8 @@ div#sidebar:
 				border-bottom: 1px solid #0D1117
 				text-decoration: none
 
-	div#credit:
-		span:
+	div#meta:
+		p:
 			font-size: 0.85em
 		img:
 			border: medium none

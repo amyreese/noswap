@@ -3,10 +3,11 @@
 <head>
     <title>LeetCode.net{% if page.title: print " - %s" % page.title %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={{ __encoding__ }}" />
-	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.1.1/build/cssreset/reset-min.css">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.1.1/build/cssreset/reset-min.css" />
     <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="/css/layout.css" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS Feed" />
 </head>
 <body>
 	<div id="wrapper">
@@ -24,14 +25,25 @@
 		</div>
 		<div id="sidebar">
 			<div id="menu">
-				<h3>Menu</h3>
+				<h3>Links</h3>
+				<ul>
+					<li><a href="http://johnmreese.com/">About Me</a></li>
+					<li><a href="http://www.linkedin.com/in/johnreese">LinkedIn</a></li>
+					<li><a href="http://www.ohloh.net/accounts/nuclear_eclipse">Ohloh</a></li>
+				</ul>
+				<ul>
+					<li><a href="http://leetcode.net/mantis">Bugtracker</a></li>
+					<li><a href="http://github.com/jreese/">GitHub Repositories</a></li>
+				</ul>
+
+				<h3>Pages</h3>
 				{% menu() %}
 			</div>
-			<div id="rss">
-				<span><a href="/feed.xml"><img src="/media/feed-icon-32x32.png" border="0"/></a></span>
-			</div>
-			<div id="credits">
-				<span>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="http://files.leetcode.net/linode.png" alt="Linode"></a></span>
+			<div id="meta">
+				<h3>Meta</h3>
+				<ul>
+					<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="http://files.leetcode.net/linode.png" alt="Linode"></a></li>
+				</ul>
 			</div>
 		</div>
 		<div id="footer">
