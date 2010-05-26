@@ -15,13 +15,13 @@ div#main:
 	margin: 0
 	margin-left: -$menu_width
 
-div#header, div#content:
+div#header, div#container:
 	margin: 0 0 0 $menu_width
 
 div#header h1:
 	border-bottom: 0.4em solid $divider_color
 
-div#content:
+div#container:
 	padding: 2em 2.2em 0 1em
 
 div#sidebar:

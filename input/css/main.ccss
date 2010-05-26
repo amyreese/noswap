@@ -1,8 +1,9 @@
 
 text_color = #222222
 
-sans = "DejaVu Sans", sans-serif
-serif = georgia, serif
+sans = "DejaVu Sans", verdana, sans-serif
+serif = "DejaVu Serif", georgia, serif
+header = georgia, "DejaVu Serif", serif
 monospace = "DejaVu Sans Mono", monospace
 
 body:
@@ -19,7 +20,7 @@ a:
 		text-decoration: underline
 
 em:
-	font-style: italics
+	font-style: italic
 
 strong:
 	font-weight: bold
@@ -31,7 +32,7 @@ div#header:
 
 		a:
 			color: #0D1117
-			font-family: $serif
+			font-family: $header
 			font-size: 4em
 			letter-spacing: 1px
 
@@ -47,11 +48,30 @@ div#header:
 
 div#content:
 	text-align: justify
+	font-size: 1.1em
 
 	h1:
 		margin-top: 1.5em;
-		font-family: $serif
+		font-family: $header
+		font-size: 1.8em
+		line-height: 120%
+
+	h2:
+		margin-top: 1.5em;
+		font-family: $header
 		font-size: 1.7em
+		line-height: 120%
+
+	h3:
+		margin-top: 1.5em;
+		font-family: $header
+		font-size: 1.4em
+		line-height: 120%
+
+	h4:
+		margin-top: 1.5em;
+		font-family: $header
+		font-size: 1.2em
 		line-height: 120%
 
 	a:
@@ -66,24 +86,28 @@ div#content:
 
 	blockquote:
 		background: #EBEDEF
-		margin: 1em 3em
-		padding: 0.1em 2em
+		margin: 1em 1.5em
+		padding: 0.1em 1.5em
+
+		p:
+			font-size: 0.9em
 
 	pre:
 		background: #F6F8FA
 		border-left: 1px solid #AAAAAA
 		border-right: 1px solid #AAAAAA
-		margin: 1em 3em
-		padding: 1em 2em
-		letter-spacing: -1px
+		margin: 1em 1.5em
+		padding: 1em 1.5em
 		line-height: 130%
 
 	code:
 		font-family: $monospace
+		font-size: 0.9em
+		letter-spacing: -1px
 
 	li:
 		list-style: disc outside none
-		margin: 1em 0 1em 1.5em
+		margin: 0.2em 0 0.2em 2em
 
 	.excerpt:
 		a:
@@ -94,19 +118,13 @@ div#content:
 				color: #0D1117
 				text-decoration: underline
 
-	.metadatastart:
+	.metadata:
 		margin-top: 0.0em
 		font-size: 0.9em
-
-	.metadataend:
-		background: #F6F7F8
-		border-top: 1px solid #CCD0D6
-		border-bottom: 1px solid #CCD0D6
-		color: #677284
-		text-align: center
+		color: #9AA1AE
 
 		a:
-			color: #34425B
+			color: #9AA1AE
 
 div#sidebar:
 	div:

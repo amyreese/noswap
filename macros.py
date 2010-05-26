@@ -116,6 +116,7 @@ endexcerpt = re.compile("^<!-- endexcerpt -->\s*$")
 def inline(page, title=True):
 	if title:
 		print "<h1><a href=\"%s\">%s</a></h1>" % (pretty(page.url), page.title)
+		metadata(page)
 
 	fi = open(page.fname)
 	input = fi.readlines()
@@ -150,29 +151,14 @@ def inline(page, title=True):
 	if excerpt:
 		print """<p class="excerpt"><a href="%s">Continue reading &raquo;</a></p>""" % pretty(page.url)
 
-	metadata(page)
-
 ### Page metadata display
 
-def metadata(page, style="end"):
-	if style == "start":
+def metadata(page, style="subtitle"):
+	if style == "subtitle":
 		if "date" in page:
 			timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
 
-			print """<p class="metadatastart">"""
-			print """<span class="authored">Posted on %s</span>""" % (timestamp)
-
-			if "tags" in page and page.tags:
-				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
-				print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
-
-			print """</p>"""
-
-	elif style == "end":
-		if "date" in page:
-			timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
-
-			print """<p class="metadataend">"""
+			print """<p class="metadata">"""
 			print """<span class="authored">Posted on %s</span>""" % (timestamp)
 
 			if "tags" in page and page.tags:

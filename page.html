@@ -16,12 +16,14 @@
 				<h1><a href="{{ pretty(page["logo-url"]) }}">{{ page.logo }}</a></h1>
 				<div id="tagline">{{ page.tagline }}</div>
 			</div>
-			<div id="content">
-				{% crumbs(page) %}
-				{% metadata(page, style="start") %}
+			<div id="container">
+				<div id="content">
+					{% crumbs(page) %}
+					{% metadata(page) %}
 
 {{ __content__ }}
 
+				</div>
 			</div>
 		</div>
 		<div id="sidebar">
