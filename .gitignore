@@ -1,5 +1,6 @@
 *.pyc
 *.swp
+.build
 output/
 input/blog/*/index.md
 input/blog/*/*/index.md

@@ -162,7 +162,7 @@ def metadata(page, style="subtitle"):
 			print """<span class="authored">Posted on %s</span>""" % (timestamp)
 
 			if "tags" in page and page.tags:
-				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
+				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip().replace(" ", "-"), t.strip()) for t in page.tags.split(",")])
 				print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
 			print """</p>"""
@@ -353,7 +353,7 @@ for p in posts:
 		tags.extend(map(unicode.strip, p.tags.split(",")))
 
 	for tag in tags:
-		tagfile = path.join(input, "blog", "tag", tag+".md")
+		tagfile = path.join(input, "blog", "tag", tag.replace(" ", "-")+".md")
 
 		if not path.exists(tagfile):
 			print "Generating %s ..." % tagfile
