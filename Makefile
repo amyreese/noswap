@@ -4,7 +4,8 @@ markdownpp=$(shell which markdown-pp)
 mdpp=$(shell find input/ -name '*.mdpp')
 md=$(patsubst %.mdpp,%.md,$(mdpp))
 
-archives=$(shell find input/blog/ -mindepth 2 -name 'index.md')
+archives=$(shell find input/blog/ -mindepth 2 -regex '.*/[0-9]+/index.md')
+tags=$(shell find input/blog/tag/ -mindepth 1 -name 'index.md' -prune -o -print)
 
 .PHONY: build
 build: output $(md)
@@ -16,7 +17,7 @@ serve: build
 
 .PHONY: clean
 clean:
-	rm -rf output/ macros.pyc $(md) $(archives)
+	rm -rf output/ macros.pyc $(md) $(archives) $(tags)
 
 .PHONY: fresh
 fresh: clean build

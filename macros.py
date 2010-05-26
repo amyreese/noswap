@@ -151,7 +151,7 @@ def inline(page, title=True):
 		print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author)
 
 		if "tags" in page and page.tags:
-			taglist = ", ".join(["""<a href="/blog/tag/%s">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
+			taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
 			print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
 		print """</div>"""
@@ -328,3 +328,37 @@ for p in posts:
 	if generated:
 		print "Restarting build process..."
 		os.execvp(sys.argv[0], sys.argv)
+
+def once_tags():
+	tagtemplate = """title: %s
+---
+{%%
+posts = pagelist(key=lambda p: "tags" in p and "%s" in p.get("tags").split(",") or " %s" in p.get("tags").split(","), sortby=lambda p: p.get("date"), reverse=True)
+for p in posts:
+	inline(p)
+%%}
+"""
+
+	generated = False
+	tags = []
+
+	blogpages = pagelist(key=lambda p: p.get("tags"))
+	for p in blogpages:
+		tags.extend(map(unicode.strip, p.tags.split(",")))
+
+	for tag in tags:
+		tagfile = path.join(input, "blog", "tag", tag+".md")
+
+		if not path.exists(tagfile):
+			print "Generating %s ..." % tagfile
+
+			fo = open(tagfile, "w")
+			fo.write(tagtemplate % (tag, tag, tag))
+			fo.close()
+
+			generated = True
+
+	if generated:
+		print "Restarting build process..."
+		os.execvp(sys.argv[0], sys.argv)
+
