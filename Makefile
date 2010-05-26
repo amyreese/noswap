@@ -1,8 +1,10 @@
 poole=$(shell which poole)
 markdownpp=$(shell which markdown-pp)
 
-mdpp=$(shell find . -name '*.mdpp')
+mdpp=$(shell find input/ -name '*.mdpp')
 md=$(patsubst %.mdpp,%.md,$(mdpp))
+
+archives=$(shell find input/blog/ -mindepth 2 -name 'index.md')
 
 .PHONY: build
 build: output $(md)
@@ -12,8 +14,15 @@ build: output $(md)
 serve: build
 	-$(poole) --serve
 
+.PHONY: clean
+clean:
+	rm -rf output/ macros.pyc $(md) $(archives)
+
+.PHONY: fresh
+fresh: clean build
+
 output:
-	mkdir output
+	mkdir output/
 
 %.md : %.mdpp
 	$(markdownpp) $< $@

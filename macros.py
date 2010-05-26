@@ -7,6 +7,7 @@ import glob
 import os
 from os import path
 import re
+import sys
 import time
 
 base_url = "http://localhost:8080"
@@ -144,15 +145,16 @@ def inline(page, title=True):
 
 	print ""
 
-	timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
-	print """<div class="metadata">"""
-	print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author) 
+	if "date" in page:
+		timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
+		print """<div class="metadata">"""
+		print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author)
 
-	if "tags" in page and page.tags:
-		taglist = ", ".join(["""<a href="/blog/tag/%s">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
-		print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
+		if "tags" in page and page.tags:
+			taglist = ", ".join(["""<a href="/blog/tag/%s">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
+			print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
-	print """</div>"""
+		print """</div>"""
 
 ### Page metadata display
 
@@ -270,6 +272,9 @@ def once_archive():
 	archivere = re.compile("blog/(\d+)/(\d+)/(.+)")
 	indexre = re.compile("index\.md$")
 	archivetemplate = """title: %s
+menu-parent: %s
+menu-position: %s
+nocrumbs:
 ---
 {%%
 posts = pagelist(key=lambda p: p.get("date", "").startswith("%s"), sortby=lambda p: p.get("date"), reverse=True)
@@ -278,7 +283,11 @@ for p in posts:
 %%}
 """
 
-	for p in pages:
+	generated = False
+	menucount = 0
+
+	blogpages = pagelist(key=lambda p: p.get("date"), sortby=lambda p: p.get("date"), reverse=True)
+	for p in blogpages:
 		url = pretty(p.url)
 
 		match = archivere.search(url)
@@ -290,13 +299,32 @@ for p in posts:
 
 			yearfile = path.join(input, "blog", year, "index.md")
 			if not path.exists(yearfile):
+				print "Generating %s ..." % yearfile
+
 				fo = open(yearfile, "w")
-				fo.write(archivetemplate % (year, year))
+				fo.write(archivetemplate % (year, "", "", year))
 				fo.close()
+
+				generated = True
 
 			monthfile = path.join(input, "blog", year, month, "index.md")
 			if not path.exists(monthfile):
+				print "Generating %s ..." % yearfile
+
+				if menucount < 5:
+					parent = "9"
+					position = "9%s" % year+month
+					menucount += 1
+				else:
+					parent = ""
+					position = ""
+
 				fo = open(monthfile, "w")
-				fo.write(archivetemplate % (date.strftime("%B"), "%s-%s" % (year, month)))
+				fo.write(archivetemplate % (date.strftime("%B %Y"), parent, position, "%s-%s" % (year, month)))
 				fo.close()
 
+				generated = True
+
+	if generated:
+		print "Restarting build process..."
+		os.execvp(sys.argv[0], sys.argv)
