@@ -1,12 +1,13 @@
 poole=$(shell which poole)
 markdownpp=$(shell which markdown-pp)
 
-srcfiles=$(shell find input/ -name '*.md')
-mdppfiles=$(shell find input/ -name '*.mdpp')
-mdfiles=$(patsubst %.mdpp,%.md,$(mdppfiles))
-
 archives=$(shell find input/blog/ -mindepth 2 -regex '.*/[0-9]+/index.md')
 tags=$(shell find input/blog/tag/ -mindepth 1 -name 'index.md' -prune -o -print)
+
+srcfiles=$(filter-out $(archives) $(tags),$(shell find input/ -name '*.md'))
+
+mdppfiles=$(shell find input/ -name '*.mdpp')
+mdfiles=$(patsubst %.mdpp,%.md,$(mdppfiles))
 
 puburi=jreese@dyson:/srv/www/sites/leetcode.net/pages/
 
