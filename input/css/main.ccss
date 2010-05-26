@@ -73,7 +73,6 @@ div#content:
 		border-right: 1px solid #AAAAAA
 		margin: 1em 3em
 		padding: 1em 2em
-		font-size: 1.3em
 		letter-spacing: -1px
 		line-height: 130%
 
