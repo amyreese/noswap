@@ -21,6 +21,8 @@ defaults = {
 	"menu-position": "",
 	"menu-title": "",
 
+	"crumb": "/",
+
 	"logo": "LeetCode.net",
 	"logo-url": "/",
 	"tagline": "open source software engineering",
@@ -30,7 +32,7 @@ page = dict(defaults)
 
 ### Recursive Menu Structure
 
-def menu(parent=""):
+def menu(page, parent=""):
 	menupages = pagelist(
 			key=lambda p: p["menu-position"] != "" and p["menu-parent"] == parent,
 			sortby=lambda p: int(p.get("menu-position"))
@@ -39,10 +41,43 @@ def menu(parent=""):
 		print "<ul>"
 		for p in menupages:
 			title = p["menu-title"] if p["menu-title"] != "" else p["title"]
-			print """<li><a href="%s">%s</a>""" % (pretty(p.url), p.title)
-			menu(p["menu-position"])
+			if page.url == p.url:
+				print """<li><a class="current" href="%s">%s</a>""" % (pretty(p.url), title)
+			else:
+				print """<li><a href="%s">%s</a>""" % (pretty(p.url), title)
+			menu(page, parent=p["menu-position"])
 			print "</li>"
 		print "</ul>"
+
+### Breadcrumb Navigation
+
+def crumbs(page):
+	if "nocrumbs" in page:
+		print """<a href="%s">%s</a>""" % (pretty(page.url), page.title)
+		return
+
+	crumb_url = page.crumb
+	url = pretty(page.url)
+	if url.startswith(crumb_url):
+		url = url.split(crumb_url, 1)[1]
+
+	segments = url.split("/")
+
+	more = False
+	crumb_url = "/"
+	for segment in segments:
+		if segment == "":
+			continue
+
+		crumb_url += segment + "/"
+		pretty_url = pretty(crumb_url)
+
+		matching_pages = [p for p in pages if pretty(p.url) == pretty_url and p.title]
+
+		if len(matching_pages) > 0:
+			title = matching_pages[0].title
+			print """%s<a href="%s">%s</a>""" % (" &raquo; " if more else "", pretty_url, title)
+			more = True
 
 ### Post Retrieval
 
@@ -107,9 +142,14 @@ def inline(page, title=True):
 
 	if "tags" in page and page.tags:
 		taglist = ", ".join(["""<a href="/blog/tag/%s">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
-		print u"""<span class="tagged">§ Tagged as %s</span>""" % (taglist)
+		print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
 	print """</div>"""
+
+### Page metadata display
+
+def metadata(page):
+	pass
 
 ### Pretty URLs
 

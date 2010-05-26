@@ -18,6 +18,9 @@ a:
 		color: #0D1117 !important
 		text-decoration: underline
 
+em:
+	font-weight: bold
+
 div#header:
 	h1:
 		line-height: 50%
@@ -108,6 +111,11 @@ div#sidebar:
 			&:hover:
 				border-bottom: 1px solid #0D1117
 				text-decoration: none
+
+	div#menu:
+		a.current:
+			color: #0D1117
+			border-bottom: 1px solid #0D1117
 
 	div#meta:
 		p:

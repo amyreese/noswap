@@ -7,3 +7,4 @@ posts = pagelist(key=lambda p: p.get("date"), sortby=lambda p: p.get("date"), re
 for p in posts:
 	inline(p)
 %}
+
