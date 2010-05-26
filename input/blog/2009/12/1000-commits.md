@@ -1,5 +1,6 @@
 title: 1000 Commits!
 date: 2009-12-03
+nocrumbs:
 ---
 I've just reached the 1000 commit milestone as recorded by <a href="http://www.ohloh.net/accounts/nuclear_eclipse">my Ohloh profile</a>.  By far, most of them are related to my work on the MantisBT project and associated plugins.
 

@@ -154,19 +154,30 @@ def inline(page, title=True):
 
 ### Page metadata display
 
-def metadata(page, extended=False):
-	if extended:
-		pass
-
-	else:
+def metadata(page, style="end"):
+	if style == "start":
 		if "date" in page:
 			timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
-			print """<p class="metadata">"""
-			print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author)
+
+			print """<p class="metadatastart">"""
+			print """<span class="authored">Posted on %s</span>""" % (timestamp)
 
 			if "tags" in page and page.tags:
 				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
-				print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
+				print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
+
+			print """</p>"""
+
+	elif style == "end":
+		if "date" in page:
+			timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
+
+			print """<p class="metadataend">"""
+			print """<span class="authored">Posted on %s</span>""" % (timestamp)
+
+			if "tags" in page and page.tags:
+				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
+				print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
 			print """</p>"""
 
