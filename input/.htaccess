@@ -10,3 +10,6 @@ RewriteRule ^(.*)/$ /$1.html [L]
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.*)$ /$1/ [R]
 
+RewriteRule ^mantis/admin /mantis [L,R]
+RewriteRule ^mantis/$ /mantis/my_view_page.php [L,R]
+

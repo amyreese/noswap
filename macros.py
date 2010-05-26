@@ -10,7 +10,7 @@ import re
 import sys
 import time
 
-base_url = "http://localhost"
+base_url = "http://leetcode.net"
 
 defaults = {
 	"author": "John Reese",
