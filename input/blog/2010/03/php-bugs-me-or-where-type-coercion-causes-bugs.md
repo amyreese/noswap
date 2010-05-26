@@ -1,4 +1,5 @@
 title: PHP Bugs Me, or Where Type Coercion Causes Bugs
+description: News flash: type coercion in PHP can cause unexpected and buggy behavior.  Gasp!
 date: 2010-03-02
 tags: facepalm, mantisbt, php
 nocrumbs:
@@ -9,9 +10,8 @@ web applications with, and frameworks like [CodeIgniter](http://codeigniter.com/
 make it even better.
 
 I've long been on the fence regarding PHP's type coercion and comparison issues,
-but a <a href="http://www.mantisbt.org/bugs/view.php?id=11571">recent bug</a> in
-<a href="http://www.mantisbt.org">Mantis Bug Tracker</a> has made me /facepalm
-for the first time in my long history of working with PHP:
+but a [recent bug][1] in [Mantis Bug Tracker] has made me /facepalm for the first
+time in my long history of working with PHP:
 
 > When I click on "Edit" next to 1.2, mantis shows me the 1.20 properties.
 > When I click 1.1 it shows me 1.10!
@@ -33,8 +33,11 @@ the following check between strings was occurring:
 >
 > <code>if( "1.1" == "1.10" ) { ... }</code>
 >
-> PHP evaluates this expression to true <em>because 1.1 and 1.10 are treated as
-floats</em>. We however need to preserve the string type during this comparison,
+> PHP evaluates this expression to true *because 1.1 and 1.10 are treated as
+floats*. We however need to preserve the string type during this comparison,
 thus we need to use the === comparison operator instead.
 
 I thought I'd seen it all...
+
+[1]: <http://www.mantisbt.org/bugs/view.php?id=11571>
+[2]: <http://www.mantisbt.org>
