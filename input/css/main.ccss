@@ -79,8 +79,17 @@ div#content:
 	code:
 		font-family: $monospace
 
-	div.metadata:
-		background: #F6F7F8 
+	.excerpt:
+		a:
+			text-decoration: none
+			font-weight: bold
+
+			&:hover:
+				color: #0D1117
+				text-decoration: underline
+
+	.metadata:
+		background: #F6F7F8
 		border-top: 1px solid #CCD0D6
 		border-bottom: 1px solid #CCD0D6
 		color: #677284

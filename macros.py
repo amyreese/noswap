@@ -111,7 +111,8 @@ def pagelist(key=None, sortby=None, reverse=False, limit=None):
 ### Inline another page's content
 
 inlineeom = re.compile("^---\s*$")
-inlineexcerpt = re.compile("^<!-- excerpt -->\s*$")
+startexcerpt = re.compile("^<!-- excerpt -->\s*$")
+endexcerpt = re.compile("^<!-- endexcerpt -->\s*$")
 def inline(page, title=True):
 	if title:
 		print "<h1><a href=\"%s\">%s</a></h1>" % (pretty(page.url), page.title)
@@ -131,12 +132,13 @@ def inline(page, title=True):
 				output = []
 				continue
 
-		if inlineexcerpt.search(line):
-			if excerpt:
-				break
-			else:
-				output = []
-				continue
+		if startexcerpt.search(line):
+			output = []
+			continue
+
+		if endexcerpt.search(line):
+			excerpt = True
+			break
 
 		output.append(line)
 
@@ -145,21 +147,28 @@ def inline(page, title=True):
 
 	print ""
 
-	if "date" in page:
-		timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
-		print """<div class="metadata">"""
-		print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author)
+	if excerpt:
+		print """<p class="excerpt"><a href="%s">Continue reading &raquo;</a></p>""" % pretty(page.url)
 
-		if "tags" in page and page.tags:
-			taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
-			print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
-
-		print """</div>"""
+	metadata(page)
 
 ### Page metadata display
 
-def metadata(page):
-	pass
+def metadata(page, extended=False):
+	if extended:
+		pass
+
+	else:
+		if "date" in page:
+			timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
+			print """<p class="metadata">"""
+			print """<span class="authored">Posted on %s by %s</span>""" % (timestamp, page.author)
+
+			if "tags" in page and page.tags:
+				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip(), t.strip()) for t in page.tags.split(",")])
+				print u"""<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
+
+			print """</p>"""
 
 ### Pretty URLs
 

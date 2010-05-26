@@ -1,11 +1,12 @@
 title: PHP Bugs Me, or Where Type Coercion Causes Bugs
 date: 2010-03-02
 tags: facepalm, mantisbt, php
+nocrumbs:
 ---
 I really like PHP as a technology, both for its extensibility and its deployment
 style. I think it is the quickest and most straightforward platform to create
 web applications with, and frameworks like [CodeIgniter](http://codeigniter.com/)
-make it even better. 
+make it even better.
 
 I've long been on the fence regarding PHP's type coercion and comparison issues,
 but a <a href="http://www.mantisbt.org/bugs/view.php?id=11571">recent bug</a> in
@@ -31,7 +32,7 @@ emphasis mine:
 the following check between strings was occurring:
 >
 > <code>if( "1.1" == "1.10" ) { ... }</code>
-> 
+>
 > PHP evaluates this expression to true <em>because 1.1 and 1.10 are treated as
 floats</em>. We however need to preserve the string type during this comparison,
 thus we need to use the === comparison operator instead.
