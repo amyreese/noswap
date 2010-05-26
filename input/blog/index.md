@@ -1,4 +1,5 @@
-title:
+title: Archive
+notitle:
 menu-position: 1
 menu-title: Blog
 ---

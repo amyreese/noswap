@@ -52,8 +52,11 @@ def menu(page, parent=""):
 ### Breadcrumb Navigation
 
 def crumbs(page):
+	if "notitle" in page:
+		return
+
 	if "nocrumbs" in page:
-		print """<a href="%s">%s</a>""" % (pretty(page.url), page.title)
+		print """<h1><a href="%s">%s</a></h1>""" % (pretty(page.url), page.title)
 		return
 
 	crumb_url = page.crumb
@@ -65,6 +68,9 @@ def crumbs(page):
 
 	more = False
 	crumb_url = "/"
+
+	print "<h1>"
+
 	for segment in segments:
 		if segment == "":
 			continue
@@ -78,6 +84,8 @@ def crumbs(page):
 			title = matching_pages[0].title
 			print """%s<a href="%s">%s</a>""" % (" &raquo; " if more else "", pretty_url, title)
 			more = True
+
+	print "</h1>"
 
 ### Post Retrieval
 
@@ -255,4 +263,40 @@ def once_rss():
 	fp = open(os.path.join(output, "feed.xml"), 'w')
 	fp.write(rss)
 	fp.close()
+
+### Auto-generate archive pages
+
+def once_archive():
+	archivere = re.compile("blog/(\d+)/(\d+)/(.+)")
+	indexre = re.compile("index\.md$")
+	archivetemplate = """title: %s
+---
+{%%
+posts = pagelist(key=lambda p: p.get("date", "").startswith("%s"), sortby=lambda p: p.get("date"), reverse=True)
+for p in posts:
+	inline(p)
+%%}
+"""
+
+	for p in pages:
+		url = pretty(p.url)
+
+		match = archivere.search(url)
+		if match:
+			year = match.group(1)
+			month = match.group(2)
+
+			date = datetime.strptime(p.date, "%Y-%m-%d")
+
+			yearfile = path.join(input, "blog", year, "index.md")
+			if not path.exists(yearfile):
+				fo = open(yearfile, "w")
+				fo.write(archivetemplate % (year, year))
+				fo.close()
+
+			monthfile = path.join(input, "blog", year, month, "index.md")
+			if not path.exists(monthfile):
+				fo = open(monthfile, "w")
+				fo.write(archivetemplate % (date.strftime("%B"), "%s-%s" % (year, month)))
+				fo.close()
 
