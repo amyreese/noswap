@@ -8,16 +8,16 @@ markdownpp=$(shell which markdown-pp)
 archives=$(shell find input/blog/ -mindepth 2 -regex '.*/[0-9]+/index.md')
 tags=$(shell find input/blog/tag/ -mindepth 1 -name 'index.md' -prune -o -print)
 
-srcfiles=$(filter-out $(archives) $(tags),$(shell find input/ -name '*.md'))
-
 mdppfiles=$(shell find input/ -name '*.mdpp')
 mdfiles=$(patsubst %.mdpp,%.md,$(mdppfiles))
+
+srcfiles=$(filter-out $(archives) $(tags) $(mdfiles),$(shell find input/))
 
 puburi=jreese@dyson:/srv/www/sites/leetcode.net/pages/
 
 build: .build
 
-.build: output $(srcfiles) $(mdfiles)
+.build: output page.html macros.py $(srcfiles) $(mdfiles)
 	$(poole) --build --ignore '^\.|~$$|\.ccss$$|\.mdpp$$|\.swp$$'
 	touch .build
 
