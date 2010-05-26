@@ -10,7 +10,7 @@ import re
 import sys
 import time
 
-base_url = "http://localhost:8080"
+base_url = "http://localhost"
 
 defaults = {
 	"author": "John Reese",

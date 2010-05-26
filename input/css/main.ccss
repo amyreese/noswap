@@ -115,8 +115,7 @@ div#sidebar:
 			margin-top: 1em
 
 			ul:
-				margin-top: 0.2em
-				margin-left: 1em
+				margin: 0.2em 0 0.2em 1em
 
 		a:
 			color: #34425B
