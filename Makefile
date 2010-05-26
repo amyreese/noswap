@@ -1,8 +1,12 @@
 poole=$(shell which poole)
+markdownpp=$(shell which markdown-pp)
+
+mdpp=$(shell find . -name '*.mdpp')
+md=$(patsubst %.mdpp,%.md,$(mdpp))
 
 .PHONY: build
-build: output
-	$(poole) --build --ignore '^\.|~$$|\.swp$$|\.ccss$$'
+build: output $(md)
+	$(poole) --build --ignore '^\.|~$$|\.ccss$$|\.mdpp$$|\.swp$$'
 
 .PHONY: serve
 serve: build
@@ -10,3 +14,7 @@ serve: build
 
 output:
 	mkdir output
+
+%.md : %.mdpp
+	$(markdownpp) $< $@
+
