@@ -104,7 +104,7 @@ div#sidebar:
 				border-bottom: 1px solid #0D1117
 				text-decoration: none
 
-	div#credit
+	div#credit:
 		span:
 			font-size: 0.85em
 		img:
