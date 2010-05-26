@@ -1,6 +1,7 @@
 title: Why Do We Like Indirect Governance?
 tags: comment, nys, politics, rant
 date: 2008-09-26
+nocrumbs:
 ---
 <a href="http://news.ycombinator.com/item?id=279535">On local government corruption in New York</a>:
 <blockquote cite="http://news.ycombinator.com/item?id=279535">Where there is money and people with power corruption is very likely.

@@ -1,6 +1,7 @@
 title: On the Inelegance of PHP
 tags: comment, php, programming
 date: 2008-12-15
+nocrumbs:
 ---
 As a well-seasoned PHP developer for <a href="http://www.mantisbt.org">MantisBT</a>
 and other projects, but at the same time a seasoned developer in Python, C++, Lua,

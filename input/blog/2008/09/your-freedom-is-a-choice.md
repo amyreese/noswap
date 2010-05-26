@@ -1,6 +1,7 @@
 title: Your Freedom is a Choice
 tags: comment, freedom, mobile, openmoko
 date: 2008-09-23
+nocrumbs:
 ---
 <a href="http://news.ycombinator.com/item?id=312658">On the new G1 phone using Android</a>:
 <blockquote>i need a google account to use gphone; i need itunes to use iphone; i have to buy apps from approved channels.

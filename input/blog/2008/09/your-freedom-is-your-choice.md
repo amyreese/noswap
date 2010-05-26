@@ -1,6 +1,7 @@
 title: Your Freedom is Your Choice
 tags: apple, comment, freedom, mobile, openmoko
 date: 2008-09-23
+nocrumbs:
 ---
 <a href="http://news.ycombinator.com/item?id=312983">On the Openmoko</a>:
 ... by the fact that Openmoko is a tiny company, they don't have the purchasing power that Apple has to get newer hardware components at an inexpensive price point, hence the older ARM CPU and TI Calypso GSM chipsets. It's still plenty peppy enough and has enough RAM that I can run numerous applications at the same time without degrading performance of the entire system.

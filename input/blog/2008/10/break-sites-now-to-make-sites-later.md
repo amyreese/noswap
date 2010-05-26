@@ -1,6 +1,7 @@
 title: Break Sites Now to Make Sites Later
 tags: browsers, comment, internet explorer, microsoft
 date: 2008-10-09
+nocrumbs:
 ---
 <a href="http://news.ycombinator.com/item?id=289438">On the topic of IE8</a>:
 <blockquote cite="http://news.ycombinator.com/item?id=289438">How about rather than asking web designers, server owners and IT staff everywhere to add some hack tag to their code, you force IE8 into compatibility mode unless a designer specifically enables IE8 rendering on their page by adding said tag? That mediates the issue pretty easily.</blockquote>

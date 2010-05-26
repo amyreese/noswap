@@ -1,6 +1,7 @@
 title: BarCamp Rochester
 tags: barcamp, github, mantisbt, rit
 date: 2009-04-15
+nocrumbs:
 ---
 Context: <a href="http://www.barcamproc.org">BarCamp Rochester</a> -- Anyone and everyone is invited to attend, and everyone is highly encouraged to present something of their own, no matter what it is.  It's happening this weekend at RIT, where I'm studying (and graduating in about a month!) for Software Engineering.
 

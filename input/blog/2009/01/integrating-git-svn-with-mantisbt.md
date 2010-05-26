@@ -1,6 +1,7 @@
 title: Integrating Git and SVN with the Mantis Bug Tracker
 tags: git, github, mantisbt, plugins, source integration, svn
 date: 2009-01-07
+nocrumbs:
 ---
 With the ongoing work towards a 1.2 release, the <a href="http://www.mantisbt.org">Mantis Bug Tracker</a> features a brand new plugin and event system, which will allow users to implement entirely new features for MantisBT without ever needing to touch any of the core codebase.  It's a very extensible system, and allows plugin authors to implement only what they need, while still allowing advanced plugins as much flexibility as possible.  Plugins can be as small as a single file with 20 lines of code, or as large as entire hierarchies of files, pages, with their own API's.
 

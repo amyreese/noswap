@@ -1,6 +1,7 @@
 title: Start With a Bang
 tags: humor, rant, explosm
 date: 2008-09-08
+nocrumbs:
 ---
 Now that I'm restarting my "blag", I <em>gotta</em> have a bit of ripe content.  Ever-so-relevant: <a href="http://www.explosm.net">Explosm's</a> cartoon, <a href="http://www.explosm.net/comics/new/">Cyanide and Happiness</a>, has pretty much summed up my frustrations with the <a href="http://pidgin.im">Pidgin IM client</a>:
 

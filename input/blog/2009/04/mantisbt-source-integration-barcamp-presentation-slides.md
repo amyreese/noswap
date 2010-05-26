@@ -1,6 +1,7 @@
 title: MantisBT Source Integration - BarCamp Presentation Slides
 tags: barcamp, mantisbt, rit
 date: 2009-04-18
+nocrumbs:
 ---
 Since I'm about to present the topic, I'm making the presentation slides available for all.  There will indeed be video of the talk, which I will post as soon I can afterwards.
 

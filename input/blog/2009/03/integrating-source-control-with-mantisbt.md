@@ -1,6 +1,7 @@
 title: Integrating Source Control Tools with Mantis Bug Tracker
 tags: bzr, cvs, hg, mantisbt, plugins, source integration
 date: 2009-03-22
+nocrumbs:
 ---
 *Update: The information in this post is unfortunately out of date.  While much of the code samples are similar, the new method of creating new plugins has changed in subtle, but very significant ways.  Until a new guide can be written, please refer to the existing plugins for code examples.*
 

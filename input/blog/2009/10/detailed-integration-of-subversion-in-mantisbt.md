@@ -2,6 +2,7 @@ title: Detailed Integration of Subversion in MantisBT
 description: Chris Dornfeld at Unitz has an excellent, detailed overview of the options available when importing Subversion repositories into MantisBT using my Source Integration framework.
 tags: mantisbt, source integration, svn
 date: 2009-10-14
+nocrumbs:
 ---
 Chris Dornfeld at [Unitz][1] has an excellent, [detailed overview][2] of the
 options available when importing Subversion repositories into MantisBT using

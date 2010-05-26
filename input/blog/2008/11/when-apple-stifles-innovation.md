@@ -1,6 +1,7 @@
 title: When Apple Stifles Innovation
 tags: apple, freedom, iphone, openmoko
 date: 2008-11-14
+nocrumbs:
 ---
 John Gruber recently talked about
 <a href="http://daringfireball.net/2008/11/flagging_messages_from_iphone_mail">how he deals with email on the iPhone</a>,

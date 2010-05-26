@@ -1,6 +1,7 @@
 title: You Can't Judge Your Own Project
 tags: comment, development, testing, usability
 date: 2008-10-07
+nocrumbs:
 ---
 <a href="http://news.ycombinator.com/item?id=268447">On the launch</a> of the <a href="http://ticketstumbler.com">excellent Ticketstumbler site</a>:
 

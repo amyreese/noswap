@@ -1,6 +1,7 @@
 title: What I Want From a Browser
 tags: browsers, chrome, firefox, opera
 date: 2008-09-23
+nocrumbs:
 ---
 With all the recent talk of Google Chrome and all the other browser options, I find more and more that the love-to-hate Firefox 3.0 is still my best friend, and will not be replaced anytime soon.  However, the major annoyance I've noticed through all the options is that there is always some feature or set of features lacking from every single option, including Firefox, that can be found in the competition.
 

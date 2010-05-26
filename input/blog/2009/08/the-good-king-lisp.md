@@ -1,6 +1,7 @@
 title: The Good King Lisp
 tags: comment, random
 date: 2009-08-05
+nocrumbs:
 ---
 From <a href="http://news.ycombinator.com/item?id=743144">HN</a>:
 
