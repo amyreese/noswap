@@ -1,0 +1,223 @@
+title: Mail server using Postfix, Dovecot
+description: Discussion and installation of a full mail server stack.
+tags: article, mail, postfix, dovecot, howto
+---
+
+I know there are an inordinate amount of posts out there showing you how to
+configure a full-stack mail server.  They always target a specific Linux distro,
+and blast through the whole process, without actually telling you *why* you're
+doing any of it, or how it all works.  How do you know what to modify to fit
+your own configuration that way?   How do you maintain a stack like that when
+you don't know how all the pieces fit together?  Why should these tutorials expect
+you to patch and compile core components from source?!
+
+So I'd like to take some time to fix those problems, and discuss my own full-stack
+configuration, and how it all works.
+
+!TOC
+
+Stack Overview
+--------------
+
+I personally use Ubuntu Linux, but any other Unix-based solution should work
+fairly the same.  My mail server uses [Postfix][] for SMTP, [Dovecot][] for
+IMAP and SASL, and [SpamAssassin][] for filtering out the junk.  Management of
+virtual domains, mailboxes, and aliases is handled using [PostfixAdmin][]'s
+excellent web interface.  Each mailbox has both IMAP and web access, and the
+"[antispam][]" plugin for Dovecot automates the process of retraining the spam
+filters whenever a user moves messages in or out of their Spam folder.
+
+Benefits of this setup:
+
+*	Ease of maintenance, using PostfixAdmin and shell
+*	A split data store that's still easy to back up
+*	A large selection of mail clients for the user while allowing them to check
+	their mail from home or any other computer
+
+Downsides of the setup, or ignored topics:
+
+*	A shared spam filter database, although the usefulness of separate spam data
+	is outweighed by the size of the database in my opinion
+*	No self-service method for editing sieve/whitelist
+
+Stack Interaction
+-----------------
+
+The end goal of this process is to have a chain of interactions between all the
+pieces in the mail stack.  I'll describe the entire stack here so that you can
+understand where everything is heading.
+
+PostfixAdmin will populate the MySQL database with the virtual domains, mailboxes,
+and aliases that define your mail accounts.  Each virtual domain corresponds to
+an actual domain that your server will accept mail.  Mailboxes represent the
+end-user accounts that your server will recognize, separate from the login accounts
+on your server.  Aliases are secondary names that point at virtual mailboxes;
+for instance, if you want your mailbox user@your.domain to also receive mail
+addressed to client@your.domain without a separate login.
+
+Dovecot will connect to the database to get the list of virtual mailboxes and aliases.
+Dovecot will act as not only the IMAP server for mail clients like Thunderbird,
+but also as the SASL host, which allows Postfix to know what mailboxes and aliases
+are valid endpoints, and it will also act as the Local Delivery Agent once mail
+has been accepted by Postfix.
+
+Postfix acts as the SMTP server, and will either accept incoming mail for valid
+mailboxes and aliases, or relay outgoing mail from valid users to other domains
+on the internet.  In this configuration, Postfix will deny both incoming mail to
+mailboxes that don't exist, and deny outgoing mail relayed from clients that have
+not provided valid authentication against the SASL from Dovecot.  This prevents
+our Postfix install from being an "open relay", which will quickly get your domain
+and IP address blacklisted as a spam source.
+
+SpamAssassin sits in between Postfix and Dovecot, looking at each message accepted
+by Postfix to determine if it is spam or ham, marking the message appropriately,
+and then passing it to Dovecot for delivery.  In cases where the user has
+reclassified a message as spam or ham (by moving it in or out of their Spam folder,
+respectively), SpamAssassin will update its database if needed.  This configuration
+will *not* quarantine spam messages in a special location, instead preferring to
+let Dovecot's Sieve filter the message into the user's Spam folder, so that they
+can deal with Spam in the same manner from any native or web-based mail client.
+
+As a quick review: 
+
+*	Incoming mail accepted by Postfix is passed to SpamAssassin, which marks the
+	message appropriately and then passes the message to Dovecot, which delivers
+	the message to the user's mailbox, using Sieve to filter ham to the user's
+	Inbox and spam to the user's Spam folder.
+
+*	Outgoing mail will be relayed by Postfix only if a user authenticates with
+	the same information used to authenticate with Dovecot, allowing users to
+	send and receive mail regardless of their location, without creating an open
+	relay.
+
+
+Preparation
+-----------
+
+### User Account
+
+The first thing I do is create an account and matching group on my machine that
+will own all of the mail-related information.  I named them it "vmail", and assigned
+an arbitrary ID of 900 &mdash; lower than the IDs used for regular users, but high enough
+that it won't collide with automatically created accounts.  The directory where
+all the mail data will be placed is created automatically with the vmail user; I
+chose `/srv/mail` to fit into my existing schema, but `/home/vmail` could work just
+as well.
+
+	# addgroup --system --gid 900 vmail
+	# adduser --system --disabled-login --gid 900 --uid 900 --home /srv/mail vmail
+
+### SSL Certificates
+
+You will also need/want to generate a set of SSL certificates for your server,
+for use by both the webserver for secure admin access, and by Postfix and Dovecot
+so that user passwords aren't being sent in the clear.  If you are using properly
+signed certificates from someone like Verisign or CACert, then you can skip this
+section; just keep track of where your certs are stored.
+
+I'm personally too broke to afford a proper SSL cert, so I've created my own
+certificate authority, and used that to create a group of self-signed certificates.
+I originally followed an article from Akadia on [self-signed certificates][1], but
+I will try to summarize the information, as well as provide a script to automate
+the process.
+
+> *It is absolutely important that this process happen in a private directory that
+only the root user can access.  Anyone who can access these files can do very bad
+things to your server or your users.  If you don't know how to accomplish that,
+go learn about file permissions for your operating system, and take the
+approrpriate steps to secure these files!*
+
+I personally like to keep all my SSL certificates in a central location, so that
+only one location needs to be protected and maintained.  You can name it and place
+it anywhere you want, as long as you remember where it is and make it secure:
+
+	# mkdir /srv/ssl
+	# chmod 700 /srv/ssl
+	# cd /srv/ssl
+
+The next step is to generate a private key that will be used to sign all the other
+certificates that you will create.  If you want to name it something other than
+"root.key", that's fine, just edit the script from above with the new file name.
+The first command will ask for a passphrase, which we will remove in the second
+command so that your mail server doesn't need to ask for the passphrase every
+time it restarts:
+
+	# openssl genrsa -des3 -out root.key.orig 1024
+	...
+	Enter pass phrase for root.key.orig:
+	Verifying - Enter pass phrase for root.key.orig:
+
+	# openssl rsa -in root.key.orig -out root.key
+	Enter pass phrase for root.key.orig:
+	writing RSA key
+
+Now that we have the signing key, we can start generating signed SSL certificates
+for our mail stack.  If you are wanting a single domain name for accessing both
+the SMTP server and the IMAP server, then you only need to do this once.  If you
+prefer to have a separate domain or subdomain for each service, you will need to
+repeat this for each one.  Make sure you use your mail server's actual domain
+for the Common Name field when prompted, and just leave the passphrase blank:
+
+	# openssl req -new -key root.key -out mail.csr
+	...
+
+	# chmod 600 mail.csr
+	# openssl x509 -req -days 3650 -signkey root.key -in mail.csr -out mail.pem
+	...
+
+	# chmod 600 mail.pem
+
+This should have created two files, "mail.csr" and "mail.pem".  We will come back
+to these later when we begin to configure the mail services.
+
+
+Installation
+------------
+
+With one exception for the antispam plugin, everything I used came from Ubuntu's
+package repository or doesn't require compilation.  Package names (or availability)
+may differ, in which case following the links above to the individual projects
+should help out; you can always resort to compiling from scratch.
+
+The next step is to install the core mail stack packages that you will need.
+If you feel like you know what you're doing, you should be able to get away with
+replacing MySQL with PostgreSQL, but I have not tried that with my configurations.
+Otherwise, the software to install includes:
+
+*	Apache server with PHP
+*	MySQL server
+*	Postfix, including TLS and MySQL support
+*	Dovecot, including IMAPd and headers
+*	SASL libraries
+*	SpamAssassin, including the `spamc` client
+
+On Ubuntu or Debian, you can install all these packages with the following command:
+
+	# aptitude install apache2 libapache2-mod-php5 php5-mysql mysql-server \
+	  postfix postfix-mysql postfix-tls dovecot-dev dovecot-imapd libsasl2-2 \
+	  libsasl2-modules libsasl2-modules-sql sasl2-bin spamassassin spamc
+
+During the setup, you'll need to provide a root password for the MySQL server, and
+select that you want to set up Postfix as an "Internet Site".  Once that's done, it's
+time to start setting up the databases, install PostfixAdmin, and configure the stack.
+
+PostfixAdmin
+------------
+
+You will need to start the next phase by downloading and extracting the latest
+version of [PostfixAdmin][].  
+
+References
+----------
+
+!REF
+
+[postfix]: http://www.postfix.com/ "Postfix"
+[postfixadmin]: http://sourceforge.net/projects/postfixadmin/ "PostfixAdmin"
+[dovecot]: http://www.dovecot.org/ "Dovecot"
+[antispam]: http://johannes.sipsolutions.net/Projects/dovecot-antispam "Dovecot Anti-spam Plugin"
+[dspam]: http://dspam.nuclearelephant.com/ "Dspam"
+[spamassassin]: http://spamassassin.apache.org/ "SpamAssassin"
+
+[1]: http://www.akadia.com/services/ssh_test_certificate.html "How to create a self-signed Certificate"
+
