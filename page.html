@@ -25,15 +25,7 @@
 		<div id="sidebar">
 			<div id="menu">
 				<h3>Menu</h3>
-				<ul>
-{%
-menupages = [p for p in pages if "menu-position" in p]
-menupages.sort(key=lambda p: int(p.get("menu-position")))
-for p in menupages:
-	title = p["menu-title"] if "menu-title" in p else p.title
-	print "					<li><a href=\"%s\">%s</a></li>" % (pretty(p.url), title)
-%}
-				</ul>
+				{% menu() %}
 			</div>
 			<div id="rss">
 				<span><a href="/feed.xml"><img src="/media/feed-icon-32x32.png" border="0"/></a></span>

@@ -97,6 +97,10 @@ div#sidebar:
 		ul:
 			margin-top: 1em
 
+			ul:
+				margin-top: 0.2em
+				margin-left: 1em
+
 		a:
 			color: #34425B
 			border-bottom: 1px solid #CCD0D6

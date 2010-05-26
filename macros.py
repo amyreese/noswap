@@ -11,11 +11,28 @@ page = {
 	"author": "John Reese",
 	"tags": "",
 
+	"menu-parent": "",
+	"menu-position": "",
+	"menu-title": "",
+
 	"logo": "LeetCode.net",
 	"logo-url": "/",
 	"tagline": "open source software engineering",
 	}
 
+
+### Recursive Menu Structure
+
+def menu(parent=""):
+	menupages = [p for p in pages if p["menu-position"] != "" and p["menu-parent"] == parent]
+	if (len(menupages) > 0):
+		print "<ul>"
+		for p in menupages:
+			title = p["menu-title"] if p["menu-title"] != "" else p["title"]
+			print """<li><a href="%s">%s</a>""" % (pretty(p.url), p.title)
+			menu(p["menu-position"])
+			print "</li>"
+		print "</ul>"
 
 ### Inline another page's content
 
