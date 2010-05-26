@@ -1,3 +1,7 @@
+
+# Copyright (C) 2010 John Reese
+# Licensed under the MIT license
+
 poole=$(shell which poole)
 markdownpp=$(shell which markdown-pp)
 

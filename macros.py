@@ -1,5 +1,8 @@
 # encoding=utf-8
 
+# Copyright (C) 2010 John Reese
+# Licensed under the MIT license
+
 import clevercss
 from datetime import datetime
 import email.utils
