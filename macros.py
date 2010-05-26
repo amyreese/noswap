@@ -333,7 +333,7 @@ for p in posts:
 
 				if menucount < 5:
 					parent = "9"
-					position = "9%s" % year+month
+					position = "9%d" % menucount
 					menucount += 1
 				else:
 					parent = ""

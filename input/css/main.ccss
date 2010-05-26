@@ -19,6 +19,9 @@ a:
 		text-decoration: underline
 
 em:
+	font-style: italics
+
+strong:
 	font-weight: bold
 
 div#header:
@@ -48,7 +51,7 @@ div#content:
 	h1:
 		margin-top: 1.5em;
 		font-family: $serif
-		font-size: 1.8em
+		font-size: 1.7em
 		line-height: 120%
 
 	a:
@@ -60,7 +63,6 @@ div#content:
 
 		a:
 			text-decoration: underline
-
 
 	blockquote:
 		background: #EBEDEF
@@ -78,6 +80,10 @@ div#content:
 
 	code:
 		font-family: $monospace
+
+	li:
+		list-style: disc outside none
+		margin: 1em 0 1em 1.5em
 
 	.excerpt:
 		a:
@@ -137,4 +143,12 @@ div#sidebar:
 
 div#footer:
 	text-align: center
+	color: #9AA1AE
+
+	a:
+		color: #9AA1AE
+		text-decoration: underline
+
+		&:hover:
+			color: #34425B
 
