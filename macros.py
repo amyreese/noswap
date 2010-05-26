@@ -31,7 +31,10 @@ page = dict(defaults)
 ### Recursive Menu Structure
 
 def menu(parent=""):
-	menupages = [p for p in pages if p["menu-position"] != "" and p["menu-parent"] == parent]
+	menupages = pagelist(
+			key=lambda p: p["menu-position"] != "" and p["menu-parent"] == parent,
+			sortby=lambda p: int(p.get("menu-position"))
+			)
 	if (len(menupages) > 0):
 		print "<ul>"
 		for p in menupages:
@@ -40,6 +43,26 @@ def menu(parent=""):
 			menu(p["menu-position"])
 			print "</li>"
 		print "</ul>"
+
+### Post Retrieval
+
+def pagelist(key=None, sortby=None, reverse=False, limit=None):
+	if key is None:
+		return []
+
+	pagelist = [p for p in pages if key(p)]
+
+	if sortby is None:
+		pagelist.sort(key=lambda p: p.get("title"))
+	else:
+		pagelist.sort(key=sortby, reverse=reverse)
+
+	if limit is None:
+		return pagelist
+	elif len(pagelist) > limit:
+		return pagelist[0:limit]
+	else:
+		return pagelist
 
 ### Inline another page's content
 
@@ -166,8 +189,12 @@ _RSS_ITEM = """
 
 def once_rss():
 	items = []
-	posts = [p for p in pages if "date" in p] # get all blog post pages
-	posts.sort(key=lambda p: p.date, reverse=True)
+	posts = pagelist(
+			key=lambda p: "date" in p,
+			sortby=lambda p: p.date,
+			reverse=True,
+			limit=5
+			)
 	for p in posts:
 		title = p.title
 		link = "%s%s" % (base_url, pretty(p.url))
@@ -178,7 +205,6 @@ def once_rss():
 
 	items = "".join(items)
 
-	# --- CHANGE THIS --- #
 	title = defaults["logo"]
 	link = "%s/blog/" % base_url
 	desc = defaults["tagline"]
