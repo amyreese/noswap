@@ -1,0 +1,14 @@
+
+require["fileinto"];
+
+# Filter Spam LAST
+if header :contains "X-Spam-Flag" ["Yes"] {
+	fileinto "Spam";
+	stop;
+}
+if header :contains "X-DSPAM-Result" ["Spam"] {
+	fileinto "Spam";
+	stop;
+}
+
+

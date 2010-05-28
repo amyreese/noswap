@@ -207,8 +207,23 @@ PostfixAdmin
 You will need to start the next phase by downloading and extracting the latest
 version of [PostfixAdmin][].  
 
-References
-----------
+Appendix A: Example Configuration Files
+---------------------------------------
+
+Below if a list of example configuration files, used for my server stack at
+LeetCode.net.  If you prefer, you can download a
+[comprehensive archive](drafts/mailstack/config/mailstack.zip) instead.
+
+*	[/etc/dovecot/dovecot.conf](drafts/mailstack/config/dovecot/dovecot.conf)
+*	[/etc/dovecot/dovecot-mysql.conf](drafts/mailstack/config/dovecot/dovecot-mysql.conf)
+*	[/etc/postfix/main.cf](drafts/mailstack/config/postfix/main.cf)
+*	[/etc/postfix/master.cf](drafts/mailstack/config/postfix/master.cf)
+*	[/etc/postfix/mysql-alias.cf](drafts/mailstack/config/postfix/mysql-alias.cf)
+*	[/etc/postfix/mysql-domain.cf](drafts/mailstack/config/postfix/mysql-domain.cf)
+*	[/etc/postfix/mysql-mailbox.cf](drafts/mailstack/config/postfix/mysql-mailbox.cf)
+
+Appendix B: References
+----------------------
 
 !REF
 
