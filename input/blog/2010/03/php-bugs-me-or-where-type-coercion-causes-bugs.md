@@ -10,8 +10,8 @@ web applications with, and frameworks like [CodeIgniter](http://codeigniter.com/
 make it even better.
 
 I've long been on the fence regarding PHP's type coercion and comparison issues,
-but a [recent bug][1] in [Mantis Bug Tracker] has made me /facepalm for the first
-time in my long history of working with PHP:
+but a [recent bug][php-type-1] in [Mantis Bug Tracker][php-type-2] has made me
+/facepalm for the first time in my long history of working with PHP:
 
 > When I click on "Edit" next to 1.2, mantis shows me the 1.20 properties.
 > When I click 1.1 it shows me 1.10!
@@ -39,5 +39,5 @@ thus we need to use the === comparison operator instead.
 
 I thought I'd seen it all...
 
-[1]: http://www.mantisbt.org/bugs/view.php?id=11571
-[2]: http://www.mantisbt.org
+[php-type-1]: http://www.mantisbt.org/bugs/view.php?id=11571
+[php-type-2]: http://www.mantisbt.org
