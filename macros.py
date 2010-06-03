@@ -33,6 +33,7 @@ defaults = {
 	}
 page = dict(defaults)
 
+tagsplit = re.compile("(\w+(?:\s+\w+)*)")
 
 ### Recursive Menu Structure
 
@@ -165,7 +166,8 @@ def metadata(page, style="subtitle"):
 			print """<span class="authored">Posted on %s</span>""" % (timestamp)
 
 			if "tags" in page and page.tags:
-				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (t.strip().replace(" ", "-"), t.strip()) for t in page.tags.split(",")])
+				tags = tagsplit.findall(page.tags)
+				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (tag.replace(" ", "-"), tag) for tag in tags])
 				print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
 			print """</p>"""
@@ -342,7 +344,7 @@ def once_tags():
 	tagtemplate = """title: %s
 ---
 {%%
-posts = pagelist(key=lambda p: "tags" in p and "%s" in p.get("tags").split(",") or " %s" in p.get("tags").split(","), sortby=lambda p: p.get("date"), reverse=True)
+posts = pagelist(key=lambda p: "tags" in p and "%s" in tagsplit.findall(p.tags), sortby=lambda p: p.get("date"), reverse=True)
 for p in posts:
 	inline(p)
 %%}
@@ -353,7 +355,7 @@ for p in posts:
 
 	blogpages = pagelist(key=lambda p: p.get("tags"))
 	for p in blogpages:
-		tags.extend(map(unicode.strip, p.tags.split(",")))
+		tags.extend(tagsplit.findall(p.tags))
 
 	for tag in tags:
 		tagfile = path.join(input, "blog", "tag", tag.replace(" ", "-")+".md")
@@ -362,7 +364,7 @@ for p in posts:
 			print "Generating %s ..." % tagfile
 
 			fo = open(tagfile, "w")
-			fo.write(tagtemplate % (tag, tag, tag))
+			fo.write(tagtemplate % (tag, tag))
 			fo.close()
 
 			generated = True

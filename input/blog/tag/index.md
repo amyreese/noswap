@@ -4,9 +4,11 @@ title: Tags
 tags = []
 pages = pagelist(key=lambda p: p.get("tags"))
 for p in pages:
-	tags.extend(map(unicode.strip, p.tags.split(",")))
+	tags.extend(tagsplit.findall(p.tags))
 
+tags = list(set(tags))
 tags.sort()
+
 for tag in tags:
-	print "*	[%s](%s)" % (tag, "/blog/tag/%s/" % tag)
+	print "*	[%s](%s)" % (tag, "/blog/tag/%s/" % tag.replace(" ", "-"))
 %}
