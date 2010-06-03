@@ -39,5 +39,5 @@ thus we need to use the === comparison operator instead.
 
 I thought I'd seen it all...
 
-[1]: <http://www.mantisbt.org/bugs/view.php?id=11571>
-[2]: <http://www.mantisbt.org>
+[1]: http://www.mantisbt.org/bugs/view.php?id=11571
+[2]: http://www.mantisbt.org

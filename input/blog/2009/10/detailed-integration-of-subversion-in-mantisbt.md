@@ -16,6 +16,6 @@ or the framework as a whole, consider Chris's post to be canonical information.
 
 Cheers
 
-[1]: <http://www.unitz.com/>
-[2]: <http://www.unitz.com/u-notez/2009/10/subversion-svn-integration-mantisbt/>
-[3]: <http://leetcode.net/blog/2009/01/integrating-git-svn-with-mantisbt/>
+[1]: http://www.unitz.com/
+[2]: http://www.unitz.com/u-notez/2009/10/subversion-svn-integration-mantisbt/
+[3]: http://leetcode.net/blog/2009/01/integrating-git-svn-with-mantisbt/
