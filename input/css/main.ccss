@@ -1,15 +1,17 @@
 
 text_color = #222222
 
-sans = "DejaVu Sans", verdana, sans-serif
-serif = "DejaVu Serif", georgia, serif
-header = georgia, "DejaVu Serif", serif
+sans = "gesta-1", "gesta-2", verdana, sans-serif
+serif = "droid-serif-1", "droid-serif-2", georgia, serif
+header = "droid-serif-1", "droid-serif-2", georgia, serif
 monospace = "DejaVu Sans Mono", monospace
 
 body:
 	color: $text_color
 	font-family: $sans
 	font-size: 0.8em
+	font-weight: 400
+	font-style: normal
 	line-height: 150%
 
 a:
@@ -80,6 +82,7 @@ div#content:
 	p:
 		margin-top: 1em
 		margin-bottom: 1em
+		font-size: 1.2em
 
 		a:
 			text-decoration: underline
@@ -90,7 +93,7 @@ div#content:
 		padding: 0.1em 1.5em
 
 		p:
-			font-size: 0.9em
+			font-size: 1.1em
 
 	pre:
 		background: #F6F8FA
@@ -108,6 +111,7 @@ div#content:
 	li:
 		list-style: disc outside none
 		margin: 0.2em 0 0.2em 2em
+		font-size: 1.1em
 
 	.excerpt:
 		a:
@@ -120,7 +124,7 @@ div#content:
 
 	.metadata:
 		margin-top: 0.0em
-		font-size: 0.9em
+		font-size: 1.0em
 		color: #9AA1AE
 
 		a:
@@ -138,11 +142,15 @@ div#sidebar:
 		ul:
 			margin-top: 1em
 
+			li:
+				margin-top: 0.2em
+
 			ul:
 				margin: 0.2em 0 0.2em 1em
 
 		a:
 			color: #34425B
+			font-size: 1.2em
 			border-bottom: 1px solid #CCD0D6
 			&:hover:
 				border-bottom: 1px solid #0D1117
