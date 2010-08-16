@@ -13,7 +13,7 @@ mdfiles=$(patsubst %.mdpp,%.md,$(mdppfiles))
 
 srcfiles=$(filter-out $(archives) $(tags) $(mdfiles),$(shell find input/))
 
-puburi=jreese@dyson:/srv/www/sites/leetcode.net/pages/
+puburi=dyson:/srv/www/sites/leetcode.net/pages/
 
 build: .build
 
