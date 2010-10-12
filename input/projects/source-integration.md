@@ -28,6 +28,12 @@ is already an integration layer in the works for both Mercurial and Perforce.
 This framework can be seen in use on the official [MantisBT][] tracker, as well as on my own [bugtracker][].
 The source code can be found on [MantisForge][] or cloned from the [Source Integration repo][sourcerepo].
 
+{%
+posts = pagelist(key=lambda p: "tags" in p and "source integration" in tagsplit.findall(p.tags), sortby=lambda p: p.get("date"), reverse=True)
+for p in posts:
+	inline(p)
+%}
+
 [mantisbt]: http://www.mantisbt.org/ "Mantis Bug Tracker"
 [mantisforge]: http://git.mantisforge.org/ "MantisForge"
 [bugtracker]: http://leetcode.net/mantis/ "LeetCode.net Bugtracker"
