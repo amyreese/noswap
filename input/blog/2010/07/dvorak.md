@@ -9,7 +9,7 @@ nocrumbs:
 I've been typing with the [Dvorak layout][dvorak] for about three years now. I personally can't
 fully touch type, and never have been able to, although these days I'm getting pretty close if
 I stop thinking about it and just start typing.  My typing speed has slightly increased, but is
-more or less limited by the speed at which I can think abotu what I'm trying to type.  The real
+more or less limited by the speed at which I can think about what I'm trying to type.  The real
 benefits are in the related experience.
 
 I've noticed a dramatic reduction in wrist strain at the end of the day, mainly due to the
