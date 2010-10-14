@@ -4,7 +4,7 @@ text_color = #222222
 sans = "gesta-1", "gesta-2", verdana, sans-serif
 serif = "droid-serif-1", "droid-serif-2", georgia, serif
 header = "droid-serif-1", "droid-serif-2", georgia, serif
-monospace = "DejaVu Sans Mono", monospace
+monospace = "droid-sans-mono-1", "droid-sans-mono-2", monospace
 
 body:
 	color: $text_color
@@ -101,12 +101,11 @@ div#content:
 		border-right: 1px solid #AAAAAA
 		margin: 1em 1.5em
 		padding: 1em 1.5em
-		line-height: 130%
+		line-height: 120%
 
 	code:
 		font-family: $monospace
 		font-size: 0.9em
-		letter-spacing: -1px
 
 	li:
 		list-style: disc outside none
