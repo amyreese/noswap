@@ -1,34 +1,3 @@
-@font-face {
-	font-family: "DejaVu Sans";
-	font-weight: normal;
-	src: local("DejaVu Sans"), url("http://files.leetcode.net/fonts/DejaVuSans.ttf") format("truetype");
-}
-@font-face {
-	font-family: "DejaVu Sans";
-	font-weight: bold;
-	src: local("DejaVu Sans Bold"), url("http://files.leetcode.net/fonts/DejaVuSans-Bold.ttf") format("truetype");
-}
-@font-face {
-	font-family: "DejaVu Serif";
-	font-weight: normal;
-	src: local("DejaVu Serif"), url("http://files.leetcode.net/fonts/DejaVuSerif.ttf") format("truetype");
-}
-@font-face {
-	font-family: "DejaVu Serif";
-	font-weight: bold;
-	src: local("DejaVu Serif Bold"), url("http://files.leetcode.net/fonts/DejaVuSerif-Bold.ttf") format("truetype");
-}
-@font-face {
-	font-family: "DejaVu Sans Mono";
-	font-weight: normal;
-	src: local("DejaVu Sans Mono"), url("http://files.leetcode.net/fonts/DejaVuSansMono.ttf") format("truetype");
-}
-@font-face {
-	font-family: "DejaVu Sans Mono";
-	font-weight: bold;
-	src: local("DejaVu Sans Mono Bold"), url("http://files.leetcode.net/fonts/DejaVuSansMono-Bold.ttf") format("truetype");
-}
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, code,
