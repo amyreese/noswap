@@ -114,8 +114,9 @@ div#content:
 
 	.excerpt:
 		a:
+			color: #9AA1AE
+			font-size: 0.8em
 			text-decoration: none
-			font-weight: bold
 
 			&:hover:
 				color: #0D1117
