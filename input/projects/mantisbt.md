@@ -18,7 +18,36 @@ in MantisBT, or to better inform developers and team members when looking at iss
 
 [Read more...](/projects/source-integration/)
 
+## Other Plugins
+
+* [Announcements][announce] -- Plugin to allow privileged accounts to create and post announcements that
+  can be shown to users on a global or per-project basis, and allow users to dismiss individual messages.
+
+* [Inline History][inline] -- Allow individual users to view isse history elements inline with the issue
+  notes, rather than being in separate data blocks.
+
+* [Product Matrix][pvm] -- Alternate method for defining a set of products, each with a hierarchical set
+  of versions, and allowing individual issues to track its status against multiple product versions at the
+  same time, without the need for cloning issues.
+
+* [Snippets][] -- Define global or per-user text snippets that can be pasted into the text box when
+  creating a note on any issue.
+
+* [Timecard][] -- Potential replacement for the built-in time tracking feature with new features including
+  the option to specify an estimated time requirement for each issue, and then view time statistics on a
+  per-project basis.
+
+* [Google][ga], [Piwik][], [Clicky][], and [Woopra][] analytics integrations.
+
 [mantisbt]: http://www.mantisbt.org/ "Mantis Bug Tracker"
 [mantisforge]: http://git.mantisforge.org/ "MantisForge"
-[bugtracker]: http://leetcode.net/mantis/ "LeetCode.net Bugtracker"
-[sourcerepo]: git://git.mantisforge.org/source-integration.git "Source Integration Repository"
+[announce]: http://git.mantisforge.org/w/announce.git "Announcement Plugin"
+[inline]: http://git.mantisforge.org/w/inline-history.git "Inline History Plugin"
+[pvm]: http://git.mantisforge.org/w/product-matrix.git "Product Matrix Plugin"
+[snippets]: http://git.mantisforge.org/w/snippets.git "Snippets Plugin"
+[timecard]: http://git.mantisforge.org/w/timecard.git "Timecard Plugin"
+
+[ga]: http://git.mantisforge.org/w/google-analytics.git "Google Analytics Plugin"
+[piwik]: http://git.mantisforge.org/w/piwik.git "Piwik Analytics Plugin"
+[clicky]: http://git.mantisforge.org/w/clicky.git "Clicky Analytics Plugin"
+[woopra]: http://git.mantisforge.org/w/woopra.git "Woopra Analytics Plugin"
