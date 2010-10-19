@@ -50,18 +50,18 @@ div#header:
 
 div#content:
 	text-align: justify
-	font-size: 1.1em
+	font-size: 1.3em
 
 	h1:
 		margin-top: 1.5em;
 		font-family: $header
-		font-size: 1.8em
+		font-size: 1.7em
 		line-height: 120%
 
 	h2:
 		margin-top: 1.5em;
 		font-family: $header
-		font-size: 1.7em
+		font-size: 1.6em
 		line-height: 120%
 
 	h3:
@@ -82,7 +82,6 @@ div#content:
 	p:
 		margin-top: 1em
 		margin-bottom: 1em
-		font-size: 1.2em
 
 		a:
 			text-decoration: underline
@@ -92,16 +91,14 @@ div#content:
 		margin: 1em 1.5em
 		padding: 0.1em 1.5em
 
-		p:
-			font-size: 1.1em
-
 	pre:
 		background: #F6F8FA
 		border-left: 1px solid #AAAAAA
 		border-right: 1px solid #AAAAAA
 		margin: 1em 1.5em
 		padding: 1em 1.5em
-		line-height: 120%
+		line-height: 110%
+		font-size: 0.9em
 
 	code:
 		font-family: $monospace
@@ -110,12 +107,12 @@ div#content:
 	li:
 		list-style: disc outside none
 		margin: 0.2em 0 0.2em 2em
-		font-size: 1.1em
 
 	.excerpt:
+		font-size: 0.85em
+
 		a:
 			color: #9AA1AE
-			font-size: 0.8em
 			text-decoration: none
 
 			&:hover:
@@ -124,7 +121,7 @@ div#content:
 
 	.metadata:
 		margin-top: 0.0em
-		font-size: 1.0em
+		font-size: 0.85em
 		color: #9AA1AE
 
 		a:
