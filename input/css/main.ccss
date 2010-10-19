@@ -27,6 +27,9 @@ em:
 strong:
 	font-weight: bold
 
+.center:
+	text-align: center
+
 div#header:
 	h1:
 		line-height: 50%
