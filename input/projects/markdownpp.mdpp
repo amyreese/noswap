@@ -1,6 +1,7 @@
 title: Markdown Preprocessor
 menu-parent: 5
 menu-position: 55
+sig:
 ---
 
 The Markdown Preprocessor is a Python module designed to add extended features

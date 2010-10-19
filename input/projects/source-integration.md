@@ -2,6 +2,7 @@ title: MantisBT Source Integration
 menu-parent: 51
 menu-position: 511
 menu-title: Source Integration
+sig:
 ---
 
 My premiere plugin set, this package provides a generalized framework for integrating source control

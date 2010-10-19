@@ -3,6 +3,7 @@ logo-url: /about/
 tagline: software engineer, free software advocate
 title: About Me
 menu-position: 3
+sig:
 ---
 I am professional Software Engineer with experience in creating web applications using a
 variety of languages, frameworks, and technologies.  I have a Bachelor of Science degree in

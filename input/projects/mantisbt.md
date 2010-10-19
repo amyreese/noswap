@@ -2,6 +2,7 @@ title: Mantis Bug Tracker
 menu-parent: 5
 menu-position: 51
 menu-title: Mantis Bug Tracker
+sig:
 ---
 As a core developer for the [Mantis Bug Tracker][mantisbt], I've implemented many various features for the
 application, including the plugin system introduced with the 1.2.0 release of MantisBT.  Using this

@@ -30,6 +30,8 @@ defaults = {
 	"logo": "LeetCode.net",
 	"logo-url": "/",
 	"tagline": "open source software engineering",
+
+    "sig": """<p class="sig">&lambda;</p>""",
 	}
 page = dict(defaults)
 
@@ -154,6 +156,8 @@ def inline(page, title=True):
 
 	if excerpt:
 		print """<p class="excerpt"><a href="%s">Continue reading &raquo;</a></p>""" % pretty(page.url)
+	else:
+		print page.sig
 
 ### Page metadata display
 
@@ -286,6 +290,7 @@ def once_archive():
 menu-parent: %s
 menu-position: %s
 nocrumbs:
+sig:
 ---
 {%%
 posts = pagelist(key=lambda p: p.get("date", "").startswith("%s"), sortby=lambda p: p.get("date"), reverse=True)
@@ -342,6 +347,7 @@ for p in posts:
 
 def once_tags():
 	tagtemplate = """title: %s
+sig:
 ---
 {%%
 posts = pagelist(key=lambda p: "tags" in p and "%s" in tagsplit.findall(p.tags), sortby=lambda p: p.get("date"), reverse=True)

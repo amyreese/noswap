@@ -4,6 +4,7 @@ tagline: software engineer, free software advocate
 title: Résumé
 menu-parent: 3
 menu-position: 31
+sig:
 ---
 
 * [PDF Format][pdf]

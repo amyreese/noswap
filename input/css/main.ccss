@@ -119,6 +119,10 @@ div#content:
 				color: #0D1117
 				text-decoration: underline
 
+	.sig:
+		color: #9AA1AE
+		font-size: 0.9em
+
 	.metadata:
 		margin-top: 0.0em
 		font-size: 0.85em
