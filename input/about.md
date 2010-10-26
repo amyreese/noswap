@@ -16,5 +16,7 @@ a firm believer in the merits of free/libre software. I contribute to various op
 projects, such as the [Mantis Bug Tracker][mantisbt], and spread knowledge and information about
 free software whenever I get the chance.
 
+[![vCard](/media/vcard.png "vCard QR code")](/media/vcard-large.png)
+
 [rit]: http://www.rit.edu "Rochester Institute of Technology"
 [mantisbt]: http://www.mantisbt.org "Mantis Bug Tracker"
