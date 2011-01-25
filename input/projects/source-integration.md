@@ -1,4 +1,4 @@
-title: MantisBT Source Integration
+title: Source Integration
 menu-parent: 51
 menu-position: 511
 menu-title: Source Integration
