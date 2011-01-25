@@ -5,7 +5,7 @@ title: About Me
 menu-position: 3
 sig:
 ---
-I am professional Software Engineer with experience in creating web applications using a
+I am a professional Software Engineer with experience in creating web applications using a
 variety of languages, frameworks, and technologies.  I have a Bachelor of Science degree in
 Software Engineering from the [Rochester Institute of Technology][rit] in Rochester, NY.
 I now live near Cincinnati, Ohio with my wonderful wife Angela and an adorable pair of cats
