@@ -1,5 +1,6 @@
 title: ZNC to Notifo
 description: Notification module for ZNC and Notifo.com
+tags: znc
 date: 2011-01-03
 menu-parent: 5
 menu-position: 59
