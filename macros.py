@@ -284,8 +284,7 @@ def once_rss():
 ### Auto-generate archive pages
 
 def once_archive():
-    archivere = re.compile("blog/(\d+)/(\d+)/(.+)")
-    indexre = re.compile("index\.md$")
+    datere = re.compile("(\d+)-(\d+)-\d+")
     archivetemplate = """title: %s
 menu-parent: %s
 menu-position: %s
@@ -306,14 +305,18 @@ for p in posts:
     for p in blogpages:
         url = pretty(p.url)
 
-        match = archivere.search(url)
+        match = datere.search(p.date)
         if match:
             year = match.group(1)
             month = match.group(2)
 
             date = datetime.strptime(p.date, "%Y-%m-%d")
 
-            yearfile = path.join(input, "blog", year, "index.md")
+            yeardir = path.join(input, "blog", year)
+            if not path.exists(yeardir):
+                os.mkdir(yeardir)
+
+            yearfile = path.join(yeardir, "index.md")
             if not path.exists(yearfile):
                 print "Generating %s ..." % yearfile
 
@@ -323,7 +326,11 @@ for p in posts:
 
                 generated = True
 
-            monthfile = path.join(input, "blog", year, month, "index.md")
+            monthdir = path.join(yeardir, month)
+            if not path.exists(monthdir):
+                os.mkdir(monthdir)
+
+            monthfile = path.join(monthdir, "index.md")
             if not path.exists(monthfile):
                 print "Generating %s ..." % yearfile
 
