@@ -16,23 +16,23 @@ import time
 base_url = "http://leetcode.net"
 
 defaults = {
-	"author": "John Reese",
-	"tags": "",
+    "author": "John Reese",
+    "tags": "",
 
-	"time": "12:00:00",
+    "time": "12:00:00",
 
-	"menu-parent": "",
-	"menu-position": "",
-	"menu-title": "",
+    "menu-parent": "",
+    "menu-position": "",
+    "menu-title": "",
 
-	"crumb": "/",
+    "crumb": "/",
 
-	"logo": "LeetCode.net",
-	"logo-url": "/",
-	"tagline": "open source software engineering",
+    "logo": "LeetCode.net",
+    "logo-url": "/",
+    "tagline": "open source software engineering",
 
     "sig": """<p class="sig">&lambda;</p>""",
-	}
+    }
 page = dict(defaults)
 
 tagsplit = re.compile("(\w+(?:\s+\w+)*)")
@@ -40,79 +40,79 @@ tagsplit = re.compile("(\w+(?:\s+\w+)*)")
 ### Recursive Menu Structure
 
 def menu(page, parent=""):
-	menupages = pagelist(
-			key=lambda p: p["menu-position"] != "" and p["menu-parent"] == parent,
-			sortby=lambda p: int(p.get("menu-position"))
-			)
-	if (len(menupages) > 0):
-		print "<ul>"
-		for p in menupages:
-			title = p["menu-title"] if p["menu-title"] != "" else p["title"]
-			if page.url == p.url:
-				print """<li><a class="current" href="%s">%s</a>""" % (pretty(p.url), title)
-			else:
-				print """<li><a href="%s">%s</a>""" % (pretty(p.url), title)
-			menu(page, parent=p["menu-position"])
-			print "</li>"
-		print "</ul>"
+    menupages = pagelist(
+            key=lambda p: p["menu-position"] != "" and p["menu-parent"] == parent,
+            sortby=lambda p: int(p.get("menu-position"))
+            )
+    if (len(menupages) > 0):
+        print "<ul>"
+        for p in menupages:
+            title = p["menu-title"] if p["menu-title"] != "" else p["title"]
+            if page.url == p.url:
+                print """<li><a class="current" href="%s">%s</a>""" % (pretty(p.url), title)
+            else:
+                print """<li><a href="%s">%s</a>""" % (pretty(p.url), title)
+            menu(page, parent=p["menu-position"])
+            print "</li>"
+        print "</ul>"
 
 ### Breadcrumb Navigation
 
 def crumbs(page):
-	if "notitle" in page:
-		return
+    if "notitle" in page:
+        return
 
-	if "nocrumbs" in page:
-		print """<h1><a href="%s">%s</a></h1>""" % (pretty(page.url), page.title)
-		return
+    if "nocrumbs" in page:
+        print """<h1><a href="%s">%s</a></h1>""" % (pretty(page.url), page.title)
+        return
 
-	crumb_url = page.crumb
-	url = pretty(page.url)
-	if url.startswith(crumb_url):
-		url = url.split(crumb_url, 1)[1]
+    crumb_url = page.crumb
+    url = pretty(page.url)
+    if url.startswith(crumb_url):
+        url = url.split(crumb_url, 1)[1]
 
-	segments = url.split("/")
+    segments = url.split("/")
 
-	more = False
-	crumb_url = "/"
+    more = False
+    crumb_url = "/"
 
-	print "<h1>"
+    print "<h1>"
 
-	for segment in segments:
-		if segment == "":
-			continue
+    for segment in segments:
+        if segment == "":
+            continue
 
-		crumb_url += segment + "/"
-		pretty_url = pretty(crumb_url)
+        crumb_url += segment + "/"
+        pretty_url = pretty(crumb_url)
 
-		matching_pages = [p for p in pages if pretty(p.url) == pretty_url and p.title]
+        matching_pages = [p for p in pages if pretty(p.url) == pretty_url and p.title]
 
-		if len(matching_pages) > 0:
-			title = matching_pages[0].title
-			print """%s<a href="%s">%s</a>""" % (" &raquo; " if more else "", pretty_url, title)
-			more = True
+        if len(matching_pages) > 0:
+            title = matching_pages[0].title
+            print """%s<a href="%s">%s</a>""" % (" &raquo; " if more else "", pretty_url, title)
+            more = True
 
-	print "</h1>"
+    print "</h1>"
 
 ### Post Retrieval
 
 def pagelist(key=None, sortby=None, reverse=False, limit=None):
-	if key is None:
-		return []
+    if key is None:
+        return []
 
-	pagelist = [p for p in pages if key(p)]
+    pagelist = [p for p in pages if key(p)]
 
-	if sortby is None:
-		pagelist.sort(key=lambda p: p.get("title"))
-	else:
-		pagelist.sort(key=sortby, reverse=reverse)
+    if sortby is None:
+        pagelist.sort(key=lambda p: p.get("title"))
+    else:
+        pagelist.sort(key=sortby, reverse=reverse)
 
-	if limit is None:
-		return pagelist
-	elif len(pagelist) > limit:
-		return pagelist[0:limit]
-	else:
-		return pagelist
+    if limit is None:
+        return pagelist
+    elif len(pagelist) > limit:
+        return pagelist[0:limit]
+    else:
+        return pagelist
 
 ### Inline another page's content
 
@@ -120,109 +120,109 @@ inlineeom = re.compile("^---\s*$")
 startexcerpt = re.compile("^<!-- excerpt -->\s*$")
 endexcerpt = re.compile("^<!-- endexcerpt -->\s*$")
 def inline(page, title=True):
-	if title:
-		print "<h1><a href=\"%s\">%s</a></h1>" % (pretty(page.url), page.title)
-		metadata(page)
+    if title:
+        print "<h1><a href=\"%s\">%s</a></h1>" % (pretty(page.url), page.title)
+        metadata(page)
 
-	fi = open(page.fname)
-	input = fi.readlines()
-	fi.close()
+    fi = open(page.fname)
+    input = fi.readlines()
+    fi.close()
 
-	eom = False
-	excerpt = False
-	output = []
-	for line in input:
-		line = line.strip("\n")
-		if not eom:
-			if inlineeom.search(line):
-				eom = True
-				output = []
-				continue
+    eom = False
+    excerpt = False
+    output = []
+    for line in input:
+        line = line.strip("\n")
+        if not eom:
+            if inlineeom.search(line):
+                eom = True
+                output = []
+                continue
 
-		if startexcerpt.search(line):
-			output = []
-			continue
+        if startexcerpt.search(line):
+            output = []
+            continue
 
-		if endexcerpt.search(line):
-			excerpt = True
-			break
+        if endexcerpt.search(line):
+            excerpt = True
+            break
 
-		output.append(line)
+        output.append(line)
 
-	for line in output:
-		print line
+    for line in output:
+        print line
 
-	print ""
+    print ""
 
-	if excerpt:
-		print """<p class="excerpt"><a href="%s">Continue reading &raquo;</a></p>""" % pretty(page.url)
-	else:
-		print page.sig
+    if excerpt:
+        print """<p class="excerpt"><a href="%s">Continue reading &raquo;</a></p>""" % pretty(page.url)
+    else:
+        print page.sig
 
 ### Page metadata display
 
 def metadata(page, style="subtitle"):
-	if style == "subtitle":
-		if "date" in page:
-			timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
+    if style == "subtitle":
+        if "date" in page:
+            timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
 
-			print """<p class="metadata">"""
-			print """<span class="authored">Posted on %s</span>""" % (timestamp)
+            print """<p class="metadata">"""
+            print """<span class="authored">Posted on %s</span>""" % (timestamp)
 
-			if "tags" in page and page.tags:
-				tags = tagsplit.findall(page.tags)
-				taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (tag.replace(" ", "-"), tag) for tag in tags])
-				print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
+            if "tags" in page and page.tags:
+                tags = tagsplit.findall(page.tags)
+                taglist = ", ".join(["""<a href="/blog/tag/%s/">%s</a>""" % (tag.replace(" ", "-"), tag) for tag in tags])
+                print """<span class="tagged">&sect; Tagged as %s</span>""" % (taglist)
 
-			print """</p>"""
+            print """</p>"""
 
 ### Pretty URLs
 
 prettyurl = re.compile("^(.+/)?([^/]+)\.html$")
 def pretty(url):
-	match = prettyurl.search(url)
+    match = prettyurl.search(url)
 
-	if match:
-		file = match.group(2)
+    if match:
+        file = match.group(2)
 
-		if match.group(1) is None:
-			if match.group(2) == "index":
-				return "/"
-			else:
-				return "/%s/" % (file)
-		else:
-			dir = match.group(1).rstrip("/")
+        if match.group(1) is None:
+            if match.group(2) == "index":
+                return "/"
+            else:
+                return "/%s/" % (file)
+        else:
+            dir = match.group(1).rstrip("/")
 
-			if file == "index":
-				return "/%s/" % dir
-			else:
-				return "/%s/%s/" % (dir, file)
-	else:
-		return url
+            if file == "index":
+                return "/%s/" % dir
+            else:
+                return "/%s/%s/" % (dir, file)
+    else:
+        return url
 
 ### CleverCSS
 
 def once_clevercss():
-	print("Building CSS files...")
-	for ccss in glob.glob(os.path.join(input, "css/**.ccss")):
-		print("  %s" % (ccss))
-		css = ccss[len(input):].lstrip("/")
-		css = "%s.css" % os.path.splitext(css)[0]
-		css = os.path.join(output, css)
-		fpi = open(ccss)
-		fpo = open(css, 'w')
-		fpo.write(clevercss.convert(fpi.read()))
-		fpi.close()
-		fpo.close()
+    print("Building CSS files...")
+    for ccss in glob.glob(os.path.join(input, "css/**.ccss")):
+        print("  %s" % (ccss))
+        css = ccss[len(input):].lstrip("/")
+        css = "%s.css" % os.path.splitext(css)[0]
+        css = os.path.join(output, css)
+        fpi = open(ccss)
+        fpo = open(css, 'w')
+        fpo.write(clevercss.convert(fpi.read()))
+        fpi.close()
+        fpo.close()
 
 ### copy .htaccess to output directory
 
 def once_htaccess():
-	fi = open(os.path.join(input, ".htaccess"))
-	fo = open(os.path.join(output, ".htaccess"), "w")
-	fo.writelines(fi.readlines())
-	fi.close()
-	fo.close()
+    fi = open(os.path.join(input, ".htaccess"))
+    fo = open(os.path.join(output, ".htaccess"), "w")
+    fo.writelines(fi.readlines())
+    fi.close()
+    fo.close()
 
 ### RSS feed generation
 
@@ -244,49 +244,49 @@ _RSS = """<?xml version="1.0"?>
 
 _RSS_ITEM = """
 <item>
-	<title>%s</title>
-	<link>%s</link>
-	<description>%s</description>
-	<pubDate>%s</pubDate>
-	<guid>%s</guid>
+    <title>%s</title>
+    <link>%s</link>
+    <description>%s</description>
+    <pubDate>%s</pubDate>
+    <guid>%s</guid>
 </item>
 """
 
 def once_rss():
-	items = []
-	posts = pagelist(
-			key=lambda p: "date" in p,
-			sortby=lambda p: p.date,
-			reverse=True,
-			limit=5
-			)
-	for p in posts:
-		title = p.title
-		link = "%s%s" % (base_url, pretty(p.url))
-		desc = p.get("description", "")
-		date = time.mktime(time.strptime("%s %s" % (p.date, p.time), "%Y-%m-%d %H:%M:%S"))
-		date = email.utils.formatdate(date)
-		items.append(_RSS_ITEM % (title, link, desc, date, link))
+    items = []
+    posts = pagelist(
+            key=lambda p: "date" in p,
+            sortby=lambda p: p.date,
+            reverse=True,
+            limit=5
+            )
+    for p in posts:
+        title = p.title
+        link = "%s%s" % (base_url, pretty(p.url))
+        desc = p.get("description", "")
+        date = time.mktime(time.strptime("%s %s" % (p.date, p.time), "%Y-%m-%d %H:%M:%S"))
+        date = email.utils.formatdate(date)
+        items.append(_RSS_ITEM % (title, link, desc, date, link))
 
-	items = "".join(items)
+    items = "".join(items)
 
-	title = defaults["logo"]
-	link = "%s/blog/" % base_url
-	desc = defaults["tagline"]
-	date = email.utils.formatdate()
+    title = defaults["logo"]
+    link = "%s/blog/" % base_url
+    desc = defaults["tagline"]
+    date = email.utils.formatdate()
 
-	rss = _RSS % (title, link, desc, date, date, items)
+    rss = _RSS % (title, link, desc, date, date, items)
 
-	fp = open(os.path.join(output, "feed.xml"), 'w')
-	fp.write(rss)
-	fp.close()
+    fp = open(os.path.join(output, "feed.xml"), 'w')
+    fp.write(rss)
+    fp.close()
 
 ### Auto-generate archive pages
 
 def once_archive():
-	archivere = re.compile("blog/(\d+)/(\d+)/(.+)")
-	indexre = re.compile("index\.md$")
-	archivetemplate = """title: %s
+    archivere = re.compile("blog/(\d+)/(\d+)/(.+)")
+    indexre = re.compile("index\.md$")
+    archivetemplate = """title: %s
 menu-parent: %s
 menu-position: %s
 nocrumbs:
@@ -295,87 +295,87 @@ sig:
 {%%
 posts = pagelist(key=lambda p: p.get("date", "").startswith("%s"), sortby=lambda p: p.get("date"), reverse=True)
 for p in posts:
-	inline(p)
+    inline(p)
 %%}
 """
 
-	generated = False
-	menucount = 0
+    generated = False
+    menucount = 0
 
-	blogpages = pagelist(key=lambda p: p.get("date"), sortby=lambda p: p.get("date"), reverse=True)
-	for p in blogpages:
-		url = pretty(p.url)
+    blogpages = pagelist(key=lambda p: p.get("date"), sortby=lambda p: p.get("date"), reverse=True)
+    for p in blogpages:
+        url = pretty(p.url)
 
-		match = archivere.search(url)
-		if match:
-			year = match.group(1)
-			month = match.group(2)
+        match = archivere.search(url)
+        if match:
+            year = match.group(1)
+            month = match.group(2)
 
-			date = datetime.strptime(p.date, "%Y-%m-%d")
+            date = datetime.strptime(p.date, "%Y-%m-%d")
 
-			yearfile = path.join(input, "blog", year, "index.md")
-			if not path.exists(yearfile):
-				print "Generating %s ..." % yearfile
+            yearfile = path.join(input, "blog", year, "index.md")
+            if not path.exists(yearfile):
+                print "Generating %s ..." % yearfile
 
-				fo = open(yearfile, "w")
-				fo.write(archivetemplate % (year, "", "", year))
-				fo.close()
+                fo = open(yearfile, "w")
+                fo.write(archivetemplate % (year, "", "", year))
+                fo.close()
 
-				generated = True
+                generated = True
 
-			monthfile = path.join(input, "blog", year, month, "index.md")
-			if not path.exists(monthfile):
-				print "Generating %s ..." % yearfile
+            monthfile = path.join(input, "blog", year, month, "index.md")
+            if not path.exists(monthfile):
+                print "Generating %s ..." % yearfile
 
-				if menucount < 5:
-					parent = "9"
-					position = "9%d" % menucount
-					menucount += 1
-				else:
-					parent = "9"
-					position = ""
+                if menucount < 5:
+                    parent = "9"
+                    position = "9%d" % menucount
+                    menucount += 1
+                else:
+                    parent = "9"
+                    position = ""
 
-				fo = open(monthfile, "w")
-				fo.write(archivetemplate % (date.strftime("%B %Y"), parent, position, "%s-%s" % (year, month)))
-				fo.close()
+                fo = open(monthfile, "w")
+                fo.write(archivetemplate % (date.strftime("%B %Y"), parent, position, "%s-%s" % (year, month)))
+                fo.close()
 
-				generated = True
+                generated = True
 
-	if generated:
-		print "Restarting build process..."
-		os.execvp(sys.argv[0], sys.argv)
+    if generated:
+        print "Restarting build process..."
+        os.execvp(sys.argv[0], sys.argv)
 
 def once_tags():
-	tagtemplate = """title: %s
+    tagtemplate = """title: %s
 sig:
 ---
 {%%
 posts = pagelist(key=lambda p: "tags" in p and "%s" in tagsplit.findall(p.tags), sortby=lambda p: p.get("date"), reverse=True)
 for p in posts:
-	inline(p)
+    inline(p)
 %%}
 """
 
-	generated = False
-	tags = []
+    generated = False
+    tags = []
 
-	blogpages = pagelist(key=lambda p: p.get("tags"))
-	for p in blogpages:
-		tags.extend(tagsplit.findall(p.tags))
+    blogpages = pagelist(key=lambda p: p.get("tags"))
+    for p in blogpages:
+        tags.extend(tagsplit.findall(p.tags))
 
-	for tag in tags:
-		tagfile = path.join(input, "blog", "tag", tag.replace(" ", "-")+".md")
+    for tag in tags:
+        tagfile = path.join(input, "blog", "tag", tag.replace(" ", "-")+".md")
 
-		if not path.exists(tagfile):
-			print "Generating %s ..." % tagfile
+        if not path.exists(tagfile):
+            print "Generating %s ..." % tagfile
 
-			fo = open(tagfile, "w")
-			fo.write(tagtemplate % (tag, tag))
-			fo.close()
+            fo = open(tagfile, "w")
+            fo.write(tagtemplate % (tag, tag))
+            fo.close()
 
-			generated = True
+            generated = True
 
-	if generated:
-		print "Restarting build process..."
-		os.execvp(sys.argv[0], sys.argv)
+    if generated:
+        print "Restarting build process..."
+        os.execvp(sys.argv[0], sys.argv)
 
