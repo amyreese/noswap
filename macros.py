@@ -13,7 +13,7 @@ import re
 import sys
 import time
 
-base_url = "http://leetcode.net"
+base_url = "http://noswap.com"
 
 defaults = {
     "author": "John Reese",
@@ -27,7 +27,7 @@ defaults = {
 
     "crumb": "/",
 
-    "logo": "LeetCode.net",
+    "logo": "NoSwap.com",
     "logo-url": "/",
     "tagline": "open source software engineering",
 
