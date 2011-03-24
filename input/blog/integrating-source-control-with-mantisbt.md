@@ -5,7 +5,7 @@ nocrumbs:
 ---
 *Update: The information in this post is unfortunately out of date.  While much of the code samples are similar, the new method of creating new plugins has changed in subtle, but very significant ways.  Until a new guide can be written, please refer to the existing plugins for code examples.*
 
-Considering that my last post on <a href="http://leetcode.net/blog/2009/01/integrating-git-svn-with-mantisbt/">Integrating Git and SVN</a> has garnered a fair amount of attention, I thought that it would be useful to discuss my Source Integration framework in more detail.  Specifically, I'll be covering topics such as the design and implementation of the framework and, more importantly, how developers can go about implementing support for other version control tools.
+Considering that my last post on <a href="//leetcode.net/blog/2009/01/integrating-git-svn-with-mantisbt/">Integrating Git and SVN</a> has garnered a fair amount of attention, I thought that it would be useful to discuss my Source Integration framework in more detail.  Specifically, I'll be covering topics such as the design and implementation of the framework and, more importantly, how developers can go about implementing support for other version control tools.
 
 The point of this is to show that it's quite possible to integrate just about any type of version control tool with the Source Integration system; indeed I planned from the beginning to create a generalized framework that would support many different types and paradigms for version control.  This should at least be evident in that I have already created extension plugins for Git and Subversion - it should be quite possible to extend the concepts further to Mercurial, Bazaar, CVS, or any other tool.
 

@@ -3,7 +3,7 @@ tags: me, random
 date: 2009-04-27
 nocrumbs:
 ---
-<a href="http://www.explosm.net/comics/54/"><img alt="Happy birthday to me." src="http://files.leetcode.net/comics/explosm/happybirthday.jpg" width="432" height="388" /></a>
+<a href="http://www.explosm.net/comics/54/"><img alt="Happy birthday to me." src="//files.leetcode.net/comics/explosm/happybirthday.jpg" width="432" height="388" /></a>
 
 What's twenty-four?
 
