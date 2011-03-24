@@ -39,12 +39,13 @@ div#header:
 			color: #0D1117
 			font-family: $header
 			font-size: 4em
+			letter-spacing: -2px
 
 			&:hover:
 				text-decoration: none
 
 	div#tagline:
-		padding: 0 0 0 1em
+		padding: 0.4em 0 0 1em
 		font-family: $serif
 		font-size: 1.1em
 		line-height: 140%
