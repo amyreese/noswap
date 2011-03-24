@@ -45,7 +45,11 @@ def menu(page, parent=""):
             sortby=lambda p: int(p.get("menu-position"))
             )
     if (len(menupages) > 0):
-        print "<ul>"
+        if (parent == ""):
+            print "<ul id=\"pages\">"
+        else:
+            print "<ul>"
+
         for p in menupages:
             title = p["menu-title"] if p["menu-title"] != "" else p["title"]
             if page.url == p.url:

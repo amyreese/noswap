@@ -142,19 +142,10 @@ div#sidebar:
 			font-family: $serif
 			font-size: 1.4em
 
-		ul:
-			margin-top: 1em
-
-			li:
-				margin-top: 0.2em
-
-			ul:
-				margin: 0.2em 0 0.2em 1em
-
 		a:
 			color: #34425B
 			font-size: 1.2em
-			border-bottom: 1px solid #CCD0D6
+			border-bottom: 0px solid #DEE3E9
 			&:hover:
 				border-bottom: 1px solid #0D1117
 				text-decoration: none
@@ -163,6 +154,24 @@ div#sidebar:
 		a.current:
 			color: #0D1117
 			border-bottom: 1px solid #0D1117
+
+		ul#pages:
+			margin-top: 1em
+
+			li:
+				margin-top: 0.6em
+
+			ul:
+				margin: 0.2em 0 0.2em 1.5em
+
+				li:
+					margin-top: 0.2em
+
+		ul#links:
+			margin-top: 1em
+
+			li:
+				margin-top: 0.2em
 
 	div#meta:
 		p:
