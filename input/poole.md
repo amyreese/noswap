@@ -29,4 +29,4 @@ Happy hacking.
 [markdown]: http://daringfireball.net/projects/markdown/syntax "Markdown"
 [poole]: http://bitbucket.org/obensonne/poole/src "Poole"
 
-[1]: http://github.com/leetcode/leetcode "LeetCode.net repo on GitHub"
+[1]: http://github.com/jreese/noswap "NoSwap repo on GitHub"
