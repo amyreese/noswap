@@ -14,12 +14,17 @@ mdfiles=$(patsubst %.mdpp,%.md,$(mdppfiles))
 srcfiles=$(filter-out $(archives) $(tags) $(mdfiles),$(shell find input/))
 
 puburi=dyson:/srv/www/sites/noswap/pages/
+previewuri=dyson:/srv/www/sites/noswap/preview/
 
 build: .build
 
 .build: output page.html macros.py $(srcfiles) $(mdfiles)
 	$(poole) --build --ignore '^\.|~$$|\.ccss$$|\.mdpp$$|\.swp$$'
 	touch .build
+
+.PHONY:
+preview: build
+	rsync -avz --delete output/ $(previewuri)
 
 .PHONY:
 publish: build
