@@ -168,7 +168,7 @@ def inline(page, title=True):
 def metadata(page, style="subtitle"):
     if style == "subtitle":
         if "date" in page:
-            timestamp = datetime.strptime(page.date, "%Y-%m-%d").strftime("%B %d, %Y")
+            timestamp = datetime.strptime(page.date[0:10], "%Y-%m-%d").strftime("%B %d, %Y")
 
             print """<p class="metadata">"""
             print """<span class="authored">Posted on %s</span>""" % (timestamp)
@@ -268,7 +268,7 @@ def once_rss():
         title = p.title
         link = "%s%s" % (base_url, pretty(p.url))
         desc = p.get("description", "")
-        date = time.mktime(time.strptime("%s %s" % (p.date, p.time), "%Y-%m-%d %H:%M:%S"))
+        date = time.mktime(time.strptime("%s %s" % (p.date[0:10], p.time), "%Y-%m-%d %H:%M:%S"))
         date = email.utils.formatdate(date)
         items.append(_RSS_ITEM % (title, link, desc, date, link))
 
@@ -314,7 +314,7 @@ for p in posts:
             year = match.group(1)
             month = match.group(2)
 
-            date = datetime.strptime(p.date, "%Y-%m-%d")
+            date = datetime.strptime(p.date[0:10], "%Y-%m-%d")
 
             yeardir = path.join(input, "blog", year)
             if not path.exists(yeardir):
