@@ -110,6 +110,9 @@ div#content:
 		list-style: disc outside none
 		margin: 0.2em 2em 0.2em 2em
 
+	img:
+		border: 1px solid #CCD0D6
+
 	.excerpt:
 		font-size: 0.85em
 
