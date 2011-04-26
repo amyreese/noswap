@@ -110,6 +110,9 @@ div#content:
 		list-style: disc outside none
 		margin: 0.2em 2em 0.2em 2em
 
+		a:
+			text-decoration: underline
+
 	img:
 		border: 1px solid #CCD0D6
 
