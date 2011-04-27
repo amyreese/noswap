@@ -104,7 +104,7 @@ div#content:
 
 	code:
 		font-family: $monospace
-		font-size: 0.9em
+		font-size: 0.8em
 
 	li:
 		list-style: disc outside none
