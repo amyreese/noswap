@@ -59,24 +59,28 @@ div#content:
 		font-family: $header
 		font-size: 1.7em
 		line-height: 120%
+		text-align: left
 
 	h2:
 		margin-top: 1.5em;
 		font-family: $header
 		font-size: 1.6em
 		line-height: 120%
+		text-align: left
 
 	h3:
 		margin-top: 1.5em;
 		font-family: $header
 		font-size: 1.4em
 		line-height: 120%
+		text-align: left
 
 	h4:
 		margin-top: 1.5em;
 		font-family: $header
 		font-size: 1.2em
 		line-height: 120%
+		text-align: left
 
 	a:
 		color: #34425B
