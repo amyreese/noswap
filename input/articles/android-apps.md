@@ -5,14 +5,28 @@ date: 2011-06-23
 nocrumbs:
 ---
 This past Friday, I bought the new [Samsung Galaxy Tab 10.1][galaxytab10], and I absolutely love it.
-Seeing the differences in interfaces and interaction patterns between the two form factors has
-given me some further insight into what applications are my favorite, and which applications are
-well designed and implemented. Some apps are best for my phone, and some have just come into their
-own on the tablet form factor.
+The new Honeycomb interface looks amazing, and is quite an improvement over what's available on my
+Nexus S with Gingerbread.  I love that the back, home, and task switching buttons are now rendered
+on the screen instead of having hardware buttons, and combining those buttons into the notification
+and status bar means you don't even lose screen space compared to previous versions.  The new
+application switcher looks really nice, but does seem to have some odd behaviors, like not showing
+the browser that I just switched away from, or seemingly choosing at random whether to display the
+list from the top instead of from the bottom where you would expect.
 
-So in no particular order:
+There are a lot of applications that don't yet take advantage of what's offered by the Honeycomb
+APIs, but still tend to work really well.  It mainly depends on how well the author designed the
+application to scale with the user's screen size and density.  An example of doing it wrong is the
+official Facebook app; it's still usable mind you, but it certainly looks dumb in process,
+showing the main menu as a large grid of tiny icons with massive amounts of whitespace between
+them.  It would have gone a long way if they had simply scaled the images to fill the screen.
 
--   [Locale][locale-market]
+I've been meaning to write about some of my most cherished apps, and seeing them in new form has
+given me an even better reason to get to it.  Some of them really only work well on a phone, and
+others have only gotten better than ever when given a tablet form factor to call their own.  So
+in no particular order, here are my favorite apps for Android.  All prices are rounded up from
+Market estimates at time of writing, and all screenshots are taken from my devices:
+
+-   **[Locale][locale-market]** - $10
 
     I've already spent an entire blog entry talking about [why I like Locale][locale-noswap], but I still
 	have to mention it again.  It's one of the most useful apps on my phone, and I don't even have
@@ -25,7 +39,7 @@ So in no particular order:
 	>  
 	> <small>Tapping a situation allows you to define its conditions and settings.</small>
 
--   [Google Voice][]
+-   **[Google Voice][]** - Free
 
 	Probably one of the best examples of Android app integration, Google Voice transforms your standard cell
 	phone into just another devices that can send and receive voice calls or text messages using a central
@@ -45,7 +59,7 @@ So in no particular order:
 	since it was in private beta, and I've never looked back.  The only way it could get better is by
 	supporting SIP devices so I wouldn't even need a voice plan for my phone.
 
--   [K-9 Mail][k9mail-market]
+-   **[K-9 Mail][k9mail-market]** - Free
 
     K-9 is an interesting application to review.  It's code is loosely based on the bog standard Email client
 	that's bundled with every Android device; it's open source and actively maintained by its developers.
@@ -83,7 +97,7 @@ So in no particular order:
 	Overall though, it's still an excellent email client, and I would recommend it without hesitation to
 	anyone planning to use their phone with an IMAP email account.
 
--   [AndChat][andchat-market]
+-   **[AndChat][andchat-market]** - Free or $4 Donation
 
 	My primary method of communicating in real time, outside of SMS to talk with family, is done through IRC.
 	I enjoy IRC so much that I even setup [Bitlbee][] on my server so that I can use my IRC client to talk
@@ -123,7 +137,7 @@ So in no particular order:
 	recommend it to anyone heavily versed in IRC, and encourage you to buy the donation version on the
 	Market to support its developers.
 
--   [ConnectBot][connectbot-market]
+-   **[ConnectBot][connectbot-market]** - Free
 
 	I'll admit it, I'm a Linux nerd, and I find myself needing to connect to my server sometimes when I'm not
 	at my desktop, so I need a good SSH client.  ConnectBot is far away the best one to be found on Android,
@@ -152,7 +166,7 @@ So in no particular order:
 	even a modified version on the Market called [Irssi ConnectBot][irssi-connectbot-market] with some
 	extra gestures and features dedicated to making it even easier to use Irssi from your phone.  Pure gold.
 
--   [Hacker's Keyboard][hackerskeyboard-market]
+-   **[Hacker's Keyboard][hackerskeyboard-market]** - Free
 
 	When using something like ConnectBot, the standard system keyboard is definitely lacking some essential
 	keys, especially on devices like Samsung's phones that don't have a trackball or hardware arrow keys.  I
@@ -179,7 +193,7 @@ So in no particular order:
 	touchscreen.  I've even been able to write C++ code without any issues; I don't think I can give it any
 	higher praise than that.
 
--   [Plume][plume-market]
+-   **[Plume][plume-market]** - Free or $3 Ad-free
 
     Compared to the official Twitter client on Android, Plume is both more featureful and more friendly.
 	It shows your time line, mentions and direct messages as separate columns; on a phone, you can swipe
@@ -195,7 +209,7 @@ So in no particular order:
 	>  
 	> <small>Tapping on a tweet pops up a contextual action menu.</small>
 
--   [Read It Later][readitlater-market]
+-   **[Read It Later][readitlater-market]** - Free or $3 Pro
 
 	When I find articles that I don't have time to read, or discussions that I would like to keep tabs on,
 	I use the Read it Later bookmarklet to add it to my list, and I can either bring it up from my browser,
@@ -212,7 +226,7 @@ So in no particular order:
 	>  
 	> <small>When viewing an article, you can choose between text-only and web formats.</small>
 
--   [Pulse][pulse-market]
+-   **[Pulse][pulse-market]** - Free
 
 	Pulse is a news app with style.  You define the news sources you like and it displays a grid of articles,
 	each represented by a large image pulled from the article itself.  Swiping left and right allows you to
@@ -232,7 +246,7 @@ So in no particular order:
 	>  
 	> <small>Pulse makes it easy to switch between articles while viewing them.</small>
 
--   [DoggCatcher][doggcatcher-market]
+-   **[DoggCatcher][doggcatcher-market]** - $7
 
 	I generally listen to about three or four podcasts a week, usually from the fantastic
 	[5 by 5 network][5by5], and DoggCatcher is an excellent way to manage them.  The interface is well
@@ -249,7 +263,7 @@ So in no particular order:
 	>  
 	> <small>Pulling on the tab shows you the description for the current episode.</small>
 
--   [Pandora][pandora-market]
+-   **[Pandora][pandora-market]** - Free
 
 	When I'm not listening to podcasts at work, I'm listening to Pandora.  Quite simply the best streaming
 	music service around, where I get to hear both my personal favorites of all genres and a mix of new
@@ -263,7 +277,7 @@ So in no particular order:
 	>  
 	> <small>Simple and elegant.</small>
 
--   [Dropbox][dropbox-market]
+-   **[Dropbox][dropbox-market]** - Free
 
 	Allows me to view documents and photos from my phone or tablet when I'm not at home, as well as upload
 	new files or pictures on the fly.  Existing or freshly uploaded files can then be "shared" to other apps
