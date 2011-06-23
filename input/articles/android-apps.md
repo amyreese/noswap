@@ -26,6 +26,10 @@ others have only gotten better than ever when given a tablet form factor to call
 in no particular order, here are my favorite apps for Android.  All prices are rounded up from
 Market estimates at time of writing, and all screenshots are taken from my devices:
 
+[galaxytab10]: http://www.amazon.com/gp/product/B00519RW1U?ie=UTF8&tag=recomprogrboo-20&linkCode=xm2&camp=1789&creativeASIN=B00519RW1U
+
+<!-- endexcerpt -->
+
 -   **[Locale][locale-market]** - $10
 
     I've already spent an entire blog entry talking about [why I like Locale][locale-noswap], but I still
@@ -291,7 +295,6 @@ Market estimates at time of writing, and all screenshots are taken from my devic
 	>  
 	> <small>Dropbox shows you what files you have downloaded locally.</small>
 
-[galaxytab10]: http://www.amazon.com/gp/product/B00519RW1U?ie=UTF8&tag=recomprogrboo-20&linkCode=xm2&camp=1789&creativeASIN=B00519RW1U
 [google voice]: https://www.google.com/voice
 [instapaper]: http://www.instapaper.com
 
