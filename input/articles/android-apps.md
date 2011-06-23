@@ -1,7 +1,8 @@
 title: Favorite Android Apps
-description: Some of my favorite and most-used apps on my phone and tablet.
-tags: android
-date: 2011-06-22
+description: A very long article in which I discuss some of my favorite and most-used apps for my Android phone and tablet.
+tags: article, android, me, mobile, screenshot
+date: 2011-06-23
+nocrumbs:
 ---
 This past Friday, I bought the new [Samsung Galaxy Tab 10.1][galaxytab10], and I absolutely love it.
 Seeing the differences in interfaces and interaction patterns between the two form factors has
