@@ -57,7 +57,10 @@ So in no particular order:
 	usage report screen.
 
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-phone-inbox.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-phone-inbox.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-tablet-inbox.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-tablet-inbox.png)
+	>  
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-phone-list.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-phone-list.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-tablet-list.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/k9mail-tablet-list.png)
 	>  
 	> <small>Selecting multiple messages displays batch actions, with more available on the menu.</small>
 
@@ -89,6 +92,7 @@ So in no particular order:
 	I'm not at a desktop to connect to [Irssi][] on my server, AndChat is my go-to client on Android.
 
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/andchat-phone-channel.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/andchat-phone-channel.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/andchat-tablet-channel.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/andchat-tablet-channel.png)
 	>  
 	> <small>A simple but useful IRC client.</small>
 
@@ -131,6 +135,7 @@ So in no particular order:
 	even customize the size of terminal text, or open a local terminal on your own phone.
 
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/connectbot-phone.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/connectbot-phone.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/connectbot-tablet.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/connectbot-tablet.png)
 	>  
 	> <small>It's Linux all the way down.</small>
 
@@ -158,6 +163,7 @@ So in no particular order:
 	into the same space.
 
 	> [<img height="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/hackerskeyboard-phone.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/hackerskeyboard-phone.png)
+	> [<img height="200"" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/hackerskeyboard-tablet.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/hackerskeyboard-tablet.png)
 	>  
 	> <small>Five rows of keys makes vim usable even on a phone.</small>
 
@@ -183,6 +189,9 @@ So in no particular order:
 	leave Plume, the next time you open it, it starts you where you left off.
 
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/plume-phone.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/plume-phone.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/plume-tablet-list.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/plume-tablet-list.png)
+	>  
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/plume-tablet-tweet.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/plume-tablet-tweet.png)
 	>  
 	> <small>Tapping on a tweet pops up a contextual action menu.</small>
 
@@ -216,7 +225,10 @@ So in no particular order:
 	up from my tablet when I get home, although I still prefer to use Read it Later for that...
 
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-phone-grid.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-phone-grid.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-tablet-grid.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-tablet-grid.png)
+	>  
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-phone-article.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-phone-article.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-tablet-article.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/pulse-tablet-article.png)
 	>  
 	> <small>Pulse makes it easy to switch between articles while viewing them.</small>
 
@@ -247,6 +259,7 @@ So in no particular order:
 	instead of the phone's data connection.
 
 	> [<img width="120" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/pandora-phone.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/pandora-phone.png)
+	> [<img height="200" src="http://dl.dropbox.com/u/7859496/Screenshots/Android/pandora-tablet.png"/>](http://dl.dropbox.com/u/7859496/Screenshots/Android/pandora-tablet.png)
 	>  
 	> <small>Simple and elegant.</small>
 
