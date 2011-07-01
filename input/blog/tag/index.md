@@ -1,4 +1,5 @@
 title: Tags
+rel:
 ---
 {%
 tags = []

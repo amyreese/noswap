@@ -32,6 +32,8 @@ defaults = {
     "tagline": "open source software engineering",
 
     "sig": """<p class="sig">&lambda;</p>""",
+    "rel": "author",
+    "link": "https://profiles.google.com/111348339961490289797",
     }
 page = dict(defaults)
 
@@ -171,7 +173,8 @@ def metadata(page, style="subtitle"):
             timestamp = datetime.strptime(page.date[0:10], "%Y-%m-%d").strftime("%B %d, %Y")
 
             print """<p class="metadata">"""
-            print """<span class="authored">Posted on %s</span>""" % (timestamp)
+            print """<span class="authored">Posted by <a rel="%s" href="%s">%s</a> on %s</span>""" % (
+                page.rel, page.link, page.author, timestamp)
 
             if "tags" in page and page.tags:
                 tags = tagsplit.findall(page.tags)
@@ -294,6 +297,7 @@ menu-parent: %s
 menu-position: %s
 nocrumbs:
 sig:
+rel:
 ---
 {%%
 posts = pagelist(key=lambda p: p.get("date", "").startswith("%s"), sortby=lambda p: p.get("date"), reverse=True)
@@ -359,6 +363,7 @@ for p in posts:
 def once_tags():
     tagtemplate = """title: %s
 sig:
+rel:
 ---
 {%%
 posts = pagelist(key=lambda p: "tags" in p and "%s" in tagsplit.findall(p.tags), sortby=lambda p: p.get("date"), reverse=True)
