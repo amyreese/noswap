@@ -31,6 +31,7 @@ defaults = {
     "logo-url": "/",
     "tagline": "open source software engineering",
 
+    "comments": "",
     "sig": """<p class="sig">&lambda;</p>""",
     "rel": "author",
     "link": "https://profiles.google.com/111348339961490289797",
@@ -206,6 +207,21 @@ def pretty(url):
                 return "/%s/%s/" % (dir, file)
     else:
         return url
+
+### Disqus Comments
+
+def disqus():
+    return """\
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'noswap';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+"""
 
 ### CleverCSS
 

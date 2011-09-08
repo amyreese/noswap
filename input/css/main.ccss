@@ -143,6 +143,9 @@ div#content:
 		a:
 			color: #9AA1AE
 
+div#dsq-content:
+    font-size: 85% !important
+
 div#sidebar:
 	div:
 		margin: 2em 0 2em 2.2em
