@@ -1,8 +1,9 @@
 title: IRC, My Way
 description: I describe my IRC setup, how I chat on the go, and how I use my IRC client to chat on AIM and Google Talk.
 tags: article, irc, chat, znc
-date: 2011-09-08
+date: 2011-09-13
 nocrumbs:
+comments: yes
 ---
 This is a post I've been meaning to write for a long time.  I have a rather
 complicated setup involving multiple layers, but the end result is amazing.
@@ -19,8 +20,11 @@ at my leisure and from any location.  I never miss a private message because
 I was connected from the wrong place, other users always see a single nick,
 and I get a central, searchable history of every channel and private message.
 
-For each layer, I'll detail the tasks it covers, the software I've chosen, and
-give a copy of any configuration files or options needed to replicate my setup.
+With this sort of setup, I gain a lot of freedom -- to deal with conversations
+on my terms -- and convenience.  It's served me well for a couple years, and
+I've enjoyed IRC much more since putting it all together.  For each layer, I'll
+detail the tasks it covers, the software I've chosen, and give a copy of any
+configuration files or options needed to replicate my environment.
 
 <!-- endexcerpt -->
 
@@ -48,6 +52,12 @@ preferences and managing user accounts.  It also supports SSL on both sides of
 the connection, allowing me to remain confident that nobody can eavesdrop on my
 private conversations.
 
+ZNC makes a distinction between global modules and user modules.  I personally
+use the global fail2ban module for security from brute-force login attempts.
+For each user, I generally enable the chansaver, log, and perform modules.
+I also set channel buffer sizes to 100, and prepend timestamps -- without the
+seconds -- so that I have plenty of context when connecting to the bouncer.
+
 For my purposes, I build ZNC from upstream source releases so that I can apply
 a [query buffering patch](https://gist.github.com/1206300); this patch forces
 ZNC to buffer incoming private messages, even if a client is already connected.
@@ -66,31 +76,19 @@ the following commands, substituting the release version where necessary:
 	$ ./configure --prefix=/usr/local --enable-extra
 	$ make && make install
 
-Once you've installed ZNC, you need to run `znc-config` (as your own account,
-not root) to generate a default configuration.  From there, running `znc` will
-start the bouncer and it's web client.  Logging in to the web client will allow
-you to add new users, modify what modules are loaded, and update your
-configuration.
-
-ZNC makes a distinction between global modules and user modules.  I personally
-use the global fail2ban module for security from brute-force login attempts.
-For each user, I generally enable the chansaver, log, and perform modules.
-I also set channel buffer sizes to 100, and prepend timestamps, so that I have
-plenty of context when connecting to the server.
 
 ### Instant Message Bridge
 
-In order to have a single location for asynchronous chat, I use [Bitlbee][] to
-bridge the connection between ZNC and instant messaging services, including
-AIM and Google Talk.  Bitlbee acts a lot like an IRC bouncer, except that it
-implements multiple chat protocols, and exposes them all as a single, private
-IRC network.
+In order to have a single location for all asynchronous chat, I use [Bitlbee][]
+to bridge the gap between ZNC and instant messaging services, including AIM and
+Google Talk.  Bitlbee acts a lot like an IRC bouncer, except that it implements
+multiple chat protocols, and exposes them all as a single, private IRC network.
 
-Conversations can either show up in a single main IRC channel, or as private
-messages, depending on your preferences.  Online "buddies" show up as nicks
-in the main channel, and away status uses a combination of voiced nicks and the
-standard /away mechanism.  IM users don't know that you're using an IRC client
-to chat with them, and conversations feel just like any other IRC network.
+Online "buddies" show up as nicks in the main channel, devoiced when away.
+Conversations can show up in a single main IRC channel or as private messages,
+depending on your preferences, while group chats happen in named channels.
+IM users don't know that you're using an IRC client to chat with them, and
+conversations feel just like any other IRC network.
 
 In my setup, I have ZNC connect to Bitlbee, so that it maintains a permanent
 presence, and centralizes the history logs from both IRC and all the IM
@@ -115,12 +113,13 @@ the existing session.  When I get to work in the mornings, or get back home in
 the evenings, I just type `irc` into a terminal, and I have Irssi back on the
 screen, exactly as I left it.
 
-To accomplish this, I set up a custom `.screenrc.irssi`, a server-side shell
-script, and a shell alias that turns a local `irc` command into a series of
-automated actions.  They log me in to the remote server, set up my environment,
-and either attach to screen, or start a new session in case it's not already
-running.  For those unfamiliar with the use of Screen, there's a good article
-[written by Matt Sparks][IrssiScreen] that covers the basics pretty well.
+To accomplish this, I set up a custom `.screenrc`, a server-side shell script,
+and a shell alias that turns a local `irc` command into a series of automated
+actions.  They log me in to the remote server, set up my environment, and
+either attach to screen, or start a new session in case it's not already
+running.  For those unfamiliar with the use of Screen, there's a great guide
+for [Irssi and Screen][IrssiScreen] written by Matt Sparks that covers the
+basics pretty well.
 
 ~/bin/screen-irc
 
@@ -153,10 +152,10 @@ when scrolling through the backlog.
 Instead, I generally prefer to use [AndChat][], a native IRC client for Android.
 It supports multiple networks, SSL connections, and works great both on phones
 and on tablets with Honeycomb.  When it connects, ZNC sends its buffer of recent
-conversation, any buffered private messages, and I can proceed to chat without
-anyone knowing or caring that I've switched to a mobile device.  When I get
-back to a terminal, I can pick up on my conversations without any interruption,
-and all of my mobile chat is still logged by ZNC.
+conversations, and I can proceed to chat without anyone knowing or caring that
+I've switched to a mobile device.  When I get back to a terminal, I can pick
+up on my conversations without any interruption, and all of my mobile chat is
+still logged by ZNC.
 
 
 ### Notifications
@@ -230,6 +229,9 @@ Colloquy can handle both the IRC client and push notifications, but for those
 with a different IRC client, [Prowl][] is also available.  Both services
 already have modules available for ZNC, though lacking the high level of
 configuration in my Notifo module.
+
+If you have any further suggestions, or if you have questions about my setup,
+feel free to share them in the comments.
 
 
 [AndChat]: http://www.andchat.net/
