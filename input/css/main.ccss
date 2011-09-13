@@ -105,10 +105,12 @@ div#content:
 		padding: 1em 1.5em
 		line-height: 110%
 		font-size: 0.9em
+		overflow: auto
 
 	code:
 		font-family: $monospace
 		font-size: 0.8em
+		overflow: inherit
 
 	li:
 		list-style: disc outside none
