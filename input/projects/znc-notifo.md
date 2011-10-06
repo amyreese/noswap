@@ -1,11 +1,14 @@
 title: ZNC to Notifo
 description: Notification module for ZNC and Notifo.com
-tags: znc
+tags: irc, znc
 date: 2011-01-03
-menu-parent: 5
-menu-position: 59
 sig:
 ---
+
+**Update:**
+ZNC to Notifo has been renamed to [ZNC Push][], and given support for multiple push
+notifications services, including [Boxcar][] and [Prowl][].  Please update your links
+to the new [ZNC Push][] page.
 
 ZNC to Notifo is a module for [ZNC][] that will send notifications to a [Notifo][] account
 for any private message or channel highlight that matches a configurable set of conditions,
@@ -16,6 +19,10 @@ The module is released under the MIT license, and the source code and documentat
 found on the project's [Github repository][github] page.
 
 [github]: http://github.com/jreese/znc-notifo "ZNC to Notifo on Github"
-[Notifo]: http://notifo.com "Notifo, Mobile Notifications for Everything"
 [ZNC]: http://en.znc.in "ZNC, an advanced IRC bouncer"
+[ZNC Push]: /projects/znc-push/
+
+[Boxcar]: http://boxcar.io
+[Notifo]: http://notifo.com
+[Prowl]: http://www.prowlapp.com
 
