@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" itemscope itemtype="http://schema.org/Blog">
 <head>
     <title>{% if page.title: print "%s - " % page.title %}{{page.logo }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={{ __encoding__ }}" />
@@ -17,6 +17,12 @@
 	<link rel="openid.delegate" href="https://login.launchpad.net/+id/XCcfGeH" /> 
 	<link rel="openid2.provider" href="https://login.launchpad.net/+openid" /> 
 	<link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" /> 
+
+{%
+if "date" in page:
+	if "title" in page: print '<meta itemprop="name" content="%s"/>' % page.title
+	if "description" in page: print '<meta itemprop="description" content="%s"/>' % page.description
+%}
 </head>
 <body>
 	<div id="wrapper">
