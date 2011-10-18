@@ -1,5 +1,5 @@
 title: EA BioWare
-description: I got a job offer from EA BioWare, and will be moving to San Francisco
+description: I got a job offer from EA BioWare, as a Platform Systems Engineer, and will be moving to San Francisco!
 date: 2011-10-18
 tags: me, jobs, games
 ---

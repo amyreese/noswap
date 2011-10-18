@@ -20,7 +20,7 @@
 
 {%
 if "date" in page:
-	if "title" in page: print '<meta itemprop="name" content="%s"/>' % page.title
+	if "title" in page: print '<meta itemprop="name" content="%s - {{page.logo}}"/>' % page.title
 	if "description" in page: print '<meta itemprop="description" content="%s"/>' % page.description
 %}
 </head>
