@@ -27,7 +27,7 @@ developer knowledgeable in that version control tool to write a simple integrati
 is already an integration layer in the works for both Mercurial and Perforce.
 
 This framework can be seen in use on the official [MantisBT][] tracker, as well as on my own [bugtracker][].
-The source code can be found on [MantisForge][] or cloned from the [Source Integration repo][sourcerepo].
+The source code can be found on [GitHub][] or cloned from the [Source Integration repo][sourcerepo].
 
 {%
 posts = pagelist(key=lambda p: "tags" in p and "source integration" in tagsplit.findall(p.tags), sortby=lambda p: p.get("date"), reverse=True)
@@ -37,6 +37,7 @@ for p in posts:
 
 [mantisbt]: http://www.mantisbt.org/ "Mantis Bug Tracker"
 [mantisforge]: http://git.mantisforge.org/ "MantisForge"
+[github]: http://github.com "GitHub"
 [bugtracker]: http://leetcode.net/mantis/ "LeetCode.net Bugtracker"
-[sourcerepo]: git://git.mantisforge.org/source-integration.git "Source Integration Repository"
+[sourcerepo]: http://github.com/mantisbt-plugins/source-integration/ "Source Integration Repository"
 
