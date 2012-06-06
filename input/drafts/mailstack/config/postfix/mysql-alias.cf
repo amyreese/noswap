@@ -1,6 +1,0 @@
-hosts = 127.0.0.1
-dbname = vmail
-user = vmail
-password = dbpassword
-
-query = SELECT goto FROM alias WHERE address='%s' AND active = '1'
