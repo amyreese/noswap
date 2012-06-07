@@ -213,7 +213,7 @@ def pretty(url):
 def livefyre():
     return """\
 <!-- START: Livefyre Embed -->
-<script type='text/javascript' src='http://www.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
+<script type='text/javascript' src='https://www.livefyre.com/wjs/v1.0/javascripts/livefyre_init.js'></script>
 <script type='text/javascript'>
     var fyre = LF({
         site_id: 289411,
