@@ -58,7 +58,6 @@ if "date" in page:
 			</div>
 			<div id="meta">
 				<ul>
-					<li><div class="g-plusone" data-size="medium"></div></li>
 					<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="//files.leetcode.net/linode.png" alt="Linode" /></a></li>
 				</ul>
 			</div>
@@ -76,26 +75,17 @@ if "date" in page:
 		</div>
 	</div>
 
-	<!-- Piwik -->
+	<!-- Google Analytics (sorry) -->
 	<script type="text/javascript">
-		var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.leetcode.net/piwik/" : "http://stats.leetcode.net/piwik/");
-		document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-		try {
-			var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 5);
-			piwikTracker.trackPageView();
-			piwikTracker.enableLinkTracking();
-		} catch( err ) {}
-	</script><noscript><p><img src="//stats.leetcode.net/piwik/piwik.php?idsite=5" style="border:0" alt="" /></p></noscript>
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-32449453-1']);
+	  _gaq.push(['_trackPageview']);
 
-	<!-- Google +1 -->
-	<script type="text/javascript">
-		(function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		})();
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
 	</script>
 
 </body>
