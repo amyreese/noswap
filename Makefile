@@ -2,7 +2,7 @@
 # Copyright (C) 2010 John Reese
 # Licensed under the MIT license
 
-poole=$(shell which python2) poole.py
+poole=./poole.py
 
 archives=$(shell find input/blog/ -mindepth 2 -regex '.*/[0-9]+/index.md')
 tags=$(shell find input/blog/tag/ -mindepth 1 -name 'index.md' -prune -o -print)
@@ -10,7 +10,7 @@ tags=$(shell find input/blog/tag/ -mindepth 1 -name 'index.md' -prune -o -print)
 srcfiles=$(filter-out $(archives) $(tags),$(shell find input/))
 
 puburi=liara:/srv/www/noswap/
-previewuri=dyson:/srv/www/sites/noswap/preview/
+previewuri=liara:/srv/www/noswap-preview/
 
 build: .build
 
