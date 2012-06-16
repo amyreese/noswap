@@ -1,0 +1,42 @@
+// Fonts
+@sans: "Open Sans", sans-serif;
+@serif: "Volkhov", serif;
+@title: "Volkhov", serif;
+@monospace: "Anonymous Pro", monospace;
+
+// Defaults
+body
+{
+	background: #f9f9f9;
+	color: #222222;
+
+	font-family: @sans;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 120%;
+}
+
+// Layout
+@divider: #ccd0d6;
+@sidebar-width: 220px;
+
+#sidebar
+{
+	position: fixed;
+	width: @sidebar-width;
+	top: 0;
+	right: 0;
+    margin-top: 36px;
+    border-left: 1px solid @divider;
+    padding: 10px;
+}
+#wrapper
+{
+    width: 100%;
+    margin-left: -@sidebar-width;
+}
+#main, #footer
+{
+    margin-left: @sidebar-width;
+}

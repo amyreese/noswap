@@ -1,16 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" itemscope itemtype="http://schema.org/Blog">
+<!DOCTYPE html>
+<html>
 <head>
     <title>{% if page.title: print "%s - " % page.title %}{{page.logo }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={{ __encoding__ }}" />
 
 	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
-	<script type="text/javascript" src="https://use.typekit.com/txv8bvy.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-    <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="/css/layout.css" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link href='http://fonts.googleapis.com/css?family=Volkhov:400,700|Anonymous+Pro' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&subset=latin,greek' rel='stylesheet' type='text/css' />
+
 	<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS Feed" />
 
 	<link rel="openid.server" href="https://login.launchpad.net/+openid" /> 
@@ -43,24 +41,6 @@ if "date" in page:
 				</div>
 			</div>
 		</div>
-		<div id="sidebar">
-			<div id="menu">
-				<h3>Pages</h3>
-				{% menu(page) %}
-
-				<h3>More</h3>
-				<ul id="links">
-					<li><a href="http://github.com/jreese/">GitHub</a></li>
-					<li><a href="https://plus.google.com/111348339961490289797">Google+</li>
-					<li><a href="http://www.linkedin.com/in/johnreese">LinkedIn</a></li>
-				</ul>
-			</div>
-			<div id="meta">
-				<ul>
-					<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" alt="Linode" /></a></li>
-				</ul>
-			</div>
-		</div>
 		<div id="footer">
 			<span class="copyright">
 				Copyright &copy; John Reese
@@ -71,6 +51,25 @@ if "date" in page:
 			<span class="generator">
 				<a href="/poole/">Generated using Poole</a>
 			</span>
+		</div>
+	</div>
+
+	<div id="sidebar">
+		<div id="menu">
+			<h3>Pages</h3>
+			{% menu(page) %}
+
+			<h3>More</h3>
+			<ul id="links">
+				<li><a href="http://github.com/jreese/">GitHub</a></li>
+				<li><a href="https://plus.google.com/111348339961490289797">Google+</li>
+				<li><a href="http://www.linkedin.com/in/johnreese">LinkedIn</a></li>
+			</ul>
+		</div>
+		<div id="meta">
+			<ul>
+				<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" alt="Linode" /></a></li>
+			</ul>
 		</div>
 	</div>
 

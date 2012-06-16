@@ -12,11 +12,16 @@ srcfiles=$(filter-out $(archives) $(tags),$(shell find input/))
 puburi=liara:/srv/www/noswap/
 previewuri=liara:/srv/www/noswap-preview/
 
-build: .build
+.PHONY:
+build: .output .presentation .content
 
-.build: output page.html macros.py $(srcfiles)
+.content: .output page.html macros.py $(srcfiles)
 	$(poole) --build --ignore '^\.|~$$|\.ccss$$|\.swp$$'
-	touch .build
+	touch .content
+
+.presentation: .output .content main.less
+	lessc main.less > output/css/main.css
+	touch .presentation
 
 .PHONY:
 preview: build
@@ -28,11 +33,12 @@ publish: build
 
 .PHONY:
 clean:
-	rm -rf output/ macros.pyc $(archives) $(tags) .build
+	rm -rf output/ macros.pyc $(archives) $(tags) .build .presentation .output
 
 .PHONY:
 fresh: clean build
 
-output:
+.output:
 	mkdir output/
+	touch .output
 
