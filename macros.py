@@ -3,7 +3,6 @@
 # Copyright (C) 2010 John Reese
 # Licensed under the MIT license
 
-import clevercss
 from datetime import datetime
 import email.utils
 import glob
@@ -222,22 +221,6 @@ def livefyre():
 </script>
 <!-- END: Livefyre Embed -->
 """
-
-### CleverCSS
-
-def once_clevercss():
-    return
-    print("Building CSS files...")
-    for ccss in glob.glob(os.path.join(input, "css/**.ccss")):
-        print("  %s" % (ccss))
-        css = ccss[len(input):].lstrip("/")
-        css = "%s.css" % os.path.splitext(css)[0]
-        css = os.path.join(output, css)
-        fpi = open(ccss)
-        fpo = open(css, 'w')
-        fpo.write(clevercss.convert(fpi.read()))
-        fpi.close()
-        fpo.close()
 
 ### copy .htaccess to output directory
 
