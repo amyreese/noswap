@@ -128,7 +128,7 @@ startexcerpt = re.compile("^<!-- excerpt -->\s*$")
 endexcerpt = re.compile("^<!-- endexcerpt -->\s*$")
 def inline(page, title=True):
     if title:
-        print "<h1><a href=\"%s\">%s</a></h1>" % (pretty(page.url), page.title)
+        print "<h2><a href=\"%s\">%s</a></h2>" % (pretty(page.url), page.title)
         metadata(page)
 
     fi = open(page.fname)
