@@ -28,11 +28,8 @@ if "date" in page:
 				<span id="tagline">{{ page.tagline }}</span>
 			</h1>
 			{% menu(page, id="pages", recursive=False) %}
-			<ul id="links">
-				<li><a href="http://github.com/jreese/">GitHub</a></li>
-				<li><a href="http://www.linkedin.com/in/johnreese">LinkedIn</a></li>
-			</ul>
 		</div>
+
 		<div id="content">
 			{% crumbs(page) %}
 			{% metadata(page) %}
@@ -43,25 +40,27 @@ if "date" in page:
 		</div>
 
 		<div id="footer">
-			{% menu(page, id="menu") %}
-
-			<h3>More</h3>
-
-			<div id="meta">
-				<ul>
-					<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" alt="Linode" /></a></li>
-				</ul>
+			<div id="legal">
+				<span class="generator">
+					Generated using <a href="/poole/">Poole</a>
+				</span><br/>
+				<span class="copyright">
+					Copyright &copy; John Reese
+				</span><br/>
+				<span class="license">
+					Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a>.
+				</span>
 			</div>
 
-			<span class="copyright">
-				Copyright &copy; John Reese
-			</span><br/>
-			<span class="license">
-				Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a>.
-			</span><br/>
-			<span class="generator">
-				<a href="/poole/">Generated using Poole</a>
-			</span>
+			<ul id="more">
+				<li><a href="http://twitter.com/#!/nuclear_eclipse">@nuclear_eclipse</a></li>
+				<li><a href="http://coderwall.com/jreese">Coderwall</a></li>
+				<li><a href="http://github.com/jreese/">GitHub</a></li>
+			</ul>
+
+			<ul id="hosted">
+				<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" width="200" alt="Linode" /></a></li>
+			</ul>
 		</div>
 	</div>
 

@@ -1,13 +1,13 @@
 @import "elements.less";
 
 // Fonts
-@import url("http://fonts.googleapis.com/css?family=Noticia+Text:400,700|Volkhov:400,700|Anonymous+Pro|Droid+Serif");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&subset=latin,greek");
+@import url("http://fonts.googleapis.com/css?family=Noticia+Text:400,700|Volkhov:400|Droid+Sans+Mono");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400&subset=latin,greek");
 
 @sans: "Open Sans", sans-serif;
 @serif: "Volkhov", serif;
 @title: "Noticia Text", serif;
-@monospace: "Anonymous Pro", monospace;
+@monospace: "Droid Sans Mono", monospace;
 
 // Colors
 @black: #010409;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6
 {
 	width: 100%;
 	background: @slate;
-	padding: 24px 0 8px;
+	padding: 36px 0 10px;
 
 	#logo
 	{
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, h6
 			a
 			{
 				color: @sand;
-				font-family: @sans;
+				font-family: @title;
 				font-weight: 700;
 			}
 
@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6
 
 	h1, h2
 	{
-		margin-top: 32px;
+		margin: 32px 0 1px;
 		font-size: 28px;
 		line-height: 32px;
 	}
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6
 
 	p
 	{
-		margin-bottom: 16px;
+		margin-bottom: @spacer;
 
 		a
 		{
@@ -202,24 +202,30 @@ h1, h2, h3, h4, h5, h6
 
 	pre
 	{
-		margin: 0 @gutter 16px;
+		margin: 0 @gutter @spacer;
 		background: @offwhite;
 		border-left: 1px solid @pebble;
 		border-right: 1px solid @pebble;
 		padding: 16px;
 		overflow: auto;
+
+		code
+		{
+			font-size: 14px;
+			line-height: 18px;
+		}
 	}
 
 	blockquote
 	{
-		margin: 0 @gutter 16px;
+		margin: 0 @gutter @spacer;
 		background: @offwhite;
-		padding: 16px;
+		padding: @spacer @spacer 1px;
 	}
 
 	ul
 	{
-		margin: 0 @gutter 16px;
+		margin: 0 @gutter @spacer;
 
 		li
 		{
@@ -247,6 +253,87 @@ h1, h2, h3, h4, h5, h6
 		{
 			color: @pebble;
 			text-decoration: none;
+		}
+	}
+
+	.sig, .excerpt
+	{
+		color: @pebble;
+
+		a
+		{
+			color: @pebble;
+			text-decoration: none;
+		}
+
+		a:hover
+		{
+			color: @link-hover;
+			text-decoration: underline;
+		}
+	}
+}
+
+#footer
+{
+	margin-top: @gutter * 2;
+	margin-bottom: @gutter * 4;
+	background: @slate;
+	color: @offwhite;
+	font-size: 14px;
+	line-height: 18px;
+
+	#legal
+	{
+		display: inline-block;
+		vertical-align: text-top;
+		width: 440px;
+		margin: @gutter 0;
+		padding: 0 @gutter;
+
+		.license, .generator
+		{
+			a
+			{
+				color: @offwhite;
+				text-decoration: underline;
+			}
+
+			a:hover
+			{
+				color: @link-hover;
+			}
+		}
+	}
+
+	#more, #hosted
+	{
+		display: inline-block;
+		vertical-align: text-top;
+		width: 240px;
+		margin: @gutter 0;
+		padding: 0 @gutter;
+		border-left: 1px solid @grey;
+
+		a
+		{
+			color: @offwhite;
+		}
+
+		a:hover
+		{
+			color: @link-hover;
+		}
+	}
+
+	#hosted
+	{
+		font-size: 12px;
+		line-height: 14px;
+
+		a:hover
+		{
+			border-bottom: 1px solid  @link-hover;
 		}
 	}
 }
