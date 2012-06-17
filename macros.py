@@ -41,16 +41,16 @@ tagsplit = re.compile("(\w+(?:\s+\w+)*)")
 
 ### Recursive Menu Structure
 
-def menu(page, parent=""):
+def menu(page, parent="", id="", recursive=True):
     menupages = pagelist(
             key=lambda p: p["menu-position"] != "" and p["menu-parent"] == parent,
             sortby=lambda p: int(p.get("menu-position"))
             )
     if (len(menupages) > 0):
-        if (parent == ""):
-            print "<ul id=\"pages\">"
-        else:
+        if id == "":
             print "<ul>"
+        else:
+            print "<ul id=\"%s\">" % id
 
         for p in menupages:
             title = p["menu-title"] if p["menu-title"] != "" else p["title"]
@@ -58,7 +58,8 @@ def menu(page, parent=""):
                 print """<li><a class="current" href="%s">%s</a>""" % (pretty(p.url), title)
             else:
                 print """<li><a href="%s">%s</a>""" % (pretty(p.url), title)
-            menu(page, parent=p["menu-position"])
+            if recursive:
+                menu(page, parent=p["menu-position"])
             print "</li>"
         print "</ul>"
 
