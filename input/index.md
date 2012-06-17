@@ -1,6 +1,6 @@
 title:
 notitle:
-menu-position: 1
+menu-position: 2
 menu-title: Blog
 sig:
 rel:
