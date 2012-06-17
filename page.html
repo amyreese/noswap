@@ -4,44 +4,55 @@
     <title>{% if page.title: print "%s - " % page.title %}{{page.logo }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset={{ __encoding__ }}" />
 
-	<link rel="stylesheet" type="text/css" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-	<link href='http://fonts.googleapis.com/css?family=Volkhov:400,700|Anonymous+Pro' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&subset=latin,greek' rel='stylesheet' type='text/css' />
-
+	<link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
 	<link rel="alternate" type="application/rss+xml" href="/feed.xml" title="RSS Feed" />
 
-	<link rel="openid.server" href="https://login.launchpad.net/+openid" /> 
-	<link rel="openid.delegate" href="https://login.launchpad.net/+id/XCcfGeH" /> 
-	<link rel="openid2.provider" href="https://login.launchpad.net/+openid" /> 
-	<link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" /> 
+	<link rel="openid.server" href="https://login.launchpad.net/+openid" />
+	<link rel="openid.delegate" href="https://login.launchpad.net/+id/XCcfGeH" />
+	<link rel="openid2.provider" href="https://login.launchpad.net/+openid" />
+	<link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" />
 
 {%
 if "date" in page:
 	if "title" in page: print '<meta itemprop="name" content="%s - {{page.logo}}"/>' % page.title
 	if "description" in page: print '<meta itemprop="description" content="%s"/>' % page.description
 %}
+
 </head>
 <body>
 	<div id="wrapper">
-		<div id="main">
-			<div id="header">
-				<h1><a href="{{ pretty(page["logo-url"]) }}">{{ page.logo }}</a></h1>
-				<div id="tagline">{{ page.tagline }}</div>
-			</div>
-			<div id="container">
-				<div id="content">
-					{% crumbs(page) %}
-					{% metadata(page) %}
+		<div id="header">
+			<h1 id="logo">
+				<a href="{{ pretty(page["logo-url"]) }}">{{ page.logo }}</a>
+				<span id="tagline">{{ page.tagline }}</span>
+			</h1>
+			{% menu(page, id="pages", recursive=False) %}
+			<ul id="links">
+				<li><a href="http://github.com/jreese/">GitHub</a></li>
+				<li><a href="http://www.linkedin.com/in/johnreese">LinkedIn</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			{% crumbs(page) %}
+			{% metadata(page) %}
 
 {{ __content__ }}
 {{ page.sig }}
-{% if page.comments: print livefyre() %}
 
-				</div>
-			</div>
 		</div>
+
 		<div id="footer">
+			{% menu(page, id="menu") %}
+
+			<h3>More</h3>
+
+			<div id="meta">
+				<ul>
+					<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" alt="Linode" /></a></li>
+				</ul>
+			</div>
+
 			<span class="copyright">
 				Copyright &copy; John Reese
 			</span><br/>
@@ -54,24 +65,7 @@ if "date" in page:
 		</div>
 	</div>
 
-	<div id="sidebar">
-		<div id="menu">
-			<h3>Pages</h3>
-			{% menu(page) %}
-
-			<h3>More</h3>
-			<ul id="links">
-				<li><a href="http://github.com/jreese/">GitHub</a></li>
-				<li><a href="https://plus.google.com/111348339961490289797">Google+</li>
-				<li><a href="http://www.linkedin.com/in/johnreese">LinkedIn</a></li>
-			</ul>
-		</div>
-		<div id="meta">
-			<ul>
-				<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" alt="Linode" /></a></li>
-			</ul>
-		</div>
-	</div>
+	<div id="background"></div>
 
 	<!-- Google Analytics (sorry) -->
 	<script type="text/javascript">

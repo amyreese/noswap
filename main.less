@@ -1,42 +1,282 @@
+@import "elements.less";
+
 // Fonts
+@import url("http://fonts.googleapis.com/css?family=Noticia+Text:400,700|Volkhov:400,700|Anonymous+Pro|Droid+Serif");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600&subset=latin,greek");
+
 @sans: "Open Sans", sans-serif;
 @serif: "Volkhov", serif;
-@title: "Volkhov", serif;
+@title: "Noticia Text", serif;
 @monospace: "Anonymous Pro", monospace;
+
+// Colors
+@black: #010409;
+@slate: #252525;
+@grey: #4a4a4a;
+@pebble: #7a706a;
+@sand: #e0ded9;
+@offwhite: #f0eee9;
+@white: #ffffff;
+
+@orange: #ff4f00;
+
+// Theme
+@text: @slate;
+@link: @slate;
+@link-hover: @orange;
+
+@divider: @slate;
 
 // Defaults
 body
 {
-	background: #f9f9f9;
-	color: #222222;
+	color: @text;
 
 	font-family: @sans;
 	font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
-	line-height: 120%;
+	line-height: 19px;
 }
 
-// Layout
-@divider: #ccd0d6;
-@sidebar-width: 220px;
-
-#sidebar
+a
 {
+	color: @link;
+	text-decoration: none;
+}
+a:hover
+{
+	color: @link-hover;
+	text-decoration: underline;
+}
+
+em
+{
+	font-style: italic;
+}
+
+strong
+{
+	font-weight: 700;
+}
+
+pre, code
+{
+	font-family: @monospace;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: @serif;
+}
+
+// Style
+@gutter: 32px;
+@spacer: 20px;
+
+#background
+{
+	z-index: -1000;
 	position: fixed;
-	width: @sidebar-width;
 	top: 0;
-	right: 0;
-    margin-top: 36px;
-    border-left: 1px solid @divider;
-    padding: 10px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.gradient(@sand, @sand, @pebble);
+	background-color: @sand;
+	background-repeat: repeat-x;
+	background-size: auto 650px;
 }
 #wrapper
 {
-    width: 100%;
-    margin-left: -@sidebar-width;
+	width: 960px;
+	margin: auto;
+	background: @white;
 }
-#main, #footer
+#header
 {
-    margin-left: @sidebar-width;
+	width: 100%;
+	background: @slate;
+	padding: 24px 0 8px;
+
+	#logo
+	{
+		padding-left: @gutter;
+		border-bottom: 3px solid @grey;
+		line-height: 10px;
+
+		a, a:hover
+		{
+			color: @orange;
+			font-family: @title;
+			font-size: 48px;
+			font-weight: 400;
+			letter-spacing: -2px;
+			text-decoration: none;
+		}
+
+		#tagline
+		{
+			padding-left: 12px;
+			color: @pebble;
+			font-family: @title;
+			font-weight: 700;
+		}
+	}
+
+	#pages, #links
+	{
+		display: inline-block;
+		padding: 8px @gutter 0;
+
+		li
+		{
+			display: inline-block;
+			margin-right: @spacer;
+
+			a
+			{
+				color: @sand;
+				font-family: @sans;
+				font-weight: 700;
+			}
+
+			a.current
+			{
+				color: @white;
+			}
+
+			a:hover
+			{
+				color: @orange;
+				text-decoration: none;
+			}
+		}
+	}
+
+	#links
+	{
+		float: right;
+
+		li
+		{
+			margin-right: 0;
+			margin-left: @spacer;
+		}
+	}
+}
+
+#content
+{
+	padding: 0 @gutter;
+
+	h1, h2
+	{
+		margin-top: 32px;
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	h3
+	{
+		margin: 4px 0 8px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	h4
+	{
+		margin: 4px 0 8px;
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	p
+	{
+		margin-bottom: 16px;
+
+		a
+		{
+			text-decoration: underline;
+		}
+	}
+
+	pre
+	{
+		margin: 0 @gutter 16px;
+		background: @offwhite;
+		border-left: 1px solid @pebble;
+		border-right: 1px solid @pebble;
+		padding: 16px;
+		overflow: auto;
+	}
+
+	blockquote
+	{
+		margin: 0 @gutter 16px;
+		background: @offwhite;
+		padding: 16px;
+	}
+
+	ul
+	{
+		margin: 0 @gutter 16px;
+
+		li
+		{
+			list-style-type: disc;
+
+			p
+			{
+				margin-bottom: 12px;
+			}
+
+			li
+			{
+				list-style-type: circle;
+			}
+		}
+	}
+
+	.metadata
+	{
+		font-size: 14px;
+		line-height: 16px;
+		color: @pebble;
+
+		a
+		{
+			color: @pebble;
+			text-decoration: none;
+		}
+	}
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar:vertical
+{
+	.gradient(@sand, @sand, @pebble);
+	background-color: @sand;
+	background-repeat: repeat-x;
+	background-size: auto 650px;
+}
+::-webkit-scrollbar-button
+{
+	display: block;
+	width: 16px;
+	height: 24px;
+	background-color: transparent;
+}
+::-webkit-scrollbar-track
+{
+	.rounded(5px);
+	background-color: rgba(0,0,0,0.2);
+}
+::-webkit-scrollbar-thumb
+{
+	.rounded(5px);
+	background: rgba(0,0,0,0.3);
 }
