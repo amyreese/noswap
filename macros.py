@@ -174,8 +174,7 @@ def metadata(page, style="subtitle"):
             timestamp = datetime.strptime(page.date[0:10], "%Y-%m-%d").strftime("%B %d, %Y")
 
             print """<p class="metadata">"""
-            print """<span class="authored">Posted by <a rel="%s" href="%s">%s</a> on %s</span>""" % (
-                page.rel, page.link, page.author, timestamp)
+            print """<span class="authored">Posted on %s</span>""" % (timestamp)
 
             if "tags" in page and page.tags:
                 tags = tagsplit.findall(page.tags)

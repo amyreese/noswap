@@ -11,3 +11,4 @@ for p in posts:
 	inline(p)
 %}
 
+<p class="more">Read more in the <a href="/blog/archive/">archive</a> ...</p>
