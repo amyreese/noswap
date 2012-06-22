@@ -6,7 +6,7 @@ tags: me, jobs, facebook
 The past two months have been intense.  At the beginning of May, I was let go
 from BioWare and Electronic Arts in a round of budget cuts for my studio.
 Since then, I've played far too many video games (and beaten multiple titles),
-slogged through inumerable interviews, redesigned my website from the ground
+slogged through innumerable interviews, redesigned my website from the ground
 up, and celebrated my seventh wedding anniversary in some of the best summer
 weather I've ever experienced.
 
