@@ -12,7 +12,8 @@ ZNC Push is a module for [ZNC][] that will send push notifications to multiple
 services for any private message or channel highlight that matches a
 configurable set of conditions, including the user's `/away` status, time since
 the last notification, number of clients connected to ZNC, and more.  Currently
-supported push services include [Boxcar][], [NMA][], [Notifo][], and [Prowl][].
+supported push services include [Boxcar][], [NMA][], [Notifo][], [Pushover][],
+[Prowl][], and [Supertoasty][].
 
 The module is released under the MIT license, and the source code and
 full documentation can be found on the project's [Github repository][github] page.
@@ -24,5 +25,7 @@ full documentation can be found on the project's [Github repository][github] pag
 [Boxcar]: http://boxcar.io
 [NMA]: http://notifymyandroid.com
 [Notifo]: http://notifo.com
+[Pushover]: http://pushover.net
 [Prowl]: http://www.prowlapp.com
+[Supertoasty]: http://supertoasty.com
 
