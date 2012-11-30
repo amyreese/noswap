@@ -1,0 +1,47 @@
+defaults:
+    template: page.html
+    title:
+    description:
+    link:
+    author: John Reese
+    sig: λ
+
+site:
+    title: NoSwap.com
+    tagline: open source software engineering
+    uri: http://noswap.com
+    root: /
+    author: John Reese
+
+document_path: documents
+resource_path: resources
+template_path: templates
+output_path: site
+
+load_plugins: ["*"]
+ignore_plugins: []
+
+blog:
+    archive:
+        yearly: True
+        monthly: True
+        daily: False
+    uris:
+        feed: "feed.xml"
+        index: "index.html"
+        tags: "tags/index.html"
+        tag: "tags/{tag}.html"
+        archive: "archive.html"
+        yearly: "{year}/index.html"
+        monthly: "{year}/{month}/index.html"
+        daily: "{year}/{month}/{day}.html"
+    templates:
+        post: "post.html"
+        feed: "feed.xml"
+        index: "posts.html"
+        tags: "list.html"
+        tag: "posts.html"
+        archive: "list.html"
+        yearly: "posts.html"
+        monthly: "posts.html"
+        daily: "posts.html"

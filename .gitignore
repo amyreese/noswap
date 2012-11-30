@@ -1,11 +1,5 @@
 *.pyc
 *.swp
 
-.content
-.presentation
-.output
-output/
+site/
 
-input/blog/*/index.md
-input/blog/*/*/index.md
-input/blog/tag/*.md
