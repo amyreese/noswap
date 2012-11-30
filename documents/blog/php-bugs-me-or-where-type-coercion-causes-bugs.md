@@ -1,5 +1,5 @@
 title: PHP Bugs Me, or Where Type Coercion Causes Bugs
-description: News flash: type coercion in PHP can cause unexpected and buggy behavior.  Gasp!
+description: "News flash: type coercion in PHP can cause unexpected and buggy behavior.  Gasp!"
 date: 2010-03-02
 tags: facepalm, mantisbt, php
 nocrumbs:

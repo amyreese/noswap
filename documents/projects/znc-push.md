@@ -1,5 +1,5 @@
 title: ZNC Push
-description:Push notification module for ZNC
+description: Push notification module for ZNC
 tags: irc, znc
 date: 2011-10-06
 menu-parent: 5

@@ -1,4 +1,4 @@
-title: Python: Using KeyboardInterrupt with a Multiprocessing Pool
+title: "Python: Using KeyboardInterrupt with a Multiprocessing Pool"
 description: There is a better way to do it, and noone has posted it yet.
 tags: python, howto
 date: 2011-05-31
