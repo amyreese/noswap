@@ -11,7 +11,7 @@ The point of this is to show that it's quite possible to integrate just about an
 
 For the point of brevity, I'll make the assumption that the developer at least has a fair understanding of PHP, their version control tool, and how events and plugins work in <a href="http://www.mantisbt.org">MantisBT</a>.  If you are not yet familiar with the plugin system, there is currently a basic introduction in the <a href="http://docs.mantisbt.org/master/en/developers/">MantisBT Developer's Guide</a>, which I'll hopefully be adding more information to in the near future.
 
-<!-- endexcerpt -->
+---
 
 <em>Note: the following few sections dive into the concepts of how the framework was designed; for those just interested in creating extension plugins, skip to the <a href="#implementation">implementation</a> section.</em>
 

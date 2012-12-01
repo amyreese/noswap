@@ -11,7 +11,7 @@ The Source Integration package tracks repository information based on a series o
 
 The true benefit of the Source Integration package lies in the amount of repository integration that it implements within MantisBT.  When importing changesets from your repository, Source looks at the commit message of each changeset for references to bug numbers in your tracker, and sets up links in the database for any bugs mentioned.  When viewing bugs mentioned in commit messages, a new section is displayed after the bugnotes called "Related Changesets", giving a list of linked changes, including information about the changeset, such as the branch, author, timestamp, and a list of changed files.
 
-<!-- endexcerpt -->
+---
 
 Since a picture is worth a thousand words, and I'm not that great of a writer, few screenshots for your viewing pleasure:
 

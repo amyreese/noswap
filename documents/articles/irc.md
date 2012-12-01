@@ -26,7 +26,7 @@ I've enjoyed IRC much more since putting it all together.  For each layer, I'll
 detail the tasks it covers, the software I've chosen, and give a copy of any
 configuration files or options needed to replicate my environment.
 
-<!-- endexcerpt -->
+---
 
 ### IRC Bouncer
 

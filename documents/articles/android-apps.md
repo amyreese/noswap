@@ -28,7 +28,7 @@ Market estimates at time of writing, and all screenshots are taken from my devic
 
 [galaxytab10]: http://www.amazon.com/gp/product/B00519RW1U?ie=UTF8&tag=recomprogrboo-20&linkCode=xm2&camp=1789&creativeASIN=B00519RW1U
 
-<!-- endexcerpt -->
+---
 
 -   **[Locale][locale-market]** - $10
 
