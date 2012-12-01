@@ -4,7 +4,7 @@ defaults:
     description:
     link:
     author: John Reese
-    sig: λ
+    sig: "&lambda;"
 
 site:
     title: NoSwap.com

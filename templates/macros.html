@@ -1,18 +1,15 @@
 {%- macro post(page, short=False) %}
 <div class="post">
 	<h2 class="title"><a href="{{ page.link }}">{{ page.title }}</a>{% if page.link != page.uri %} <span class="muted">&rarr;</span>{% endif %}</h2>
-	<div class="metadata">
-		<span class="timestamp">Posted on {{ page.date | longdate }}</span>
-		{%- if page.author %}
-		<span class="author">by {{ page.author }}</span>
-		{%- endif %}
+	<p class="metadata">
+		<span class="authored">Posted on {{ page.date | longdate }}</span>
 		<span class="permalink"><a href="{{ page.uri }}">&raquo;</a></span>
-		<span class="tags">Tagged as
-		{%- for tag in page.tags %}
-			<a class="tag" href="{{ page.tags[tag].uri }}">{{ tag }}</a>
+		<span class="tagged">Tagged as
+		{%- for tag in page.tags | sort %}
+			<a class="tag" href="{{ page.tags[tag].uri }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
 		{%- endfor %}
 		</span>
-	</div>
+	</p>
 	{%- if short %}
 	<div class="short">
 		{{ page.short }}
@@ -23,7 +20,9 @@
 	</div>
 	{%- endif %}
 	{%- if short and page.short != page.content %}
-	<a class="more" href="{{ page.uri }}">Continue Reading &raquo;</a>
+	<p class="excerpt"><a href="{{ page.uri }}">Continue reading &raquo;</a></p>
+	{%- elif page.sig %}
+	<p class="sig">{{ page.sig }}</p>
 	{%- endif %}
 </div>
 {%- endmacro %}
