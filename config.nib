@@ -41,7 +41,7 @@ blog:
         index: "posts.html"
         tags: "list.html"
         tag: "posts.html"
-        archive: "list.html"
+        archive: "archive.html"
         yearly: "posts.html"
         monthly: "posts.html"
         daily: "posts.html"
