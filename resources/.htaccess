@@ -1,13 +1,10 @@
 RewriteEngine on
 RewriteBase /
 
-RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-RewriteRule ^(.*)/$ /$1/index.html [L]
-
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^(.*)/$ /$1 [L,R]
-
 RewriteRule ^mantis.*$ /blog/me-php-and-mantisbt/  [L,R]
 
-#RewriteRule ^$ /blog/ [L,R]
-RewriteRule ^blog/feed/$ /feed.xml [L,R]
+RewriteRule ^blog/feed/$ /feed.xml [L,R=301]
+RewriteRule ^blog/tag/(.*)$ /tags/$1 [L,R=301]
+RewriteRule ^blog/archive$ /archive [L,R=301]
+RewriteRule ^blog/(\d+)/?$ /$1/ [L,R=301]
+RewriteRule ^blog/(\d+)/(\d+)/?$ /$1/$2 [L,R=301]
