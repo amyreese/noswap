@@ -1,7 +1,5 @@
 title: Snail's Pace
-menu-parent: 4
-menu-position: 42
-sig:
+parent: games/index
 ---
 
 Snail's Pace is available as a [zip archive][snailspacezip], including the .Net and Xna dependencies, and the

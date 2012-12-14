@@ -2,9 +2,7 @@ title: Spotify Gnome Integration
 description: With Spotify now available for those of us in the USA, I set about wiring up the Spotify client on Linux to handle Gnome's media keys.
 tags: spotify, linux
 date: 2011-07-15
-menu-parent: 5
-menu-position: 57
-menu-title: Spotify Gnome
+parent: projects/index
 ---
 
 Spotify-Gnome is a program that provides Gnome media key support for the

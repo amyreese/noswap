@@ -2,9 +2,7 @@ title: ZNC Push
 description: Push notification module for ZNC
 tags: irc, znc
 date: 2011-10-06
-menu-parent: 5
-menu-position: 59
-sig:
+parent: projects/index
 ---
 
 Based around the core conditions and functionality from my [original project][ZNC to Notifo],

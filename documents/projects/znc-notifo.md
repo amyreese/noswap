@@ -2,7 +2,6 @@ title: ZNC to Notifo
 description: Notification module for ZNC and Notifo.com
 tags: irc, znc
 date: 2011-01-03
-sig:
 ---
 
 **Update:**

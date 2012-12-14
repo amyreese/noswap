@@ -1,8 +1,7 @@
-title: Source Integration
-menu-parent: 51
-menu-position: 511
-menu-title: Source Integration
-sig:
+title: MantisBT Source Integration
+parent: projects/index
+pages: "'tags' in page and 'source integration' in page['tags']"
+template: posts.html
 ---
 
 My premiere plugin set, this package provides a generalized framework for integrating source control

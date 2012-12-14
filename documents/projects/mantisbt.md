@@ -1,7 +1,5 @@
 title: Mantis Bug Tracker
-menu-parent: 5
-menu-position: 51
-menu-title: Mantis Bug Tracker
+parent: projects/index
 sig:
 ---
 As a core developer for the [Mantis Bug Tracker][mantisbt], I've implemented many various features for the

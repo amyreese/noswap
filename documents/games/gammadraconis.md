@@ -1,7 +1,5 @@
 title: Gamma Draconis
-menu-parent: 4
-menu-position: 41
-sig:
+parent: games/index
 ---
 
 Gamma Draconis is available as a [zip archive][gammadraconiszip], including the .Net and Xna dependencies,
