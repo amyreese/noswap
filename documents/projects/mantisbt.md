@@ -1,6 +1,7 @@
 title: Mantis Bug Tracker
 parent: projects/index
-sig:
+pages: "'tags' in page and 'mantisbt' in page['tags']"
+template: posts.html
 ---
 As a core developer for the [Mantis Bug Tracker][mantisbt], I've implemented many various features for the
 application, including the plugin system introduced with the 1.2.0 release of MantisBT.  Using this

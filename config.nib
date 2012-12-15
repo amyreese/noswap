@@ -5,6 +5,8 @@ defaults:
     link:
     author: John Reese
     sig: "&lambda;"
+    logo: NoSwap.com
+    tagline: open source software engineering
 
 site:
     title: NoSwap.com
