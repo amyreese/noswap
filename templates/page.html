@@ -30,8 +30,8 @@
 		<div id="header">
 			<div id="logo">
 				<h1>
-					<a href="{{ site.root }}">{{ page.logo }}</a>
-					<span id="tagline">{{ page.tagline }}</span>
+					<a href="{{ site.root }}">{% if page.logo %}{{ page.logo }}{% else %}{{ site.title }}{% endif %}</a>
+					<span id="tagline">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</span>
 				</h1>
 			</div>
 
