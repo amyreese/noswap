@@ -6,13 +6,19 @@ puburi=liara:/srv/www/noswap/
 previewuri=liara:/srv/www/noswap-preview/
 
 .PHONY:
-preview: clean
+previewbuild:
 	nib --debug --config preview.nib
+
+.PHONY:
+build:
+	nib --debug
+
+.PHONY:
+preview: clean previewbuild
 	rsync -avz --delete site/ $(previewuri)
 
 .PHONY:
-publish: clean
-	nib --debug
+publish: clean build
 	rsync -avz --delete site/ $(puburi)
 
 .PHONY:
