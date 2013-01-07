@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>{{ site.uri }}{{ page.uri }}</id>
-	<link href="{{ site.uri }}"/>
+	<id>{{ site.uri }}{{ site.root }}</id>
+	<link rel="self" href="{{ page.uri }}"/>
 	<title>{{ site.title }}</title>
-	<subtitle>{{ site.description }}</subtitle>
+	<subtitle>{{ site.tagline }}</subtitle>
 {%- if site.author %}
 	<author>
 		<name>{{ site.author }}</name>
@@ -16,7 +16,7 @@
 	<generator uri="http://github.com/jreese/nib">Nib</generator>
 {%- for page in pages | sort(reverse=True, attribute='date') %}
 	<entry>
-		<id>{{ site.uri }}{{ page.uri }}</id>
+		<id>{{ page.uri }}</id>
 		<link href="{{ page.link }}"/>
 		<title>{{ page.title }}</title>
 		<updated>{{ page.date | atomtime }}</updated>
