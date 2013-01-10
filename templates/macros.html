@@ -22,7 +22,7 @@
 	{%- if short and page.short != page.content %}
 	<p class="excerpt"><a href="{{ page.uri }}">Continue reading &raquo;</a></p>
 	{%- elif page.sig %}
-	<p class="sig">{{ page.sig }}</p>
+	<p class="sig"><a href="{{ page.uri }}">{{ page.sig }}</a></p>
 	{%- endif %}
 </div>
 {%- endmacro %}
