@@ -29,7 +29,12 @@
 {%- if page.description %}
 		<summary>{{ page.description }}</summary>
 {%- endif %}
-		<content type="html" xml:base="{{ site.uri }}" xml:lang="en"><![CDATA[{{ page.short | trim }}]]></content>
+		<content type="html" xml:base="{{ site.uri }}" xml:lang="en"><![CDATA[
+{{ page.short | trim }}
+{%- if page.sig %}
+<p><a href="{{ page.uri }}">{{ page.sig }}</a></p>
+{%- endif %}
+		]]></content>
 	</entry>
 {%- endfor %}
 </feed>
