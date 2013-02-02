@@ -107,27 +107,24 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
     > </small>
 
 
--   **[DoggCatcher][doggcatcher-app]** - $5
+-   **[Pocket Casts][pocketcasts-app]** - $3
 
-    Not much has changed since the last time I reviewed this, but it's had many
-    small improvements, both feature wise and aesthetically.  Still the best
-    podcatcher on Android.
+	[Doggcatcher][doggcatcher-app]
 
-    > [<img src="/media/android-apps-2012/doggcatcher-1.png" width="180"/>](/media/android-apps-2012/doggcatcher-1.png)
-    > [<img src="/media/android-apps-2012/doggcatcher-2.png" width="180"/>](/media/android-apps-2012/doggcatcher-2.png)
+    > [<img src="/media/android-apps-2012/pocketcasts-1.png" width="180"/>](/media/android-apps-2012/pocketcasts-1.png)
+    > [<img src="/media/android-apps-2012/pocketcasts-2.png" width="180"/>](/media/android-apps-2012/pocketcasts-2.png)
     >
     > <small>
-    > Well organized, and with a good looking interface and plenty of options.
+	> 
     > </small>
 
 
--   **[Plume][plume-app]** - $5 or free with ads
+-   **[Falcon Pro][falconpro-app]** - $1
 
-    Still functions more or less the same as when I last reviewed it, but with
-    added polish and updated to the latest Android look and feel.  And again,
-    still my favorite Twitter client for Android.
+	[Plume][plume-app]
 
-    > [<img src="/media/android-apps-2012/plume.png" width="180"/>](/media/android-apps-2012/plume.png)
+    > [<img src="/media/android-apps-2012/falconpro-1.png" width="180"/>](/media/android-apps-2012/falconpro-1.png)
+    > [<img src="/media/android-apps-2012/falconpro-2.png" width="180"/>](/media/android-apps-2012/falconpro-2.png)
     >
     > <small>
     >
@@ -177,10 +174,12 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
 [locale-app]: https://play.google.com/store/apps/details?id=com.twofortyfouram.locale
 [doggcatcher-app]: https://play.google.com/store/apps/details?id=com.snoggdoggler.android.applications.doggcatcher.v1_0
 [dropbox-app]: https://play.google.com/store/apps/details?id=com.dropbox.android
+[falconpro-app]: https://play.google.com/store/apps/details?id=com.jv.falcon.pro
 [greader-app]: https://play.google.com/store/apps/details?id=com.noinnion.android.greader.reader
 [google-reader-app]: https://play.google.com/store/apps/details?id=com.google.android.apps.reader
 [instapaper-app]: https://play.google.com/store/apps/details?id=com.instapaper.android
 [plume-app]: https://play.google.com/store/apps/details?id=com.levelup.touiteur
+[pocketcasts-app]: https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts
 [press-app]: https://play.google.com/store/apps/details?id=com.twentyfivesquares.press
 [reddit-app]: https://play.google.com/store/apps/details?id=com.andrewshu.android.reddit
 [spotify-app]: https://play.google.com/store/apps/details?id=com.spotify.mobile.android.ui
