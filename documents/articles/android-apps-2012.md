@@ -1,7 +1,7 @@
 title: Favorite Android Apps of 2012
 description: I post more of my favorite Android apps, and updates to my previous favorites.
 tags: article, android, me, mobile, screenshot
-date: 2013-01-18
+date: 2013-02-05
 ---
 Eighteen months ago, I wrote an article about my [Favorite Android Apps][faa],
 but a lot has changed with Android and its app ecosystem since then.  Developers
@@ -9,10 +9,9 @@ have started putting more focus on design and usability when creating apps, and
 of course newer apps have come along that I have come to rely upon.  I myself
 have upgraded to newer devices, with a Nexus 7 replacing my Galaxy Tab 10.1,
 and a Galaxy Nexus from work has sadly replaced my beloved but aging Nexus S.
-
-So what follows are some of my favorite new apps, and some follow-up on what my
-previous favorite apps look like in modern attire.  All screenshots are taken
-from devices running Android 4.2.1 (CM 10.1 nightlies).
+So what follows are some of my favorite new apps from 2012, and some follow-up
+on what my previous favorite apps look like in modern attire.  All screenshots
+are taken from devices running Android 4.2.1 (CM 10.1 nightlies).
 
 
 [faa]: /articles/android-apps
@@ -64,8 +63,7 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
     > [<img src="/media/android-apps-2012/instapaper-4.png" width="200"/>](/media/android-apps-2012/instapaper-4.png)
     >
     > <small>
-    > Instapaper looks similar on both phones and tablets, but the tablet UI
-    > looks nicer, even though it presents more text for each story.
+	> Instapaper looks its best in the reading-friendly tablet UI.
     > </small>
 
 
@@ -82,7 +80,57 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
     > [<img src="/media/android-apps-2012/reddit-is-fun.png" width="180"/>](/media/android-apps-2012/reddit-is-fun.png)
     >
     > <small>
-    > Simple, swipable interface that follows the latest Android design guides.
+    > Simple, swipable interface that allows instant gratification.
+    > </small>
+
+
+-   **[Pocket Casts][pocketcasts-app]** - $3
+
+	In the past, my favorite podcast app was [DoggCatcher][doggcatcher-app], an
+	excellent entry that I used for many years.  Recently though, I found
+	Pocket Casts, and while it's not as nice looking as DoggCatcher -- it
+	suffers from iOS syndrome IMO -- it does have one killer feature that the
+	alternatives do not: a playlist.  Pocket Casts can automatically add newly
+	downloaded episodes into your playlist, which allows you to listen to your
+	podcasts in a more "natural" order -- the order they were released.  This
+	alone has converted me to using Pocket Casts full time, although I would be
+	hard-pressed to find a reason to stick with it if DoggCatcher were to
+	implement that one feature.  My biggest gripe with Pocket Casts is that the
+	play/pause/seek buttons are only visible and active from the "now
+	listening" tab, which is especially obnoxious when the app doesn't always
+	default to opening that view when launched.  This is something DoggCatcher
+	got right from day one, and it's surprising to me that an app centered
+	around listening to audio wouldn't have those controls available at all
+	times.
+
+    > [<img src="/media/android-apps-2012/pocketcasts-1.png" width="180"/>](/media/android-apps-2012/pocketcasts-1.png)
+    > [<img src="/media/android-apps-2012/pocketcasts-2.png" width="180"/>](/media/android-apps-2012/pocketcasts-2.png)
+    >
+    > <small>
+	> A simple interface with features designed for dedicated listeners.
+    > </small>
+
+
+-   **[Falcon Pro][falconpro-app]** - $1
+
+	[Plume][plume-app] has long been my preferred Twitter client on Android,
+	but I was looking at alternate clients, and my favorite so far is Falcon
+	Pro.  It has fewer features overall than Plume, but the user experience is
+	simpler and seems more useful to how I use Twitter as a passive source of
+	information and links.  Falcon's best feature is its inline web viewer,
+	which allows me to see linked articles quickly without waiting to switch
+	over to my primary browser, while still leaving that option available to
+	me if I need it.  Typography and design are overall nicer than Plume, and
+	it has one of the best light-on-dark themes that I've seen on Android.  The
+	biggest feature I miss from Plume is support for the new enhanced
+	notifications on Jelly Bean;  Plume could show me the latest tweet in
+	detail, where Falcon Pro only shows me an unread count.
+
+    > [<img src="/media/android-apps-2012/falconpro-1.png" width="180"/>](/media/android-apps-2012/falconpro-1.png)
+    > [<img src="/media/android-apps-2012/falconpro-2.png" width="180"/>](/media/android-apps-2012/falconpro-2.png)
+    >
+    > <small>
+    > Elegant looks with a great user experience.
     > </small>
 
 
@@ -101,33 +149,7 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
     > [<img src="/media/android-apps-2012/locale-2.png" width="180"/>](/media/android-apps-2012/locale-2.png)
     >
     > <small>
-    > Tapping a situation allows you to modify the conditions that trigger the
-    > situation, and the settings that will take effect when that situation is
-    > active.
-    > </small>
-
-
--   **[Pocket Casts][pocketcasts-app]** - $3
-
-	[Doggcatcher][doggcatcher-app]
-
-    > [<img src="/media/android-apps-2012/pocketcasts-1.png" width="180"/>](/media/android-apps-2012/pocketcasts-1.png)
-    > [<img src="/media/android-apps-2012/pocketcasts-2.png" width="180"/>](/media/android-apps-2012/pocketcasts-2.png)
-    >
-    > <small>
-	> 
-    > </small>
-
-
--   **[Falcon Pro][falconpro-app]** - $1
-
-	[Plume][plume-app]
-
-    > [<img src="/media/android-apps-2012/falconpro-1.png" width="180"/>](/media/android-apps-2012/falconpro-1.png)
-    > [<img src="/media/android-apps-2012/falconpro-2.png" width="180"/>](/media/android-apps-2012/falconpro-2.png)
-    >
-    > <small>
-    >
+    > Tapping a situation allows you to modify the conditions that trigger the situation.
     > </small>
 
 
@@ -137,8 +159,8 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
     has stolen my loyalty by combining on-demand music from an extremely large
     library with trainable radio stations that rival even Pandora's excellent
     algorithms.  The desktop application actually works really well, and the
-    first-class integration with local mp3 files, coupled with the ability to
-    sync playlists between the desktop and mobile apps, leaves me with no other
+    first-class integration with local mp3 files coupled with the ability to
+    sync playlists between the desktop and mobile apps leaves me with no other
     credible choice.  This is truly the best way to listen to music in the
     modern age.
 
@@ -161,6 +183,7 @@ from devices running Android 4.2.1 (CM 10.1 nightlies).
     > [<img src="/media/android-apps-2012/dropbox-2.png" width="180"/>](/media/android-apps-2012/dropbox-2.png)
     >
     > <small>
+	> Everything you could want or expect from a file syncing service.
     > </small>
 
 
