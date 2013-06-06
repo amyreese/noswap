@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset={{ __encoding__ }}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<link rel="stylesheet" href="/css/reset.css" />
 	<link rel="stylesheet" href="/css/main.css" />
@@ -30,7 +30,7 @@
 		<div id="header">
 			<div id="logo">
 				<h1>
-					<a href="{{ site.root }}">{% if page.logo %}{{ page.logo }}{% else %}{{ site.title }}{% endif %}</a>
+					<a href="{{ site.root }}">{{ site.title }}</a>
 					<span id="tagline">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</span>
 				</h1>
 			</div>
@@ -73,13 +73,13 @@
 			</div>
 
 			<ul id="more">
-				<li><i class="icon-twitter"></i> <a href="http://twitter.com/#!/nuclear_eclipse">@nuclear_eclipse</a></li>
+				<li><i class="icon-facebook-sign"></i> <a href="http://facebook.com/nucleareclipse/">Facebook</a></li>
 				<li><i class="icon-github"></i> <a href="http://github.com/jreese/">GitHub</a></li>
-				<li><i class="icon-github-sign"></i> <a href="http://coderwall.com/jreese">Coderwall</a></li>
 			</ul>
 
-			<ul id="hosted">
-				<li>hosted with<br/><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><img src="/media/linode.png" width="200" alt="Linode" /></a></li>
+			<ul id="more">
+				<li><i class="icon-rss"></i> <a href="/feed.xml">Subscribe</a></li>
+				<li><i class="icon-hdd"></i> <a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode">Hosted with Linode</a></li>
 			</ul>
 		</div>
 	</div>

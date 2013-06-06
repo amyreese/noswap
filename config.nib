@@ -7,8 +7,8 @@ defaults:
     sig: "&lambda;"
 
 site:
-    title: NoSwap.com
-    tagline: open source software engineering
+    title: John Reese
+    tagline: software engineer, video game enthusiast, free software advocate
     uri: http://noswap.com
     root: /
     author: John Reese

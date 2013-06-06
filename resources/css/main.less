@@ -1,19 +1,36 @@
 @import "elements.less";
 
 // Fonts
-@import url("http://fonts.googleapis.com/css?family=Noticia+Text:400,700|Volkhov:400|Droid+Sans+Mono:400");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400&subset=latin,greek");
+@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Noticia+Text:400,700|Volkhov:400|Droid+Sans+Mono:400|Source+Code+Pro:300,400");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,300,400italic,400,600italic,600&subset=latin,greek");
 
-@sans: "Open Sans", sans-serif;
-@serif: "Volkhov", serif;
-@title: "Noticia Text", serif;
-@monospace: "Droid Sans Mono", monospace;
+.sans(@weight: 300) {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: @weight;
+}
+
+.serif(@weight: 400) {
+	font-family: "Roboto Slab", serif;
+	font-weight: @weight;
+}
+
+.title(@weight: 400) {
+	font-family: "Roboto Slab", serif;
+	font-weight: @weight;
+}
+
+.monospace(@weight: 400) {
+	font-family: "Source Code Pro", monospace;
+	font-weight: @weight;
+}
 
 // Colors
 @black: #010409;
 @slate: #252525;
 @grey: #4a4a4a;
 @pebble: #7a706a;
+@clay: #b3b1ad;
+//@clay: #cccac6;
 @sand: #e0ded9;
 @offwhite: #f0eee9;
 @white: #ffffff;
@@ -32,11 +49,10 @@ body
 {
 	color: @text;
 
-	font-family: @sans;
-	font-size: 16px;
-	font-weight: 400;
+	.sans();
+	font-size: 20px;
 	font-style: normal;
-	line-height: 20px;
+	line-height: 140%;
 }
 
 a
@@ -57,17 +73,18 @@ em
 
 strong
 {
-	font-weight: 700;
+	font-weight: 400;
 }
 
 pre, code
 {
-	font-family: @monospace;
+	.monospace();
+	line-height: 20px;
 }
 
 h1, h2, h3, h4, h5, h6
 {
-	font-family: @serif;
+	.serif();
 }
 
 // Style
@@ -82,35 +99,36 @@ h1, h2, h3, h4, h5, h6
 	left: 0;
 	width: 100%;
 	height: 100%;
-	.gradient(@sand, @sand, @pebble);
-	background-color: @sand;
-	background-repeat: repeat-x;
-	background-size: auto 650px;
+	//.gradient(@sand, @sand, @pebble);
+	background-color: @offwhite;
+	//background-repeat: repeat-x;
+	//background-size: auto 650px;
 }
 #wrapper
 {
 	width: 960px;
 	margin: auto;
-	background: @white;
+	//background: @white;
 }
 #header
 {
 	width: 100%;
-	background: @slate;
+	//background: @slate;
 	padding: 36px 0 6px;
+	font-size: 16px;
+	line-height: 20px;
 
 	#logo
 	{
 		padding-left: @gutter;
-		border-bottom: 3px solid @grey;
-		line-height: 9px;
+		border-bottom: 1px solid @orange;
+		line-height: 12px;
 
 		a, a:hover
 		{
-			color: @orange;
-			font-family: @title;
+			color: @pebble;
+			.title(400);
 			font-size: 48px;
-			font-weight: 400;
 			letter-spacing: -2px;
 			text-decoration: none;
 		}
@@ -121,8 +139,7 @@ h1, h2, h3, h4, h5, h6
 			top: -1px;
 			padding-left: 12px;
 			color: @pebble;
-			font-family: @title;
-			font-weight: 700;
+			.title(400);
 		}
 	}
 
@@ -130,8 +147,7 @@ h1, h2, h3, h4, h5, h6
 	{
 		display: inline-block;
 		padding: 6px @gutter 0;
-		font-family: @serif;
-		font-weight: 400;
+		.serif();
 
 		li
 		{
@@ -140,12 +156,12 @@ h1, h2, h3, h4, h5, h6
 
 			a
 			{
-				color: @sand;
+				color: @pebble;
 			}
 
 			a.current
 			{
-				color: @white;
+				color: @grey;
 			}
 
 			a:hover
@@ -192,6 +208,20 @@ h1, h2, h3, h4, h5, h6
 		line-height: 22px;
 	}
 
+	h1,h2,h3,h4
+	{
+		color: @grey;
+
+		a
+		{
+			color: @grey;
+		}
+		a:hover
+		{
+			color: @link-hover;
+		}
+	}
+
 	p
 	{
 		margin-bottom: @spacer;
@@ -200,14 +230,22 @@ h1, h2, h3, h4, h5, h6
 		{
 			text-decoration: underline;
 		}
+
+		code
+		{
+			background: @sand;
+			.monospace(300);
+			letter-spacing: -2px;
+			padding: 0 4px 0 1px;
+		}
 	}
 
 	pre
 	{
 		margin: 0 @gutter @spacer;
-		background: @offwhite;
-		border-left: 1px solid @pebble;
-		border-right: 1px solid @pebble;
+		background: @sand;
+		border-left: 1px solid @clay;
+		border-right: 1px solid @clay;
 		padding: 16px;
 		overflow: auto;
 
@@ -221,7 +259,7 @@ h1, h2, h3, h4, h5, h6
 	blockquote
 	{
 		margin: 0 @gutter @spacer;
-		background: @offwhite;
+		background: @sand;
 		padding: @spacer @spacer 1px;
 	}
 
@@ -307,8 +345,8 @@ h1, h2, h3, h4, h5, h6
 {
 	margin-top: @gutter;
 	margin-bottom: @gutter * 4;
-	background: @slate;
-	color: @offwhite;
+	//background: @slate;
+	color: @grey;
 	font-size: 14px;
 	line-height: 18px;
 
@@ -324,7 +362,7 @@ h1, h2, h3, h4, h5, h6
 		{
 			a
 			{
-				color: @offwhite;
+				color: @grey;
 				text-decoration: underline;
 			}
 
@@ -342,11 +380,11 @@ h1, h2, h3, h4, h5, h6
 		width: 240px;
 		margin: @gutter 0;
 		padding: 0 @gutter;
-		border-left: 1px solid @grey;
+		border-left: 1px solid @sand;
 
 		a
 		{
-			color: @offwhite;
+			color: @grey;
 		}
 
 		a:hover

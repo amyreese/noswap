@@ -1,5 +1,3 @@
-logo: John M. Reese
-tagline: software engineer, free software advocate
 title: About Me
 ---
 I am a professional Software Engineer with experience in creating web applications using a
