@@ -1,15 +1,15 @@
 @import "elements.less";
 
 // Fonts
-@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Noticia+Text:400,700|Volkhov:400|Droid+Sans+Mono:400|Source+Code+Pro:300,400");
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,300,400italic,400,600italic,600&subset=latin,greek");
+@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:400|Source+Code+Pro:300,400");
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,300,400italic,400&subset=latin,greek");
 
-.sans(@weight: 300) {
+.text(@weight: 300) {
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: @weight;
 }
 
-.serif(@weight: 400) {
+.header(@weight: 400) {
 	font-family: "Roboto Slab", serif;
 	font-weight: @weight;
 }
@@ -19,7 +19,7 @@
 	font-weight: @weight;
 }
 
-.monospace(@weight: 400) {
+.code(@weight: 400) {
 	font-family: "Source Code Pro", monospace;
 	font-weight: @weight;
 }
@@ -49,7 +49,7 @@ body
 {
 	color: @text;
 
-	.sans();
+	.text();
 	font-size: 20px;
 	font-style: normal;
 	line-height: 140%;
@@ -78,13 +78,13 @@ strong
 
 pre, code
 {
-	.monospace();
+	.code();
 	line-height: 20px;
 }
 
 h1, h2, h3, h4, h5, h6
 {
-	.serif();
+	.header();
 }
 
 // Style
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6
 	{
 		display: inline-block;
 		padding: 6px @gutter 0;
-		.serif();
+		.header();
 
 		li
 		{
@@ -234,7 +234,7 @@ h1, h2, h3, h4, h5, h6
 		code
 		{
 			background: @sand;
-			.monospace(300);
+			.code(300);
 			letter-spacing: -2px;
 			padding: 0 4px 0 1px;
 		}
