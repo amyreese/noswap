@@ -101,7 +101,6 @@ h1, h2, h3, h4, h5, h6
 	height: 100%;
 	//.gradient(@sand, @sand, @pebble);
 	background-color: @offwhite;
-	//background-repeat: repeat-x;
 	//background-size: auto 650px;
 }
 #wrapper
@@ -117,6 +116,15 @@ h1, h2, h3, h4, h5, h6
 	padding: 36px 0 6px;
 	font-size: 16px;
 	line-height: 20px;
+
+	#gear
+	{
+		float: right;
+		z-index: -1;
+		margin-top: -16px;
+		margin-right: @gutter;
+		opacity: 0.1;
+	}
 
 	#logo
 	{
