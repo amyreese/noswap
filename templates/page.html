@@ -15,20 +15,29 @@
 	<link rel="openid2.provider" href="https://login.launchpad.net/+openid" />
 	<link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" />
 
+	<meta property="og:site_name" content="{{ site.title }}"/>
+	<meta property="og:url" content="{{ page.uri }}"/>
+	<meta property="og:image" content="{{ site.uri }}/media/noswap-256.png"/>
 	{%- if page.date %}
+	<meta property="og:type" content="article"/>
+	{%- if page.title %}
+	<meta property="og:title" content="{{ page.title }}"/>
+	{%- endif %}
+	{%- if page.description %}
+	<meta property="og:description" content="{{ page.description }}"/>
+	{%- endif %}
 	{%- if page.title %}
 	<meta itemprop="name" content="{{ page.title }} - {{ site.title }}"/>
 	{%- endif %}
 	{%- if page.description %}
 	<meta itemprop="description" content="{{ page.description }}"/>
-	{%- endif %}
+	{%- endif -%}
 	{%- endif %}
 </head>
 <body>
 
 	<div id="wrapper">
 		<div id="header">
-			<div id="gear"><img src="/media/noswap.png"/></div>
 			<div id="logo">
 				<h1>
 					<a href="{{ site.root }}">{{ site.title }}</a>
