@@ -103,12 +103,7 @@ h1, h2, h3, h4, h5, h6
 	background-color: @offwhite;
 	//background-size: auto 650px;
 }
-#wrapper
-{
-	width: 960px;
-	margin: auto;
-	//background: @white;
-}
+
 #header
 {
 	width: 100%;
@@ -179,6 +174,35 @@ h1, h2, h3, h4, h5, h6
 		{
 			margin-right: 0;
 			margin-left: @spacer;
+		}
+	}
+}
+
+@media (min-width: 981px)
+{
+	#wrapper
+	{
+		width: 960px;
+		margin: auto;
+		//background: @white;
+	}
+}
+@media (max-width: 980px)
+{
+	#wrapper
+	{
+		width: 100%;
+		padding: 0 2em;
+	}
+	#header
+	{
+		#logo
+		{
+			border-bottom: 2px solid @orange;
+		}
+		#tagline
+		{
+			display: none;
 		}
 	}
 }
