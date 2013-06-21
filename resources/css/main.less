@@ -420,45 +420,5 @@ h1, h2, h3, h4, h5, h6
 			color: @link-hover;
 		}
 	}
-
-	#hosted
-	{
-		font-size: 12px;
-		line-height: 14px;
-
-		a:hover
-		{
-			border-bottom: 1px solid  @link-hover;
-		}
-	}
 }
 
-::-webkit-scrollbar
-{
-	width: 8px;
-	height: 8px;
-}
-::-webkit-scrollbar:vertical
-{
-	.gradient(@sand, @sand, @pebble);
-	background-color: @sand;
-	background-repeat: repeat-x;
-	background-size: auto 650px;
-}
-::-webkit-scrollbar-button
-{
-	display: block;
-	width: 16px;
-	height: 24px;
-	background-color: transparent;
-}
-::-webkit-scrollbar-track
-{
-	.rounded(5px);
-	background-color: rgba(0,0,0,0.2);
-}
-::-webkit-scrollbar-thumb
-{
-	.rounded(5px);
-	background: rgba(0,0,0,0.3);
-}
