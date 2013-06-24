@@ -5,6 +5,7 @@ defaults:
     link:
     author: John Reese
     sig: '<i class="icon-gamepad"></i>'
+    feedsig: '&infin;'
 
 site:
     title: John Reese

@@ -31,8 +31,8 @@
 {%- endif %}
 		<content type="html" xml:base="{{ site.uri }}" xml:lang="en"><![CDATA[
 {{ page.short | trim }}
-{%- if page.sig %}
-<p><a href="{{ page.uri }}">{{ page.sig }}</a></p>
+{%- if page.feedsig %}
+<p><a href="{{ page.uri }}">{{ page.feedsig }}</a></p>
 {%- endif %}
 		]]></content>
 	</entry>
