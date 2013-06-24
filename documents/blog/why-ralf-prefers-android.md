@@ -1,7 +1,7 @@
 link: http://www.24100.net/2013/01/an-iphone-lovers-confession-i-switched-to-the-nexus-4-completely/
 title: Why Ralf Prefers Android
 description: My thoughts on Ralf Rottmann's new preference for Android over iOS.
-tags: android, apple, mobile
+tags: android, apple, mobile, link
 date: 2013-01-10
 ---
 Along a similar vein as my previous post on [Why I Prefer Android][wipa],
