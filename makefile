@@ -7,11 +7,11 @@ previewuri=liara:/srv/www/noswap-preview/
 
 .PHONY:
 previewbuild:
-	nib --debug --config preview.nib
+	nib --debug --config preview.nib build
 
 .PHONY:
 build:
-	nib --debug
+	nib --debug build
 
 .PHONY:
 preview: clean previewbuild
