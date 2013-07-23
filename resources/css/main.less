@@ -279,14 +279,6 @@ h1, h2, h3, h4, h5, h6
 		}
 	}
 
-	blockquote
-	{
-		.rounded(10px);
-		margin: 0 @gutter @spacer;
-		background: @sand;
-		padding: @spacer @spacer 1px;
-	}
-
 	ul
 	{
 		margin: 0 @gutter @spacer;
@@ -315,6 +307,20 @@ h1, h2, h3, h4, h5, h6
 	img
 	{
 		border: 1px solid @clay;
+		margin-left: @gutter;
+	}
+
+	blockquote
+	{
+		.rounded(10px);
+		margin: 0 @gutter @spacer;
+		background: @sand;
+		padding: @spacer @spacer 1px;
+
+		img
+		{
+			margin-left: 0;
+		}
 	}
 
 	.metadata
