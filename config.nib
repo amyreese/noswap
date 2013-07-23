@@ -6,6 +6,10 @@ defaults:
     author: John Reese
     sig: '<i class="icon-gamepad"></i>'
     feedsig: '&infin;'
+    paginate: True
+    per_page: 15
+    sort_by: date
+    reverse: True
 
 site:
     title: John Reese

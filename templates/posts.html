@@ -5,13 +5,21 @@
 <h2 class="title">{{ breadcrumbs(page) }}</h2>
 {%- endif %}
 {{ content }}
-{% for p in pages | sort(reverse=True, attribute='date') %}
-{%- if loop.index0 < 15 %}
+{% for p in pages %}
 {{ post(p, short=True) }}
-{%- elif loop.index0 == 15 %}
-<p class="more">Read more in the <a href="/archive.html">archive</a> ...</p>
-{%- else %}
-{%- endif %}
 {% endfor %}
+{%- if page.previous or page.next %}
+<p class="more">
+{%- if page.previous %}
+<a href="{{ page.previous.uri }}">&larr; Previous</a>
+{%- endif %}
+{%- if page.previous and page.next %}
+&emsp;
+{%- endif %}
+{%- if page.next %}
+<a href="{{ page.next.uri }}">Next &rarr;</a>
+{%- endif %}
+</p>
+{%- endif %}
 </div>
 {% endblock %}
