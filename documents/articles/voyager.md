@@ -1,6 +1,7 @@
 title: Voyager
 tags: article, nasa, dreams
 date: 2013-09-12
+image: /media/voyager/great-red-spot.jpg
 ---
 
 When I was in elementary school, I discovered a series of books in the library
