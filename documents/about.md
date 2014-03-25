@@ -1,17 +1,21 @@
 title: About Me
 ---
-I am a professional Software Engineer with experience in creating web applications using a
-variety of languages, frameworks, and technologies.  I have a Bachelor of Science degree in
-Software Engineering from the [Rochester Institute of Technology][rit] in Rochester, NY.
-I now live near San Francisco, California with my wonderful wife Angela and an adorable pair
-of cats named Skittle and Zero.
+I am a professional software engineer with a wide range of experience in
+creating and supporting applications and the infrastructure they run on, using
+a variety of languages, frameworks, and technologies.  I've had the opportunity
+to learn and grow in multiple sectors of the industry, including
+telecommunications, network security, video games, and social networking.
 
-I have been using and promoting Linux and open source software since late 2003, and I have become
-a firm believer in the merits of free/libre software. I contribute to various open source software
-projects, such as the [Mantis Bug Tracker][mantisbt], and spread knowledge and information about
-free software whenever I get the chance.
+I have a Bachelor of Science in Software Engineering from the
+[Rochester Institute of Technology][rit] in Rochester, New York.
+I now live in the sunny San Francisco Bay Area, in California, with my wonderful
+wife Angela and an adorable pair of cats named Skittle and Zero.
 
-[![vCard](/media/vcard.png "vCard QR code")](/media/vcard-large.png)
+<img src="/media/profile.jpg" width="480" alt="My handsome face" />
 
-[rit]: http://www.rit.edu "Rochester Institute of Technology"
-[mantisbt]: http://www.mantisbt.org "Mantis Bug Tracker"
+I have been using and promoting Linux and open source software since late 2003,
+and I am a firm believer in the merits of free/libre software in professional
+software. I contribute to various open source software projects, and I like to
+share my passion and excitement for free software whenever I get the chance.
+
+[rit]: http://www.rit.edu
