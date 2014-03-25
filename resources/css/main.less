@@ -1,16 +1,22 @@
-@import "elements.less";
+@import (reference) "elements.less";
+@import (inline) "reset.css";
 
 // Fonts
-@import url("http://fonts.googleapis.com/css?family=Roboto+Slab:400|Source+Code+Pro:300,400");
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,300,400italic,400&subset=latin,greek");
+@import (inline) url("https://brick.a.ssl.fastly.net/Roboto:300,300i,400,900/Roboto+Slab:400/Source+Code+Pro:300");
+@import (inline) "font-awesome.css";
 
 .text(@weight: 300) {
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: @weight;
 }
 
-.header(@weight: 400) {
-	font-family: "Roboto Slab", serif;
+.metatext(@weight: 400) {
+	font-family: "Roboto", sans-serif;
+	font-weight: @weight;
+}
+
+.header(@weight: 900) {
+	font-family: "Roboto", serif;
 	font-weight: @weight;
 }
 
@@ -19,7 +25,7 @@
 	font-weight: @weight;
 }
 
-.code(@weight: 400) {
+.code(@weight: 300) {
 	font-family: "Source Code Pro", monospace;
 	font-weight: @weight;
 }
@@ -31,8 +37,8 @@
 @pebble: #7a706a;
 @clay: #b3b1ad;
 //@clay: #cccac6;
-@sand: #e0ded9;
-@offwhite: #f0eee9;
+@sand: #dedede;
+@offwhite: #eeeeee;
 @white: #ffffff;
 
 @orange: #ff4f00;
@@ -50,9 +56,9 @@ body
 	color: @text;
 
 	.text();
-	font-size: 20px;
+	font-size: 18px;
 	font-style: normal;
-	line-height: 140%;
+	line-height: 24px;
 }
 
 a
@@ -88,6 +94,7 @@ h1, h2, h3, h4, h5, h6
 }
 
 // Style
+@gradient-height: @gutter * 10;
 @gutter: 32px;
 @spacer: 20px;
 
@@ -99,9 +106,17 @@ h1, h2, h3, h4, h5, h6
 	left: 0;
 	width: 100%;
 	height: 100%;
-	//.gradient(@sand, @sand, @pebble);
-	background-color: @offwhite;
-	//background-size: auto 650px;
+	background-color: @white;
+
+	#gradient
+	{
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: @gradient-height;
+		.gradient(@white, @white, @offwhite);
+		background-size: auto @gradient-height;
+	}
 }
 
 #header
@@ -141,7 +156,7 @@ h1, h2, h3, h4, h5, h6
 	{
 		display: inline-block;
 		padding: 6px @gutter 0;
-		.header();
+		.title();
 
 		li
 		{
@@ -214,30 +229,30 @@ h1, h2, h3, h4, h5, h6
 	h1, h2
 	{
 		margin: 32px 0 1px;
-		font-size: 28px;
-		line-height: 32px;
+		font-size: 32px;
+		line-height: 36px;
 	}
 
 	h3
 	{
 		margin: 4px 0 8px;
-		font-size: 20px;
-		line-height: 24px;
+		font-size: 24px;
+		line-height: 28px;
 	}
 	h4
 	{
 		margin: 4px 0 8px;
-		font-size: 18px;
-		line-height: 22px;
+		font-size: 22px;
+		line-height: 26px;
 	}
 
 	h1,h2,h3,h4
 	{
-		color: @grey;
+		color: @pebble;
 
 		a
 		{
-			color: @grey;
+			color: @pebble;
 		}
 		a:hover
 		{
@@ -256,17 +271,19 @@ h1, h2, h3, h4, h5, h6
 
 		code
 		{
+			.rounded(5px);
 			background: @sand;
 			.code(300);
-			letter-spacing: -2px;
-			padding: 0 4px 0 1px;
+			font-size: 16px;
+			letter-spacing: -1px;
+			padding: 0 4px 0 3px;
 		}
 	}
 
 	pre
 	{
 		margin: 0 @gutter @spacer;
-		background: @sand;
+		background: @offwhite;
 		border-left: 1px solid @clay;
 		border-right: 1px solid @clay;
 		padding: 16px;
@@ -314,7 +331,7 @@ h1, h2, h3, h4, h5, h6
 	{
 		.rounded(10px);
 		margin: 0 @gutter @spacer;
-		background: @sand;
+		background: @offwhite;
 		padding: @spacer @spacer 1px;
 
 		img
@@ -325,6 +342,7 @@ h1, h2, h3, h4, h5, h6
 
 	.metadata
 	{
+		.metatext();
 		font-size: 14px;
 		line-height: 16px;
 		color: @pebble;
