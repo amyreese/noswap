@@ -1,6 +1,7 @@
 title: Elite Dangerous
 tags: notes, games
 date: 2015-01-20
+updated: 2015-01-21
 image: /media/elite-dangerous-voyager.jpg
 ---
 It's no secret that I'm a huge fan of space, video games, or video games set
