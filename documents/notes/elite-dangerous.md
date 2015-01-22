@@ -93,8 +93,9 @@ I will attempt to keep this up to date for as long as I'm playing the game.
     have the best price-to-speed ratio for any ship up to the Type 7.
     **Scoop fuel while plotting routes to save even more time.**
 
--   Class D thrusters are faster/better than class C, for pretty much all ships.
-    ([source](https://www.reddit.com/r/EliteDangerous/comments/2s6lpi/thruster_testing_results/))
+-   Class D thrusters are faster than class C for any ship, other than the
+    Viper.  They are also lighter and cheaper, making class C thrusters
+    strictly inferior options. [^1]
 
 -   When trying to maximize jump range, class D equipment weighs significantly
     less than any other class rating.  Conversely, class B equipment weighs the
@@ -107,6 +108,12 @@ I will attempt to keep this up to date for as long as I'm playing the game.
     hull damage from "losing" the interdiction, and your FSD cooldown will only
     be 10 seconds, instead of 40, meaning you'll have a far better chance of
     escaping back into supercruise than if you'd fought and lost.
+
+-   The fastest path to a station is not a straight line.  By "looping" around
+    the target at full throttle, you can slow down without overshooting.
+    Combining this with a well-timed dive into the gravity well will bleed
+    off the remaining speed and allow you to slow down to under 1Mm/s shortly
+    before reaching the 1000km disengage distance. [^2]
 
 
 ### Links
@@ -123,6 +130,9 @@ I will attempt to keep this up to date for as long as I'm playing the game.
 
 - [Message From Lrrr](https://www.reddit.com/r/EliteDangerous/comments/2smaa7/attn_people_of_the_earth_corporation_known_as/)
 
+
+[^1]: Source: [Thruster Testing Results](https://www.reddit.com/r/EliteDangerous/comments/2s6lpi/thruster_testing_results/)
+[^2]: Video: [Avoid Pirate Interdiction and Supercruise Quickly](https://www.youtube.com/watch?v=1nC3KmSF85Q)
 
 [Star Citizen]: http://robertsspaceindustries.com/
 [Elite: Dangerous]: http://www.elitedangerous.com/
