@@ -4,7 +4,7 @@ defaults:
     description:
     link:
     author: John Reese
-    sig: '<i class="icon-gamepad"></i>'
+    sig: '<i class="fa fa-gamepad"></i>'
     feedsig: '&infin;'
     paginate: True
     per_page: 15
