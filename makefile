@@ -13,7 +13,7 @@ public:
 	nib --debug build
 
 .PHONY:
-publish: clean build
+publish: clean public
 	rsync -avz --delete site/ $(puburi)
 
 .PHONY:
