@@ -1,0 +1,52 @@
+defaults:
+    template: page.html
+    title:
+    description:
+    link:
+    author: John Reese
+    sig: '<i class="icon-gamepad"></i>'
+    feedsig: '&infin;'
+    paginate: True
+    per_page: 15
+    sort_by: date
+    reverse: True
+
+site:
+    title: John Reese
+    tagline: software engineer, video game enthusiast, free software advocate
+    uri: http://localhost
+    root: /
+    author: John Reese
+
+document_path: documents
+resource_path: resources
+template_path: templates
+output_path: site
+
+load_plugins: ["*"]
+ignore_plugins: []
+
+blog:
+    archive:
+        yearly: True
+        monthly: True
+        daily: False
+    uris:
+        feed: "feed.xml"
+        index: "index.html"
+        tags: "tags/index.html"
+        tag: "tags/{tag}.html"
+        archive: "archive.html"
+        yearly: "{year}/index.html"
+        monthly: "{year}/{month:>02}/index.html"
+        daily: "{year}/{month:>02}/{day:>02}.html"
+    templates:
+        post: "post.html"
+        feed: "feed.xml"
+        index: "posts.html"
+        tags: "list.html"
+        tag: "posts.html"
+        archive: "archive.html"
+        yearly: "posts.html"
+        monthly: "posts.html"
+        daily: "posts.html"

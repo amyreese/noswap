@@ -3,19 +3,14 @@
 # Licensed under the MIT license
 
 puburi=liara:/srv/www/noswap/
-previewuri=liara:/srv/www/noswap-preview/
 
 .PHONY:
-previewbuild:
-	nib --debug --config preview.nib build
+local:
+	nib --debug --config local.nib build
 
 .PHONY:
-build:
+public:
 	nib --debug build
-
-.PHONY:
-preview: clean previewbuild
-	rsync -avz --delete site/ $(previewuri)
 
 .PHONY:
 publish: clean build
