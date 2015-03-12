@@ -6,8 +6,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/bigfoot/bigfoot-default.css" />
     <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="All Posts" />
@@ -48,14 +48,14 @@
             </div>
 
             <div class="navbar-collapse collapse" id="navbar-main">
-                <p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
+                <p class="navbar-text"><small>{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</small></p>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/about">About Me</a></li>
                     <li><a href="/articles">Articles</a></li>
                     <li><a href="/notes">Notes</a></li>
-                    <li><a href="/games">Games</a></li>
+                    <!-- <li><a href="/games">Games</a></li> -->
                     <li><a href="/projects">Projects</a></li>
-                    <li><a href="/tags">Tags</a></li>
+                    <!-- <li><a href="/tags">Tags</a></li> -->
                     <!-- <li><a href="/archive">Archive</a></li> -->
                     <li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
                 </ul>
@@ -84,32 +84,30 @@
         </div>
         {%- endblock %}
 
+        <div class="well">
         <div class="row">
-            <div class="col-md-6" id="legal">
+            <div class="col-md-6">
                 <div><i class="fa fa-copyright"></i> John Reese</div>
                 <div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
             </div>
 
             <div class="col-md-3">
-            <ul id="more">
-                <li><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official"></i> Facebook</a></li>
-                <li><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></li>
-                <li><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></li>
-            </ul>
+                <div><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official"></i> Facebook</a></div>
+                <div><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></div>
+                <div><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></div>
             </div>
 
             <div class="col-md-3">
-            <ul id="more">
-                <li><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></li>
-                <li><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></li>
-                <li><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><i class="fa fa-linux"></i> Hosted with Linode</a></li>
-            </ul>
+                <div><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></div>
+                <div><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></div>
+                <div><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><i class="fa fa-linux"></i> Hosted with Linode</a></div>
             </div>
+        </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="/bigfoot/bigfoot.js"></script>
     <script type="text/javascript">$.bigfoot();</script>
 
