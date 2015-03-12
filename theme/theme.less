@@ -6,6 +6,26 @@
 @import "variables.less";
 @import "mixins.less";
 
+@font-size-navbar:        14px;
+@font-size-navbar-brand:  ceil((@font-size-navbar * 1.25));
+
+@font-weight-base:        300;
+@font-weight-bold:        400;
+@font-weight-navbar:      400;
+
+
+
+//
+// Page
+// --------------------------------------------------
+
+body {
+    margin-top: (@grid-gutter-width * 2);
+    font-weight: @font-weight-base;
+}
+strong {
+    font-weight: @font-weight-bold;
+}
 
 //
 // Buttons
@@ -108,6 +128,17 @@
 //
 // Navbar
 // --------------------------------------------------
+.navbar {
+    font-size: @font-size-navbar;
+    font-weight: @font-weight-navbar;
+}
+.navbar-brand {
+    font-size: @font-size-navbar-brand;
+}
+.navbar-text {
+    font-size: ceil((@font-size-navbar * 0.85));
+    line-height: ceil((@font-size-navbar-brand * @line-height-base));
+}
 
 // Default navbar
 .navbar-default {

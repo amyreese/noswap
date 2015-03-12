@@ -48,7 +48,7 @@
             </div>
 
             <div class="navbar-collapse collapse" id="navbar-main">
-                <p class="navbar-text"><small>{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</small></p>
+                <p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/about">About Me</a></li>
                     <li><a href="/articles">Articles</a></li>
@@ -64,12 +64,6 @@
     </div>
 
     <div class="container">
-        <div class="page-header">
-            <div class="row">
-                <div class="col-md-12">
-                </div>
-            </div>
-        </div>
 
         {%- block page %}
         <div class="row">
