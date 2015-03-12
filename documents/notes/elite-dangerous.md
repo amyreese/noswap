@@ -13,9 +13,14 @@ been playing it an awful lot, all the way up from the first beta.
 
 And damn, it's good!
 
->	[<img alt="Voyager 1, found in the Sol system, ~2M Ls out"
->		 src="/media/elite-dangerous-voyager.jpg" width="450"/>](/media/elite-dangerous-voyager.jpg)
->	<br/><small>Voyager 1, found in the Sol system, ~2M Ls out</small>
+<div class="row">
+ <div class="thumbnail col-md-6 col-md-offset-3">
+  <a href="/media/elite-dangerous-voyager.jpg">
+   <img alt="Voyager 1, found in the Sol system, ~2M Ls out" src="/media/elite-dangerous-voyager.jpg" />
+  </a>
+  <div class="caption">Voyager 1, found in the Sol system, ~2M Ls out</div>
+ </div>
+</div>
 
 The discipline and focus of the team at Frontier Development has produced one
 of the most polished space sim games I've ever played, and while there are
