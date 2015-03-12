@@ -6,6 +6,7 @@ puburi=liara:/srv/www/noswap/
 
 bootstrap=third-party/bootstrap
 resources=resources/css/bootstrap.css resources/css/bootstrap.min.css resources/css/bootstrap-theme.css resources/css/bootstrap-theme.min.css resources/js/bootstrap.min.js
+sources=theme/variables.less theme/theme.less
 
 .PHONY:
 local: bootstrap
@@ -23,21 +24,21 @@ publish: clean public
 bootstrap: $(resources)
 	cd $(bootstrap) && git checkout -f
 
-resources/css/bootstrap.css: resources/css/variables.less
-	cp $< $(bootstrap)/less/variables.less
+resources/css/bootstrap.css: $(sources)
+	cp $^ $(bootstrap)/less/
 	cd $(bootstrap) && grunt dist
 	cp $(bootstrap)/dist/css/bootstrap.css $@
 
-resources/css/bootstrap.min.css: resources/css/variables.less
+resources/css/bootstrap.min.css: $(sources)
 	cp $(bootstrap)/dist/css/bootstrap.min.css $@
 
-resources/css/bootstrap-theme.css: resources/css/variables.less
+resources/css/bootstrap-theme.css: $(sources)
 	cp $(bootstrap)/dist/css/bootstrap-theme.css $@
 
-resources/css/bootstrap-theme.min.css: resources/css/variables.less
+resources/css/bootstrap-theme.min.css: $(sources)
 	cp $(bootstrap)/dist/css/bootstrap-theme.min.css $@
 
-resources/js/bootstrap.min.js: resources/css/variables.less
+resources/js/bootstrap.min.js: $(sources)
 	cp $(bootstrap)/dist/js/bootstrap.min.js $@
 
 .PHONY:
