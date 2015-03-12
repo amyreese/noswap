@@ -2,129 +2,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
+    <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="/bigfoot/bigfoot-default.css" />
-	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="All Posts" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/bigfoot/bigfoot-default.css" />
+    <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="All Posts" />
 
-	<link rel="openid.server" href="https://login.launchpad.net/+openid" />
-	<link rel="openid.delegate" href="https://login.launchpad.net/+id/XCcfGeH" />
-	<link rel="openid2.provider" href="https://login.launchpad.net/+openid" />
-	<link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" />
+    <link rel="openid.server" href="https://login.launchpad.net/+openid" />
+    <link rel="openid.delegate" href="https://login.launchpad.net/+id/XCcfGeH" />
+    <link rel="openid2.provider" href="https://login.launchpad.net/+openid" />
+    <link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" />
 
-	<meta property="og:site_name" content="{{ site.title }}"/>
-	<meta property="og:url" content="{{ page.uri }}"/>
-	<meta property="og:image" content="{{ site.uri }}{% if page.image %}{{ page.image }}{% else %}/media/noswap-256.png{% endif %}"/>
-	{%- if page.date %}
-	<meta property="og:type" content="article"/>
-	{%- if page.title %}
-	<meta property="og:title" content="{{ page.title }}"/>
-	{%- endif %}
-	{%- if page.description %}
-	<meta property="og:description" content="{{ page.description }}"/>
-	{%- endif %}
-	{%- if page.title %}
-	<meta itemprop="name" content="{{ page.title }} - {{ site.title }}"/>
-	{%- endif %}
-	{%- if page.description %}
-	<meta itemprop="description" content="{{ page.description }}"/>
-	{%- endif -%}
-	{%- endif %}
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:url" content="{{ page.uri }}"/>
+    <meta property="og:image" content="{{ site.uri }}{% if page.image %}{{ page.image }}{% else %}/media/noswap-256.png{% endif %}"/>
+    {%- if page.date %}
+    <meta property="og:type" content="article"/>
+    {%- if page.title %}
+    <meta property="og:title" content="{{ page.title }}"/>
+    {%- endif %}
+    {%- if page.description %}
+    <meta property="og:description" content="{{ page.description }}"/>
+    {%- endif %}
+    {%- if page.title %}
+    <meta itemprop="name" content="{{ page.title }} - {{ site.title }}"/>
+    {%- endif %}
+    {%- if page.description %}
+    <meta itemprop="description" content="{{ page.description }}"/>
+    {%- endif -%}
+    {%- endif %}
 </head>
 <body>
 
-	<div class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="{{ site.root }}">{{ site.title }}</a>
-				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-					<i class="fa fa-bars"></i>
-				</button>
-			</div>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ site.root }}">{{ site.title }}</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
 
-			<div class="navbar-collapse collapse" id="navbar-main">
-				<p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="/about">About Me</a></li>
-					<li><a href="/articles">Articles</a></li>
-					<li><a href="/notes">Notes</a></li>
-					<li><a href="/games">Games</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="/tags">Tags</a></li>
-					<!-- <li><a href="/archive">Archive</a></li> -->
-					<li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/notes">Notes</a></li>
+                    <li><a href="/games">Games</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/tags">Tags</a></li>
+                    <!-- <li><a href="/archive">Archive</a></li> -->
+                    <li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-	<div class="container">
-		<div class="page-header">
-			<div class="row">
-				<div class="col-md-12">
-				</div>
-			</div>
-		</div>
+    <div class="container">
+        <div class="page-header">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+        </div>
 
-		{%- block page %}
-		<div class="row">
-			<div class="col-md-12">
-				{%- if title %}
-				<h2 class="title">{{ breadcrumbs(page) }}</h2>
-				{%- endif %}
-				{%- block content %}
-				{{ content }}
-				{%- endblock %}
-			</div>
-		</div>
-		{%- endblock %}
+        {%- block page %}
+        <div class="row">
+            <div class="col-md-12">
+                {%- if title %}
+                <h2 class="title">{{ breadcrumbs(page) }}</h2>
+                {%- endif %}
+                {%- block content %}
+                {{ content }}
+                {%- endblock %}
+            </div>
+        </div>
+        {%- endblock %}
 
-		<div class="row">
-			<div class="col-md-6" id="legal">
-				<div><i class="fa fa-copyright"></i> John Reese</div>
-				<div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
-			</div>
+        <div class="row">
+            <div class="col-md-6" id="legal">
+                <div><i class="fa fa-copyright"></i> John Reese</div>
+                <div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
+            </div>
 
-			<div class="col-md-3">
-			<ul id="more">
-				<li><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official"></i> Facebook</a></li>
-				<li><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></li>
-				<li><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></li>
-			</ul>
-			</div>
+            <div class="col-md-3">
+            <ul id="more">
+                <li><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official"></i> Facebook</a></li>
+                <li><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></li>
+                <li><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></li>
+            </ul>
+            </div>
 
-			<div class="col-md-3">
-			<ul id="more">
-				<li><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></li>
-				<li><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></li>
-				<li><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><i class="fa fa-linux"></i> Hosted with Linode</a></li>
-			</ul>
-			</div>
-		</div>
-	</div>
+            <div class="col-md-3">
+            <ul id="more">
+                <li><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></li>
+                <li><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></li>
+                <li><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><i class="fa fa-linux"></i> Hosted with Linode</a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="/bigfoot/bigfoot.js"></script>
-	<script type="text/javascript">$.bigfoot();</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="/bigfoot/bigfoot.js"></script>
+    <script type="text/javascript">$.bigfoot();</script>
 
-	<!-- Google Analytics (sorry) -->
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-32449453-1']);
-	  _gaq.push(['_trackPageview']);
+    <!-- Google Analytics (sorry) -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32449453-1']);
+      _gaq.push(['_trackPageview']);
 
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
 </body>
 </html>

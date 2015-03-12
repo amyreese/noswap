@@ -1,34 +1,34 @@
 {%- macro post(page, short=False) %}
 <div class="row">
-	<div class="col-md-12">
-		<h2 class="title"><a href="{{ page.link }}">{{ page.title }}</a>{% if page.link != page.uri %} <span class="muted">&rarr;</span>{% endif %}</h2>
-		<p class="metadata">
-			<span class="authored">Posted on {{ page.date | longdate }}</span>
-			{%- if page.updated %}
-			<span class="updated">, updated on {{ page.updated | longdate }}</span>
-			{%- endif %}
-			<span class="permalink"><a href="{{ page.uri }}">&raquo;</a></span>
-			<span class="tagged">Tagged as
-			{%- for tag in page.tags | sort %}
-				<a class="tag" href="{{ page.tags[tag].uri }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-			{%- endfor %}
-			</span>
-		</p>
-		{%- if short %}
-		<div class="short">
-			{{ page.short }}
-		</div>
-		{%- else %}
-		<div class="content">
-			{{ page.content }}
-		</div>
-		{%- endif %}
-		{%- if short and page.short != page.content %}
-		<p class="excerpt"><a href="{{ page.uri }}">Continue reading &raquo;</a></p>
-		{%- elif page.sig %}
-		<p class="sig"><a href="{{ page.uri }}">{{ page.sig }}</a></p>
-		{%- endif %}
-	</div>
+    <div class="col-md-12">
+        <h2 class="title"><a href="{{ page.link }}">{{ page.title }}</a>{% if page.link != page.uri %} <span class="muted">&rarr;</span>{% endif %}</h2>
+        <p class="metadata">
+            <span class="authored">Posted on {{ page.date | longdate }}</span>
+            {%- if page.updated %}
+            <span class="updated">, updated on {{ page.updated | longdate }}</span>
+            {%- endif %}
+            <span class="permalink"><a href="{{ page.uri }}">&raquo;</a></span>
+            <span class="tagged">Tagged as
+            {%- for tag in page.tags | sort %}
+                <a class="tag" href="{{ page.tags[tag].uri }}">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+            {%- endfor %}
+            </span>
+        </p>
+        {%- if short %}
+        <div class="short">
+            {{ page.short }}
+        </div>
+        {%- else %}
+        <div class="content">
+            {{ page.content }}
+        </div>
+        {%- endif %}
+        {%- if short and page.short != page.content %}
+        <p class="excerpt"><a href="{{ page.uri }}">Continue reading &raquo;</a></p>
+        {%- elif page.sig %}
+        <p class="sig"><a href="{{ page.uri }}">{{ page.sig }}</a></p>
+        {%- endif %}
+    </div>
 </div>
 {%- endmacro %}
 
