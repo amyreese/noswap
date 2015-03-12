@@ -4,8 +4,10 @@
 <head>
 	<title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="/bigfoot/bigfoot-default.css" />
 	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="All Posts" />
@@ -36,31 +38,42 @@
 </head>
 <body>
 
-	<div id="wrapper">
-		<div id="header">
-			<div id="logo">
-				<h1>
-					<a href="{{ site.root }}">{{ site.title }}</a>
-					<span id="tagline">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</span>
-				</h1>
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="{{ site.root }}">{{ site.title }}</a>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+					<i class="fa fa-bars"></i>
+				</button>
 			</div>
 
-			<ul id="pages">
-				<li><a href="/about">About Me</a></li>
-				<li><a href="/">Blog</a></li>
-				<li><a href="/articles">Articles</a></li>
-				<li><a href="/notes">Notes</a></li>
-				<li><a href="/games">Games</a></li>
-				<li><a href="/projects">Projects</a></li>
-				<li><a href="/tags">Tags</a></li>
-				<!-- <li><a href="/archive">Archive</a></li> -->
-				<li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
-			</ul>
+			<div class="navbar-collapse collapse" id="navbar-main">
+				<p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/about">About Me</a></li>
+					<li><a href="/articles">Articles</a></li>
+					<li><a href="/notes">Notes</a></li>
+					<li><a href="/games">Games</a></li>
+					<li><a href="/projects">Projects</a></li>
+					<li><a href="/tags">Tags</a></li>
+					<!-- <li><a href="/archive">Archive</a></li> -->
+					<li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="page-header">
+			<div class="row">
+				<div class="col-md-12">
+				</div>
+			</div>
 		</div>
 
-		<div id="content">
-			{%- block page %}
-			<div class="page">
+		{%- block page %}
+		<div class="row">
+			<div class="col-md-12">
 				{%- if title %}
 				<h2 class="title">{{ breadcrumbs(page) }}</h2>
 				{%- endif %}
@@ -68,39 +81,35 @@
 				{{ content }}
 				{%- endblock %}
 			</div>
-			{%- endblock %}
 		</div>
+		{%- endblock %}
 
-		<div id="footer">
-			<div id="legal">
-				<span class="generator">
-					Generated using <a href="https://github.com/jreese/nib">Nib</a>
-				</span><br/>
-				<span class="copyright">
-					Copyright &copy; John Reese
-				</span><br/>
-				<span class="license">
-					Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a>.
-				</span>
+		<div class="row">
+			<div class="col-md-6" id="legal">
+				<div><i class="fa fa-copyright"></i> John Reese</div>
+				<div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
 			</div>
 
+			<div class="col-md-3">
 			<ul id="more">
 				<li><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official"></i> Facebook</a></li>
 				<li><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></li>
 				<li><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></li>
 			</ul>
+			</div>
 
+			<div class="col-md-3">
 			<ul id="more">
 				<li><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></li>
 				<li><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></li>
 				<li><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><i class="fa fa-linux"></i> Hosted with Linode</a></li>
 			</ul>
+			</div>
 		</div>
 	</div>
 
-	<div id="background"><div id="gradient"></div></div>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script src="/bigfoot/bigfoot.js"></script>
 	<script type="text/javascript">$.bigfoot();</script>
 

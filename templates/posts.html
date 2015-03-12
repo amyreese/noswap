@@ -1,25 +1,32 @@
 {% extends "page.html" %}
 {% block page %}
-<div class="posts">
-{%- if page.title %}
-<h2 class="title">{{ breadcrumbs(page) }}</h2>
-{%- endif %}
-{{ content }}
+<div class="row">
+    <div class="col-md-12">
+        {%- if page.title %}
+        <h2 class="title">{{ breadcrumbs(page) }}</h2>
+        {%- endif %}
+        {{ content }}
+    </div>
+</div>
+
 {% for p in pages %}
 {{ post(p, short=True) }}
 {% endfor %}
+
 {%- if page.previous or page.next %}
-<p class="more">
-{%- if page.previous %}
-<a href="{{ page.previous.uri }}">&larr; Previous</a>
-{%- endif %}
-{%- if page.previous and page.next %}
-&emsp;
-{%- endif %}
-{%- if page.next %}
-<a href="{{ page.next.uri }}">Next &rarr;</a>
-{%- endif %}
-</p>
-{%- endif %}
-</div>
+<nav>
+    <ul class="pager">
+        {%- if page.previous %}
+        <li class="previous">
+            <a href="{{ page.previous.uri }}">&larr; Previous</a>
+        </li>
+        {%- endif %}
+        {%- if page.next %}
+        <li class="next">
+            <a href="{{ page.next.uri }}">Next &rarr;</a>
+        </li>
+        {%- endif %}
+    </ul>
+</nav>
+{% endif %}
 {% endblock %}
