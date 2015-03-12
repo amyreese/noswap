@@ -1,4 +1,4 @@
-{%- from 'macros.html' import post, breadcrumbs -%}
+{%- from 'macros.html' import post, navlinks, breadcrumbs -%}
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,13 +50,12 @@
             <div class="navbar-collapse collapse" id="navbar-main">
                 <p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/about">About Me</a></li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/notes">Notes</a></li>
-                    <!-- <li><a href="/games">Games</a></li> -->
-                    <li><a href="/projects">Projects</a></li>
-                    <!-- <li><a href="/tags">Tags</a></li> -->
-                    <!-- <li><a href="/archive">Archive</a></li> -->
+                    {{ navlinks(site, page, [
+                        ("/about", "About Me"),
+                        ("/articles", "Articles"),
+                        ("/notes", "Notes"),
+                        ("/projects", "Projects"),
+                    ]) }}
                     <li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
                 </ul>
             </div>

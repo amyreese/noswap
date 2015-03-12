@@ -1,3 +1,9 @@
+{%- macro navlinks(site, page, pairs) %}
+{%- for uri, name in pairs %}
+<li {%- if page.uri.startswith(site.uri + uri) %} class="active"{% endif %}><a href="{{ uri }}">{{ name }}</a></li>
+{%- endfor %}
+{%- endmacro %}
+
 {%- macro post(page, short=False) %}
 <div class="row">
     <div class="col-md-12">
