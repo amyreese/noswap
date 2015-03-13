@@ -12,9 +12,14 @@ of visiting those distant worlds; it indeed captured my imagination, and
 continues to inspire me even now, two decades after I first learned of their
 amazing quests.
 
->	[<img alt="Jupiter's Great Red Spot, as photographed by Voyager 1"
->		 src="/media/voyager/great-red-spot.jpg" width="450"/>](/media/voyager/great-red-spot.jpg)
->	<br/><small>Jupiter's Great Red Spot, as photographed by Voyager 1.</small>
+<div class="row">
+ <div class="thumbnail col-md-6 col-md-offset-3">
+  <a href="/media/voyager/great-red-spot.jpg">
+   <img alt="Jupiter's Great Red Spot, as photographed by Voyager 1" src="/media/voyager/great-red-spot.jpg" />
+  </a>
+  <div class="caption">Jupiter's Great Red Spot, as photographed by Voyager 1.</div>
+ </div>
+</div>
 
 I've spent countless hours dreaming of visiting the planets and stars of our
 universe: in games like Wing Commander, Freespace, [Freelancer][],
@@ -24,9 +29,14 @@ solar system. I can't wait for [Star Citizen][] and [X Rebirth][] to give me
 further ways to escape the confines of Earth and experience worlds that
 I will never be able to visit otherwise.
 
->	[<img alt="Volcanic eruption on Io, as photographed by Voyager 1"
->		 src="/media/voyager/io-eruption.jpg" width="450"/>](/media/voyager/io-eruption.jpg)
->	<br/><small>Volcanic eruption on Io, as photographed by Voyager 1.</small>
+<div class="row">
+ <div class="thumbnail col-md-6 col-md-offset-3">
+  <a href="/media/voyager/io-eruption.jpg">
+   <img alt="Volcanic eruption on Io, as photographed by Voyager 1" src="/media/voyager/io-eruption.jpg" />
+  </a>
+  <div class="caption">Volcanic eruption on Io, as photographed by Voyager 1</div>
+ </div>
+</div>
 
 And I have NASA to thank for inspiring so many of these wonderful outlets, from
 the Mercury, Gemini, and Apollo projects that took us to the Moon, the Voyager
@@ -35,9 +45,14 @@ the Mars rovers for exploring our closest neighbor, and to future NASA
 missions like [New Horizons][] that are leading the way towards understanding
 our tiny place in this vast universe.
 
->	[<img alt="Voyager"
->		 src="/media/voyager/voyager.jpg" width="400"/>](/media/voyager/voyager.jpg)
->	<br/><small>Voyager.</small>
+<div class="row">
+ <div class="thumbnail col-md-6 col-md-offset-3">
+  <a href="/media/voyager/voyager.jpg">
+   <img alt="The Voyager probe." src="/media/voyager/voyager.jpg" />
+  </a>
+  <div class="caption">The Voyager probe.</div>
+ </div>
+</div>
 
 Today, it was finally confirmed that Voyager 1 has indeed crossed the boundary
 of the heliosphere and [forever left our solar system behind][nytimes].
