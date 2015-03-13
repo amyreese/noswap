@@ -2,4 +2,6 @@
 *.swp
 .remote-sync.json
 
+resources/*/bootstrap*
+
 site/

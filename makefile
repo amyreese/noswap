@@ -43,5 +43,5 @@ resources/js/bootstrap.min.js: $(sources)
 
 .PHONY:
 clean:
-	rm -rf site/
+	rm -rf site/ $(resources)
 
