@@ -168,6 +168,19 @@ h6 {
   font-size: 14px;
   color: #7a706a;
 }
+pre,
+code,
+kbd {
+  font-size: 14px;
+}
+pre {
+  overflow: auto;
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: pre;
+}
 .btn-default,
 .btn-primary,
 .btn-success,
