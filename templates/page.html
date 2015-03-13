@@ -42,18 +42,19 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="{{ site.root }}">{{ site.title }}</a>
+                <p class="pull-left navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                     <i class="fa fa-bars"></i>
                 </button>
             </div>
 
             <div class="navbar-collapse collapse" id="navbar-main">
-                <p class="navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
                 <ul class="nav navbar-nav navbar-right">
                     {{ navlinks(site, page, [
                         ("/about", "About Me"),
                         ("/articles", "Articles"),
                         ("/notes", "Notes"),
+                        ("/games", "Games"),
                         ("/projects", "Projects"),
                     ]) }}
                     <li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
@@ -77,25 +78,23 @@
         </div>
         {%- endblock %}
 
-        <div class="well">
-        <div class="row">
+        <div id="footer" class="row">
             <div class="col-md-6">
                 <div><i class="fa fa-copyright"></i> John Reese</div>
                 <div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
             </div>
 
-            <div class="col-md-3">
-                <div><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official"></i> Facebook</a></div>
+            <div class="links col-md-3">
+                <div><a href="https://facebook.com/nucleareclipse/"><i class="fa fa-facebook-official text-info"></i> Facebook</a></div>
                 <div><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></div>
                 <div><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></div>
             </div>
 
-            <div class="col-md-3">
+            <div class="links col-md-3">
                 <div><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></div>
                 <div><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></div>
                 <div><a href="http://www.linode.com/?r=ebecdda24dde08d94025bbfe10e9994718d398be" title="Hosted with Linode"><i class="fa fa-linux"></i> Hosted with Linode</a></div>
             </div>
-        </div>
         </div>
     </div>
 

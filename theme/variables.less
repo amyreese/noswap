@@ -60,6 +60,7 @@
 @font-size-base:          18px;
 @font-size-large:         ceil((@font-size-base * 1.25));
 @font-size-small:         ceil((@font-size-base * 0.85));
+@font-size-tiny:          ceil((@font-size-base * 0.75));
 
 @font-size-h1:            floor((@font-size-base * 2));
 @font-size-h2:            floor((@font-size-base * 1.75));
@@ -327,7 +328,7 @@
 @grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-min;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
