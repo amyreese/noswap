@@ -16,12 +16,14 @@
 @orange: #ff4f00;
 @pebble: #7a706a;
 
-@brand-primary:         @orange; // #337ab7
-@brand-text:            @pebble;
+@brand-primary:         @pebble; // #337ab7
+@brand-splash:          @orange;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
+
+@brand-background:      lighten(@pebble, 50%);
 
 
 //== Scaffolding
@@ -34,9 +36,9 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            @brand-text;
+@link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
-@link-hover-color:      @brand-primary;
+@link-hover-color:      @brand-splash;
 //** Link hover decoration.
 @link-hover-decoration: underline;
 
@@ -45,9 +47,11 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@import (inline) url("https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,900|Source+Code+Pro:300&subset=latin,greek");
+@import (inline) url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600,700,900&subset=latin,greek");
+@import (inline) url("https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,600,700,900&subset=latin,greek");
+@import (inline) url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300italic,400,600,700,900&subset=latin,greek");
 
-@font-family-sans-serif:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -73,7 +77,7 @@
 @headings-font-family:    inherit;
 @headings-font-weight:    900;
 @headings-line-height:    1.1;
-@headings-color:          @brand-text;
+@headings-color:          @brand-primary;
 
 
 //== Iconography
@@ -107,9 +111,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        6px;
+@border-radius-large:       8px;
+@border-radius-small:       4px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
