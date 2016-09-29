@@ -13,7 +13,7 @@ defaults:
 
 site:
     title: John Reese
-    tagline: software engineer, video game enthusiast, free software advocate
+    tagline: software engineer, video game enthusiast, virtual astronaut
     uri: http://localhost
     root: /
     author: John Reese
