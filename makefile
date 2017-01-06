@@ -21,8 +21,12 @@ publish: clean public
 	rsync -avz --delete site/ $(puburi)
 
 .PHONY:
-bootstrap: $(resources)
+bootstrap: bootstrap-build $(resources)
 	cd $(bootstrap) && git checkout -f
+
+.PHONY:
+bootstrap-build:
+	cd $(bootstrap) && npm install
 
 resources/css/bootstrap.css: $(sources)
 	cp $^ $(bootstrap)/less/
