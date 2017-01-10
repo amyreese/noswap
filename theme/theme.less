@@ -23,68 +23,68 @@
 // --------------------------------------------------
 
 body {
-    margin-top: (@grid-gutter-width * 3);
-    font-weight: @font-weight-base;
-    background: none;
+  margin-top: (@grid-gutter-width * 3);
+  font-weight: @font-weight-base;
+  background: none;
 }
 strong {
-    font-weight: @font-weight-bold;
+  font-weight: @font-weight-bold;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Roboto", @font-family-sans-serif;
+  font-family: "Roboto", @font-family-sans-serif;
 }
 
 @gradient-height: (@grid-gutter-width * 12);
 
 #background
 {
-	z-index: -1000;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: @body-bg;
+  z-index: -1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: @body-bg;
 
-	#gradient
-	{
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: @gradient-height;
-        #gradient > .vertical(@brand-background, @body-bg);
-	}
+  #gradient
+  {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: @gradient-height;
+    #gradient > .vertical(@brand-background, @body-bg);
+  }
 }
 
 #footer {
-    margin-top: (@grid-gutter-width * 2);
-    margin-bottom: (@grid-gutter-width * 3);
-    font-size: @font-size-tiny;
+  margin-top: (@grid-gutter-width * 2);
+  margin-bottom: (@grid-gutter-width * 3);
+  font-size: @font-size-tiny;
 
-    .links {
-        border-left: 1px solid @brand-background;
-    }
+  .links {
+    border-left: 1px solid @brand-background;
+  }
 }
 
 .metadata {
-    font-size: @font-size-tiny;
-    color: @brand-primary;
+  font-size: @font-size-tiny;
+  color: @brand-primary;
 }
 
 pre,
 code,
 kbd {
-    font-size: @font-size-tiny;
+  font-size: @font-size-tiny;
 }
 
 pre {
-    overflow: auto;
-    word-wrap: normal;
-    word-break: normal;
+  overflow: auto;
+  word-wrap: normal;
+  word-break: normal;
 
-    code {
-        white-space: pre;
-    }
+  code {
+    white-space: pre;
+  }
 }
 
 
@@ -254,20 +254,20 @@ pre {
 }
 
 .navbar {
-    font-size: @font-size-navbar;
-    font-weight: @font-weight-navbar;
+  font-size: @font-size-navbar;
+  font-weight: @font-weight-navbar;
 }
 .navbar-brand {
-    font-size: @font-size-navbar-brand;
-    font-weight: @font-weight-navbar-brand;
+  font-size: @font-size-navbar-brand;
+  font-weight: @font-weight-navbar-brand;
 }
 .navbar-text {
-    font-size: @font-size-navbar-text;
-    line-height: @line-height-navbar;
-    margin-bottom: 0;
+  font-size: @font-size-navbar-text;
+  line-height: @line-height-navbar;
+  margin-bottom: 0;
 }
 .navbar-fixed-top {
-    border-bottom: 1px solid @brand-splash;
+  border-bottom: 1px solid @brand-splash;
 }
 
 
