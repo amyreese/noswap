@@ -247,3 +247,32 @@
 .is-positioned-top .bigfoot-footnote__tooltip {
   bottom: -0.65em;
 }
+
+.bigfoot-footnote__button {
+  position: relative;
+  height: 0.95em;
+  width: 1.5em;
+  border-radius: 0.475em;
+}
+.bigfoot-footnote__button:after {
+  content: attr(data-footnote-number);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  font-size: 0.57em;
+  font-weight: bold;
+  color: rgba(110, 110, 110, 0.5);
+  -webkit-transition: color 0.25s ease;
+          transition: color 0.25s ease;
+}
+.bigfoot-footnote__button:hover:after, .bigfoot-footnote__button.is-active:after {
+  color: white;
+}
+
+.bigfoot-footnote__button__circle {
+  display: none;
+}
