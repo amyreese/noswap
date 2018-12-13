@@ -48,15 +48,15 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@import (inline) url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600,700,900&subset=latin,greek");
-@import (inline) url("https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,600,700,900&subset=latin,greek");
-@import (inline) url("https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300italic,400,600,700,900&subset=latin,greek");
+@import (inline) url("https://use.typekit.net/drg3exd.css");
 
-@font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
-//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-@font-family-monospace:   "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-sans-serif:  freight-sans-pro, Helvetica, sans-serif;
+@font-family-serif:       times, serif;
+@font-family-monospace:   fira-mono, Menlo, Monaco, Consolas, "Courier New", monospace;
+
 @font-family-base:        @font-family-sans-serif;
+@font-family-brand:       freight-sans-pro, serif;
+@font-family-heading:     eurostile, serif;
 
 @font-size-base:          18px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // 23px
@@ -70,14 +70,25 @@
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil((@font-size-base * 0.85));
 
+@font-size-navbar:        18px;
+@font-size-navbar-brand:  24px;
+@font-size-navbar-text:   16px;
+
+@font-weight-base:        400;
+@font-weight-bold:        600;
+@font-weight-navbar:      400;
+@font-weight-navbar-brand: 700;
+@font-weight-heading:     900;
+
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+@line-height-navbar:      ceil((@font-size-navbar * @line-height-base));
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    900;
+@headings-font-weight:    @font-weight-heading;
 @headings-line-height:    1.1;
 @headings-color:          @brand-primary;
 
