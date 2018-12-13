@@ -1,6 +1,7 @@
 *.pyc
 *.swp
 .remote-sync.json
+.venv
 
 resources/*/bootstrap*
 
