@@ -8,13 +8,17 @@ bootstrap=third-party/bootstrap
 resources=resources/css/bootstrap.css resources/css/bootstrap.min.css resources/css/bootstrap-theme.css resources/css/bootstrap-theme.min.css resources/js/bootstrap.min.js
 sources=theme/variables.less theme/theme.less
 
-.PHONY:
-local: bootstrap
-	nib --debug --config local.nib build
+.venv:
+	python3 -m venv .venv
+	.venv/bin/python -m pip install -Ur requirements.txt
 
 .PHONY:
-public: bootstrap
-	nib --debug build
+local: .venv bootstrap
+	.venv/bin/nib --debug --config local.nib build
+
+.PHONY:
+public: .venv bootstrap
+	.venv/bin/nib --debug build
 
 .PHONY:
 publish: clean public
