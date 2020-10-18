@@ -1,36 +1,19 @@
 @import (reference) "elements.less";
 
+// "Reset"
+* {
+	box-sizing: border-box;
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
 // Fonts
 @import (inline) url("https://use.typekit.net/igl6ogc.css");
-
-.logo(@weight: 600) {
-	font-family: "lust-script", Georgia, serif;
-	font-weight: @weight;
-}
-
-.sublogo(@weight: 400) {
-	font-family: "lato", Helvetica, Arial, sans-serif;
-}
-
-.title(@weight: 600) {
-	font-family: "chaparral-pro", Helvetica, Arial, sans-serif;
-	font-weight: @weight;
-}
-
-.metatext(@weight: 400) {
-	font-family: "lato", Helvetica, Arial, sans-serif;
-	font-weight: @weight;
-}
-
-.text(@weight: 300) {
-	font-family: "lato", Helvetica, Arial, sans-serif;
-	font-weight: @weight;
-}
-
-.code(@weight: 300) {
-	font-family: "input-sans", monospace;
-	font-weight: @weight;
-}
 
 // Witch Hazel
 @whbackground: #433E56;
@@ -44,15 +27,96 @@
 @whclass: #FFF352;
 @whfunction: #CEB1FF;
 
-* {
-	box-sizing: border-box;
-	color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	font-weight: inherit;
-	line-height: 1.5em;
-	margin: 0;
-	padding: 0;
+:root {
+	--font-logo: "lust-script", Georgia, serif;
+	--font-sublogo: "lato", Helvetica, Arial, sans-serif;
+	--font-title: "chaparral-pro-display", Helvetica, Arial, sans-serif;
+	--font-metatext: "lato", Helvetica, Arial, sans-serif;
+	--font-text: "lato", Helvetica, Arial, sans-serif;
+	--font-code: "input-sans", monospace;
+
+	--size-logo: 72px;
+	--size-title: 42px;
+	--size-text: 24px;
+	--size-small: 18px;
+
+	--weight-logo: 600;
+	--weight-sublogo: 400;
+	--weight-title: 600;
+	--weight-metatext: 300;
+	--weight-text: 400;
+	--weight-code: 400;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: @whbackground;
+		--color-logo: @whselection;
+		--color-sublogo: @whcomment;
+		--color-nav: @whcomment;
+		--color-nav-hover: @whfunction;
+		--color-divider: @whhighlight;
+		--color-title: @whselection;
+		--color-metatext: @whcomment;
+		--color-text: @whforeground;
+		--color-link: @whother;
+		--color-link-hover: @whfunction;
+
+		--weight-sublogo: 300;
+		--weight-metatext: 300;
+		--weight-text: 300;
+		--weight-code: 300;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-background: @whforeground;
+		--color-logo: @whhighlight;
+		--color-sublogo: @whbackground;
+		--color-nav: @whbackground;
+		--color-nav-hover: @whhighlight;
+		--color-divider: @whselection;
+		--color-title: @whhighlight;
+		--color-metatext: @whhighlight;
+		--color-text: @whbackground;
+		--color-link: @whhighlight;
+		--color-link-hover: @whselection;
+	}
+}
+
+// (40em + 2x2em) * 24px == 1056 
+@media (min-width: 1057px) {
+	#wrapper {
+		width: 40em;
+		margin: auto;
+	}
+}
+
+@media (max-width: 1056px) {
+	#wrapper {
+		width: 100%;
+		padding: 0 2em;
+	}
+}
+
+// increase fonts, reduce padding for small, retina devices
+@media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	:root {
+		--size-logo: 96px;
+		--size-title: 64px;
+		--size-text: 46px;
+		--size-small: 28px;
+		--weight-metatext: 400;
+	}
+
+	#wrapper {
+		padding: 0 1em;
+	}
+}
+
+body {
+	background-color: var(--color-background);
 }
 
 #background {
@@ -62,36 +126,23 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	background-color: @whbackground;
-}
-
-@media (min-width: 981px) {
-	#wrapper {
-		width: 960px;
-		margin: auto;
-	}
-}
-
-@media (max-width: 980px) {
-	#wrapper {
-		width: 100%;
-		padding: 0 3em;
-	}
+	background-color: var(--color-background);
 }
 
 #wrapper {
-	color: @whforeground;
-	font-size: 24px;
-	.text();
+	color: var(--color-text);
+	font-family: var(--font-text);
+	font-size: var(--size-text);
+	font-weight: var(--weight-text);
 	line-height: 1.5em;
 
 	a {
-		color: @whcomment;
+		color: var(--color-link);
 		text-decoration: none;
 	}
 
 	a:hover {
-		color: @whselection;
+		color: var(--color-link-hover);
 		text-decoration: underline;
 	}
 
@@ -104,36 +155,39 @@
 	display: flex;
 	flex-direction: column;
 
-	color: @whcomment;
-	border-bottom: 1px solid @whhighlight;
+	color: var(--color-sublogo);
+	border-bottom: 1px solid var(--color-divider);
 
-	margin: 1em 0 0;
+	padding: 1em 0;
 
-	#title {
+	#logo {
 		text-align: center;
 		margin: 0em 0em -0.8em;
 
 		a {
-			color: @whselection;
-			font-size: 72px;
-			.logo();
+			color: var(--color-logo);
+			font-family: var(--font-logo);
+			font-size: var(--size-logo);
+			font-weight: var(--weight-logo);
 			text-decoration: none;
 		}
 	}
 
 	#tagline {
-		font-size: 18px;
+		font-family: var(--font-sublogo);
+		font-size: var(--size-small);
+		font-weight: var(--weight-sublogo);
 		text-align: center;
-		.sublogo(300);
 	}
 
 	#navbar {
-		//order: -1;
+		order: -1;
+		text-align: right;
 
-		font-variant-caps: all-small-caps;
-		text-align: center;
-		margin: 0.5em 0em;
-		.code(400);
+		font-family: var(--font-code);
+		font-variant: all-small-caps;
+		font-weight: var(--weight-code);
+		margin: -0.5em 0em 0.5em;
 
 		ul {
 			li {
@@ -141,7 +195,12 @@
 				list-style-type: none;
 				margin: 0em 0.25em;
 
+				a {
+					color: var(--color-nav);
+				}
+
 				a:hover {
+					color: var(--color-nav-hover);
 					text-decoration: none;
 				}
 			}
@@ -154,24 +213,39 @@
 		margin: 2em 0em 3em;
 
 		h2 {
-			color: @whselection;
-			font-size: 36px;
-			.title();
+			color: var(--color-title);
+			font-family: var(--font-title);
+			font-size: var(--size-title);
+			font-weight: var(--weight-title);
+			line-height: 1.2em;
 
 			a {
-				color: @whselection;
+				color: var(--color-title);
+				line-height: 1.2em;
+			}
+
+			span {
+				line-height: 1.2em;
 			}
 		}
 
 		p.metadata {
-			color: @whcomment;
-			font-size: 18px;
-			.metatext(300);
+			color: var(--color-metatext);
+			font-family: var(--font-metatext);
+			font-size: var(--size-small);
+			font-weight: var(--weight-metatext);
+			margin: 0 0 1em;
+		}
+
+		p.sig a {
+			color: var(--color-title);
 		}
 
 		img {
 			width: 100%;
 			margin: auto;
+			.rounded(5px);
+			.drop-shadow(5px, 5px);
 		}
 	}
 
