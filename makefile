@@ -13,7 +13,7 @@ sources=theme/variables.less theme/theme.less
 	.venv/bin/python -m pip install -Ur requirements.txt
 
 .PHONY:
-local: .venv bootstrap
+local: .venv
 	.venv/bin/nib --debug --config local.nib build
 
 .PHONY:

@@ -1,72 +1,70 @@
 {%- from 'macros.html' import post, navlinks, breadcrumbs -%}
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="/css/bootstrap.css" />
-    <link rel="stylesheet" href="/css/bootstrap-theme.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/bigfoot/bigfoot-default.css" />
     <link rel="alternate" type="application/atom+xml" href="/feed.xml" title="All Posts" />
 
-    <link rel="me" href="https://micro.blog/jreese" />
+    <link rel="me" href="https://jreese.sh" />
     <link rel="canonical" href="{{ page.uri }}" />
     <link rel="openid.server" href="https://login.launchpad.net/+openid" />
     <link rel="openid.delegate" href="https://login.launchpad.net/+id/XCcfGeH" />
     <link rel="openid2.provider" href="https://login.launchpad.net/+openid" />
     <link rel="openid2.local_id" href="https://login.launchpad.net/+id/XCcfGeH" />
 
-    <meta property="og:site_name" content="{{ site.title }}"/>
-    <meta property="og:url" content="{{ page.uri }}"/>
-    <meta property="og:image" content="{{ site.uri }}{% if page.image %}{{ page.image }}{% else %}/media/noswap-256.png{% endif %}"/>
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:url" content="{{ page.uri }}" />
+    <meta property="og:image"
+        content="{{ site.uri }}{% if page.image %}{{ page.image }}{% else %}/media/noswap-256.png{% endif %}" />
     {%- if page.date %}
-    <meta property="og:type" content="article"/>
+    <meta property="og:type" content="article" />
     {%- if page.title %}
-    <meta property="og:title" content="{{ page.title }}"/>
+    <meta property="og:title" content="{{ page.title }}" />
     {%- endif %}
     {%- if page.description %}
-    <meta property="og:description" content="{{ page.description }}"/>
+    <meta property="og:description" content="{{ page.description }}" />
     {%- endif %}
     {%- if page.title %}
-    <meta itemprop="name" content="{{ page.title }} - {{ site.title }}"/>
+    <meta itemprop="name" content="{{ page.title }} - {{ site.title }}" />
     {%- endif %}
     {%- if page.description %}
-    <meta itemprop="description" content="{{ page.description }}"/>
+    <meta itemprop="description" content="{{ page.description }}" />
     {%- endif -%}
     {%- endif %}
 </head>
+
 <body>
 
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="{{ site.root }}">{{ site.title }}</a>
-                <p class="pull-left navbar-text">{% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}</p>
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                    <i class="fa fa-bars"></i>
-                </button>
+    <div id="wrapper">
+        <div id="header">
+            <div id="title">
+                <h1><a href="{{ site.root }}">{{ site.title }}</a></h1>
             </div>
-
-            <div class="navbar-collapse collapse" id="navbar-main">
-                <ul class="nav navbar-nav navbar-right">
-                    {{ navlinks(site, page, [
-                        ("/about", "About Me"),
-                        ("https://github.com/jreese", '<i class="fa fa-github"></i> Projects'),
-                    ]) }}
+            <div id="tagline">
+                {% if page.tagline %}{{ page.tagline }}{% else %}{{ site.tagline }}{% endif %}
+            </div>
+            <div id="navbar">
+                <ul>
+                    {{- navlinks(site, page, [
+                        ("/about", "About"),
+                        ("/blog", "Blog"),
+                    ])}}
+                    <li><a href="https://github.com/jreese"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/n7cmdr"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="/feed.xml"><i class="fa fa-rss"></i></a></li>
                 </ul>
             </div>
         </div>
-    </div>
 
-    <div id="content" class="container">
-
-        {%- block page %}
-        <div class="row">
-            <div class="col-md-12">
+        <div id="content">
+            {%- block page %}
+            <div class="story">
                 {%- if title %}
                 <h2 class="title">{{ breadcrumbs(page) }}</h2>
                 {%- endif %}
@@ -74,36 +72,47 @@
                 {{ content }}
                 {%- endblock %}
             </div>
+            {%- endblock %}
         </div>
-        {%- endblock %}
 
         <div id="footer" class="row">
             <div class="col-md-6">
                 <div><i class="fa fa-copyright"></i> John Reese</div>
-                <div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
+                <div><i class="fa fa-share-alt"></i> Licensed under a <a rel="license"
+                        href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons License</a></div>
             </div>
 
             <div class="links col-md-3">
-                <div><a href="https://facebook.com/n7cmdr/"><i class="fa fa-facebook-official text-info"></i> Facebook</a></div>
+                <div><a href="https://facebook.com/n7cmdr/"><i class="fa fa-facebook-official text-info"></i>
+                        Facebook</a></div>
                 <div><a href="https://twitter.com/n7cmdr/"><i class="fa fa-twitter"></i> Twitter</a></div>
-                <div><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i> Steam</a></div>
+                <div><a href="https://steamcommunity.com/id/nuclear_eclipse/"><i class="fa fa-steam"></i>
+                        Steam</a>
+                </div>
             </div>
 
             <div class="links col-md-3">
                 <!-- <div><a href="/feed.xml"><i class="fa fa-rss"></i> Subscribe</a></div> -->
                 <div><a href="https://github.com/jreese/"><i class="fa fa-github"></i> GitHub</a></div>
-                <div><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a></div>
-                <div><a href="https://m.do.co/c/1518964d392d" title="Hosted with Digital Ocean"><i class="fa fa-linux"></i> Hosted with Digital Ocean</a></div>
+                <div><a href="https://github.com/jreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a>
+                </div>
+                <div><a href="https://m.do.co/c/1518964d392d" title="Hosted with Digital Ocean"><i
+                            class="fa fa-linux"></i> Hosted with Digital Ocean</a></div>
             </div>
         </div>
     </div>
 
-    <div id="background"><div id="gradient"></div></div>
+    <div id="background">
+        <div id="gradient"></div>
+    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha384-UM1JrZIpBwVf5jj9dTKVvGiiZPZTLVoq4sfdvIe9SBumsvCuv6AHDNtEiIb5h1kU" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+        integrity="sha384-UM1JrZIpBwVf5jj9dTKVvGiiZPZTLVoq4sfdvIe9SBumsvCuv6AHDNtEiIb5h1kU"
+        crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/bigfoot/bigfoot.js"></script>
     <script src="/js/main.js"></script>
 
 </body>
+
 </html>
