@@ -14,4 +14,6 @@ Facebook, [Bowler](https://pybowler.io), which I built using those same concepts
 I really appreciated the questions from the audience and in the halls afterwards, and
 we really enjoyed our time in Sydney.  Thanks to everyone that made PyCon so great!
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/9USGh4Uy-xQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="embed">
+    <iframe src="https://www.youtube-nocookie.com/embed/9USGh4Uy-xQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

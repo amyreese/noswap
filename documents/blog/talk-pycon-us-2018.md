@@ -14,4 +14,6 @@ expected, and I was really happy to hear from everyone that stopped by the
 Facebook booth to ask questions, discuss Facebook engineering practices, or
 even just say "hello".  Thank you to everyone who made my first PyCon amazing!
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/0kXaLh8Fz3k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="embed">
+    <iframe src="https://www.youtube-nocookie.com/embed/0kXaLh8Fz3k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

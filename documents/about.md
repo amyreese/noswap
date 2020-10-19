@@ -11,12 +11,10 @@ I have a Bachelor of Science in Software Engineering from the
 I now live in the sunny San Francisco Bay Area, in California, with my wonderful
 wife Angela and an adorable pair of cats named Skittle and Zero.
 
-<div class="row">
- <div class="thumbnail col-md-4 col-md-offset-4">
+<div class="thumbnails">
   <a href="/media/profile.jpg">
    <img src="/media/profile.jpg" />
   </a>
- </div>
 </div>
 
 I have been using and promoting Linux and open source software since late 2003,

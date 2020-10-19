@@ -12,13 +12,11 @@ of visiting those distant worlds; it indeed captured my imagination, and
 continues to inspire me even now, two decades after I first learned of their
 amazing quests.
 
-<div class="row">
- <div class="thumbnail col-md-6 col-md-offset-3">
+<div class="fullbleed">
   <a href="/media/voyager/great-red-spot.jpg">
    <img alt="Jupiter's Great Red Spot, as photographed by Voyager 1" src="/media/voyager/great-red-spot.jpg" />
   </a>
   <div class="caption">Jupiter's Great Red Spot, as photographed by Voyager 1.</div>
- </div>
 </div>
 
 I've spent countless hours dreaming of visiting the planets and stars of our
@@ -29,13 +27,11 @@ solar system. I can't wait for [Star Citizen][] and [X Rebirth][] to give me
 further ways to escape the confines of Earth and experience worlds that
 I will never be able to visit otherwise.
 
-<div class="row">
- <div class="thumbnail col-md-6 col-md-offset-3">
+<div class="fullbleed">
   <a href="/media/voyager/io-eruption.jpg">
    <img alt="Volcanic eruption on Io, as photographed by Voyager 1" src="/media/voyager/io-eruption.jpg" />
   </a>
   <div class="caption">Volcanic eruption on Io, as photographed by Voyager 1</div>
- </div>
 </div>
 
 And I have NASA to thank for inspiring so many of these wonderful outlets, from
@@ -45,13 +41,11 @@ the Mars rovers for exploring our closest neighbor, and to future NASA
 missions like [New Horizons][] that are leading the way towards understanding
 our tiny place in this vast universe.
 
-<div class="row">
- <div class="thumbnail col-md-6 col-md-offset-3">
+<div class="fullbleed">
   <a href="/media/voyager/voyager.jpg">
    <img alt="The Voyager probe." src="/media/voyager/voyager.jpg" />
   </a>
   <div class="caption">The Voyager probe.</div>
- </div>
 </div>
 
 Today, it was finally confirmed that Voyager 1 has indeed crossed the boundary

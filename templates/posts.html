@@ -14,19 +14,14 @@
 {% endfor %}
 
 {%- if page.previous or page.next %}
-<nav>
-    <ul class="pager">
-        {%- if page.previous %}
-        <li class="previous">
-            <a href="{{ page.previous.uri }}">&larr; Previous</a>
-        </li>
-        {%- endif %}
-        {%- if page.next %}
-        <li class="next">
-            <a href="{{ page.next.uri }}">Next &rarr;</a>
-        </li>
-        {%- endif %}
-    </ul>
-</nav>
+<div id="pager">
+    {%- if page.previous %}
+    <a class="previous" href="{{ page.previous.uri }}">&larr; Previous</a>
+    {%- endif %}
+    {%- if page.next %}
+    <a class="next" href="{{ page.next.uri }}">Next &rarr;</a>
+    {%- endif %}
+</div>
+
 {% endif %}
 {% endblock %}

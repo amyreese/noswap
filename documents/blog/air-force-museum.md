@@ -16,15 +16,28 @@ Hopefully we'll get to return soon and rectify that.
 The full gallery is [on Picasa](https://picasaweb.google.com/nucleareclipse/AirForceMuseum2011?authuser=0&feat=directlink),
 and contains 130 photos.
 
-![B-29 "Bockscar"](https://lh3.googleusercontent.com/-mPxzzBLomTo/TjV-1UxQh0I/AAAAAAAAAjk/NYLMIq76PU4/s640/IMG_20110731_115650.jpg)  
-B-29 "Bockscar"
+<div class="fullbleed">
+    <a href="https://lh3.googleusercontent.com/-mPxzzBLomTo/TjV-1UxQh0I/AAAAAAAAAjk/NYLMIq76PU4/s640/IMG_20110731_115650.jpg">
+    <img alt='B-29 "Bockscar"' src="https://lh3.googleusercontent.com/-mPxzzBLomTo/TjV-1UxQh0I/AAAAAAAAAjk/NYLMIq76PU4/s640/IMG_20110731_115650.jpg" /></a>
+    <div class="caption">B-29 "Bockscar"</div>
+</div>
 
-![F-86 Saber](https://lh4.googleusercontent.com/-1W2EJ7_jXfw/TjcQAD8EWgI/AAAAAAAAAp0/QBsr4d4iT6Y/s640/IMG_20110731_133028.jpg)  
-F-86 Saber
+<div class="fullbleed">
+    <a href="https://lh4.googleusercontent.com/-1W2EJ7_jXfw/TjcQAD8EWgI/AAAAAAAAAp0/QBsr4d4iT6Y/s640/IMG_20110731_133028.jpg">
+    <img alt="F-86 Saber" src="https://lh4.googleusercontent.com/-1W2EJ7_jXfw/TjcQAD8EWgI/AAAAAAAAAp0/QBsr4d4iT6Y/s640/IMG_20110731_133028.jpg" /></a>
+    <div class="caption">F-86 Saber</div>
+</div>
 
-![F-117 Nighthawk](https://lh6.googleusercontent.com/-B0YkmUn3O0c/TjbLDp75PLI/AAAAAAAAAnU/K58ThZk4Gvc/s640/IMG_20110731_140904.jpg)  
-F-117 Nighthawk
+<div class="fullbleed">
+    <a href="https://lh6.googleusercontent.com/-B0YkmUn3O0c/TjbLDp75PLI/AAAAAAAAAnU/K58ThZk4Gvc/s640/IMG_20110731_140904.jpg">
+    <img alt="F-117 Nighthawk" src="https://lh6.googleusercontent.com/-B0YkmUn3O0c/TjbLDp75PLI/AAAAAAAAAnU/K58ThZk4Gvc/s640/IMG_20110731_140904.jpg" /></a>
+    <div class="caption">F-117 Nighthawk</div>
+</div>
 
-![F-22 Raptor](https://lh5.googleusercontent.com/-yNIk88YjyCA/TjcV6aXw5nI/AAAAAAAAArs/y70EMEfiA2Y/s640/IMG_20110731_130122.jpg)  
-F-22 Raptor
+
+<div class="fullbleed">
+    <a href="https://lh5.googleusercontent.com/-yNIk88YjyCA/TjcV6aXw5nI/AAAAAAAAArs/y70EMEfiA2Y/s640/IMG_20110731_130122.jpg">
+    <img alt="F-22 Raptor" src="https://lh5.googleusercontent.com/-yNIk88YjyCA/TjcV6aXw5nI/AAAAAAAAArs/y70EMEfiA2Y/s640/IMG_20110731_130122.jpg" /></a>
+    <div class="caption">F-22 Raptor</div>
+</div>
 

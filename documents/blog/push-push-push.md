@@ -19,7 +19,9 @@ to who is sending/receiving these, nor the contents of those messages.*
 
 So without further ado, some pretty graphs straight from the Pushover dashboard:
 
-[<img src="/media/push-push-push.png" width="546"/>](/media/push-push-push.png)
+<div class="thumbnails">
+    <img src="/media/push-push-push.png" alt="Daily notification volume on the order of hundreds per day" />
+</div>
 
 **ZNC Push reached a milestone of sending *15,000* push notifications in May
 through the Pushover service!**

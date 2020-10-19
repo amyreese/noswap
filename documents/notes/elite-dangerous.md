@@ -13,13 +13,11 @@ been playing it an awful lot, all the way up from the first beta.
 
 And damn, it's good!
 
-<div class="row">
- <div class="thumbnail col-md-6 col-md-offset-3">
+<div class="fullbleed">
   <a href="/media/elite-dangerous-voyager.jpg">
    <img alt="Voyager 1, found in the Sol system, ~2M Ls out" src="/media/elite-dangerous-voyager.jpg" />
   </a>
   <div class="caption">Voyager 1, found in the Sol system, ~2M Ls out</div>
- </div>
 </div>
 
 The discipline and focus of the team at Frontier Development has produced one

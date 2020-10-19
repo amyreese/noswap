@@ -11,7 +11,6 @@ Soren Johnson, lead designer of Civilization 4:
 > disc-based ecosystem while softly undermining it with three moves that
 > create an alternate digital future.
 
-> ...
 
 > Combined, these three changes would destroy the traditional retail market.
 > The $40 price would make digital games cheaper at release; the ongoing heavy

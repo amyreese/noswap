@@ -4,23 +4,19 @@ date: 2020-10-11
 tags: me, pride
 ---
 
-<div class="row">
- <div class="thumbnail col-md-5 col-md-offset-1">
-  <a href="/media/coming-out/serious.jpg">
-   <img alt="My wife and I standing together, holding hands and looking at each other" src="/media/coming-out/serious.jpg" />
-  </a>
- </div>
- <div class="thumbnail col-md-5">
-  <a href="/media/coming-out/silly.jpg">
-   <img alt="My wife and I standing back-to-back, with goofy finger guns like we're secret agents" src="/media/coming-out/silly.jpg" />
-  </a>
- </div>
-</div>
-
 I am a gender fluid person. My preferred pronouns are they/them.
 
 This is difficult for me to say publicly. I’ve been trying to find the right
 time and the right words for over a year now.
+
+<div class="thumbnails">
+  <a href="/media/coming-out/serious.jpg">
+   <img alt="My wife and I standing together, holding hands and looking at each other" src="/media/coming-out/serious.jpg" />
+  </a>
+  <a href="/media/coming-out/silly.jpg">
+   <img alt="My wife and I standing back-to-back, with goofy finger guns like we're secret agents" src="/media/coming-out/silly.jpg" />
+  </a>
+</div>
 
 Most of my life, I’ve known deep down that I didn’t fit into the traditional
 male gender role or expectations, even if I didn’t understand what that meant.
