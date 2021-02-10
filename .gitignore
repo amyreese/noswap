@@ -2,6 +2,7 @@
 *.swp
 .remote-sync.json
 .venv
+.python-version
 
 resources/*/bootstrap*
 
