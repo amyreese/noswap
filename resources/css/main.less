@@ -263,7 +263,6 @@ body {
 
 		img {
 			margin: auto;
-			.rounded(5px);
 			.drop-shadow(5px, 5px);
 		}
 
@@ -311,6 +310,11 @@ body {
 			.rounded(5px);
 			.drop-shadow(5px, 5px);
 		}
+
+        img.nodropshadow {
+            .rounded(0px);
+            .drop-shadow(0px,0px,0px,0);
+        }
 
 		.caption {
 			font-size: var(--size-small);
