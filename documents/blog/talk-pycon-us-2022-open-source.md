@@ -1,5 +1,5 @@
 title: "Talk @ PyCon US 2022: Open Source on Easy Mode"
-description: I gave a talk on high performance Python services using AsyncIO and Multiprocessing"
+description: I gave a talk on hard mode about maintaining open source projects on easy mode.
 image: /media/pycon-2022-cover.png
 link: https://youtu.be/lSqyKoPYtr0
 date: 2022-05-27
