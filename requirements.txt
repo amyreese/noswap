@@ -1,1 +1,1 @@
-nib==0.5.7
+git+https://github.com/jreese/nib@53308e73aae7d10cdc273ab339bb041b07930a75

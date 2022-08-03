@@ -9,7 +9,7 @@ resources=resources/css/bootstrap.css resources/css/bootstrap.min.css resources/
 sources=theme/variables.less theme/theme.less
 
 .venv:
-	python3 -m venv .venv
+	python3 -m venv --clear --upgrade-deps .venv
 	.venv/bin/python -m pip install -Ur requirements.txt
 
 .PHONY:
@@ -51,5 +51,5 @@ resources/js/bootstrap.min.js: $(sources)
 
 .PHONY:
 clean:
-	rm -rf site/ $(resources)
+	rm -rf .venv/ site/ $(resources)
 
