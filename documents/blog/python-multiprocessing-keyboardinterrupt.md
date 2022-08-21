@@ -67,11 +67,11 @@ The following example shows how to do this, and how it works with both idle and 
     if __name__ == "__main__":
         main()
 
-This code is also available on Github as [jreese/multiprocessing-keyboardinterrupt][github-keyboardinterrupt].
+This code is also available on Github as [amyreese/multiprocessing-keyboardinterrupt][github-keyboardinterrupt].
 If you think there's a better way to accomplish this, please feel free to fork it and submit a pull request.
 Otherwise, hopefully this helps settle this issue for good.
 
 [so-keyboardinterrupt]: http://stackoverflow.com/questions/1408356/keyboard-interrupts-with-pythons-multiprocessing-pool "Keyboard Interrupts with python's multiprocessing Pool on Stack Overflow"
 [bryceboe-keyboardinterrupt]: http://www.bryceboe.com/2010/08/26/python-multiprocessing-and-keyboardinterrupt/ "Python Multiprocessing and KeyboardInterrupt by Bryce Boe"
-[github-keyboardinterrupt]: http://github.com/jreese/multiprocessing-keyboardinterrupt "jreese/multiprocessing-keyboardinterrupt on Github"
+[github-keyboardinterrupt]: http://github.com/amyreese/multiprocessing-keyboardinterrupt "amyreese/multiprocessing-keyboardinterrupt on Github"
 

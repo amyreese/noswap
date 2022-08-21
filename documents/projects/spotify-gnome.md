@@ -17,7 +17,7 @@ to translate media key signals from Gnome and send them to the Spotify client.
 
 
 The program is released under the MIT license, and the source code and documentation can be
-found on the project's [Github repository](https://github.com/jreese/spotify-gnome) page.
+found on the project's [Github repository](https://github.com/amyreese/spotify-gnome) page.
 
 Many thanks to [Mike Houston at kothar.net](http://kothar.net/index.php/blog/30-spotifydbus)
 and [Fran Dieguez at Mabishu](http://www.mabishu.com/blog/2010/11/15/playing-with-d-bus-interface-of-spotify-for-linux/)

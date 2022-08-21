@@ -17,7 +17,7 @@ connected to ZNC, and more.
 The module is released under the MIT license, and the source code and documentation can be
 found on the project's [Github repository][github] page.
 
-[github]: http://github.com/jreese/znc-notifo "ZNC to Notifo on Github"
+[github]: http://github.com/amyreese/znc-notifo "ZNC to Notifo on Github"
 [ZNC]: http://en.znc.in "ZNC, an advanced IRC bouncer"
 [ZNC Push]: /projects/znc-push/
 

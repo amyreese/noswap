@@ -160,5 +160,5 @@ existing modules, are also appreciated.
 *	[Markdown Preprocessor on GitHub][2]
 
 [1]: http://leetcode.net/mantis "LeetCode.net Bugtracker"
-[2]: http://github.com/jreese/markdown-pp "Markdown Preprocessor on GitHub"
+[2]: http://github.com/amyreese/markdown-pp "Markdown Preprocessor on GitHub"
 

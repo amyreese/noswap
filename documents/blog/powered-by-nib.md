@@ -65,6 +65,6 @@ will be useful for someone other than myself.
 
 
 [poole]: http://bitbucket.org/obensonne/poole/src
-[macros.py]: https://github.com/jreese/noswap/blob/poole/macros.py
-[nib]: https://github.com/jreese/nib
+[macros.py]: https://github.com/amyreese/noswap/blob/poole/macros.py
+[nib]: https://github.com/amyreese/nib
 [sample site]: http://nib.noswap.com

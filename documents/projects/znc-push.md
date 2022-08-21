@@ -16,7 +16,7 @@ supported push services include [Boxcar][], [NMA][], [Notifo][], [Pushover][],
 The module is released under the MIT license, and the source code and
 full documentation can be found on the project's [Github repository][github] page.
 
-[github]: http://github.com/jreese/znc-push "ZNC Push on Github"
+[github]: http://github.com/amyreese/znc-push "ZNC Push on Github"
 [ZNC]: http://en.znc.in "ZNC, an advanced IRC bouncer"
 [ZNC to Notifo]: /projects/znc-notifo/ "ZNC to Notifo"
 

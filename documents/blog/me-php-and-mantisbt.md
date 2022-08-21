@@ -59,11 +59,11 @@ I've been working on, most of which are written in Python or C++.  I find them
 more enjoyable to deal with, and most importantly, they allow me to break out
 of the realm of writing web applications.  IRC, as old as it is, has been my
 point of intrigue lately, and is at the core of my current
-["pet" project](http://github.com/jreese/pyranha).
+["pet" project](http://github.com/amyreese/pyranha).
 
-Regardless of language, you can still find me on [Github](https://github.com/jreese),
+Regardless of language, you can still find me on [Github](https://github.com/amyreese),
 where all my toys are available for the public to point and laugh at.  And as
-always, I will answer questions on Freenode as "jreese", or via email, although
+always, I will answer questions on Freenode as "amyreese", or via email, although
 there may sometimes be a long delay before I can reply.
 
 Thank you to everyone who's contributed to MantisBT or its plugins, and thank
