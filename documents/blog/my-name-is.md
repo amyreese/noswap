@@ -2,6 +2,7 @@ title: My Name is Amethyst
 description: Another personal announcement
 date: 2022-08-21
 tags: me, pride
+image: /media/portrait.jpg
 ---
 
 My name is Amethyst.
