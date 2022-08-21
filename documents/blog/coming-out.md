@@ -70,7 +70,7 @@ makes me happy. I hope that some day I can feel safe enough to share more
 of my authentic self in public as well.
 
 I’m truly thankful to have an amazing best friend, wife, and soul mate in
-Angela, who truly accepts and embraces me for who I am. She is, and always
+Ember, who truly accepts and embraces me for who I am. She is, and always
 will be, the love of my life. At every step of this journey, she has been
 my rock and my guiding star, and I will never be able to express just how
 much it means to have her support.

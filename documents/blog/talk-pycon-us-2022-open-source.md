@@ -54,7 +54,7 @@ It can't be this easy, right? Am I crazy?
     <p>
     <iframe src="https://giphy.com/embed/EmYq28W9UwjsMfvSan" width="480" height="206" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     </p>
-    &mdash; John Reese ✊🏳️‍🌈🏳️‍⚧️ (@n7cmdr) <a href="https://twitter.com/n7cmdr/status/1508664479877238787?ref_src=twsrc%5Etfw">March 29, 2022</a>
+    &mdash; Amethyst Reese ✊🏳️‍🌈🏳️‍⚧️ (@n7cmdr) <a href="https://twitter.com/n7cmdr/status/1508664479877238787?ref_src=twsrc%5Etfw">March 29, 2022</a>
 </blockquote>
 
 I tried it with other monitors and my TV, and it seemed flawless. I did full dry runs using my

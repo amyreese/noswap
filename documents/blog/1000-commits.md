@@ -10,7 +10,6 @@ associated plugins.
 
 Now if only I could find a job local to Cincinnati...  If you are interested
 in hiring me, or know someone who's looking for an open source developer, take
-a look at [my resume][1000-2].
+a look at my resume.
 
 [1000-1]: http://www.ohloh.net/accounts/nuclear_eclipse
-[1000-2]: http://johnmreese.com/resume
