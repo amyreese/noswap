@@ -9,14 +9,11 @@ telecommunications, network security, video games, and social networking.
 I have a Bachelor of Science in Software Engineering from the
 [Rochester Institute of Technology][rit] in Rochester, New York.
 I now live in the sunny San Francisco Bay Area, in California, with my wonderful
-wife Angela and an cat named Zero.
+wife Ember and an adorable cat named Zero.
 
 <div class="thumbnails">
-  <a href="/media/avatar-totoro.jpg">
-   <img alt="" src="/media/avatar-totoro.jpg" />
-  </a>
-  <a href="/media/profile-optimistic.jpg">
-   <img alt="" src="/media/profile-optimistic.jpg" />
+  <a href="/media/portrait.jpg">
+   <img alt="" src="/media/portrait.jpg" />
   </a>
 </div>
 

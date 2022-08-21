@@ -3,7 +3,7 @@ defaults:
     title:
     description:
     link:
-    author: John Reese
+    author: Amethyst Reese
     sig: '<i class="fa fa-gamepad"></i>'
     feedsig: '&infin;'
     paginate: True
@@ -12,11 +12,11 @@ defaults:
     reverse: True
 
 site:
-    title: John Reese
+    title: Amethyst Reese
     tagline: software engineer, video game enthusiast, virtual astronaut
-    uri: https://jreese.sh
+    uri: https://noswap.com
     root: /
-    author: John Reese
+    author: Amethyst Reese
 
 document_path: documents
 resource_path: resources
