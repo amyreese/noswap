@@ -21,6 +21,10 @@ public: .venv bootstrap
 	.venv/bin/nib --debug build
 
 .PHONY:
+serve: local
+	.venv/bin/nib serve
+
+.PHONY:
 publish: clean public
 	rsync -avz --delete site/ $(puburi)
 
