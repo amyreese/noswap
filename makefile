@@ -2,7 +2,7 @@
 # Copyright (C) 2010 John Reese
 # Licensed under the MIT license
 
-puburi=kirby:/srv/www/noswap/
+puburi=noswap.com:/srv/www/noswap/
 
 bootstrap=third-party/bootstrap
 resources=resources/css/bootstrap.css resources/css/bootstrap.min.css resources/css/bootstrap-theme.css resources/css/bootstrap-theme.min.css resources/js/bootstrap.min.js
