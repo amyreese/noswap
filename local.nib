@@ -14,7 +14,7 @@ defaults:
 site:
     title: Amethyst Reese
     tagline: software engineer, video game enthusiast, virtual astronaut
-    uri: http://localhost:8080
+    uri: http://localhost:8000
     root: /
     author: Amethyst Reese
 
