@@ -4,8 +4,6 @@
 
 puburi=noswap.com:/srv/www/noswap/
 
-bootstrap=third-party/bootstrap
-resources=resources/css/bootstrap.css resources/css/bootstrap.min.css resources/css/bootstrap-theme.css resources/css/bootstrap-theme.min.css resources/js/bootstrap.min.js
 sources=theme/variables.less theme/theme.less
 
 .venv:
@@ -17,7 +15,7 @@ local: .venv
 	.venv/bin/nib --debug --config local.nib build
 
 .PHONY:
-public: .venv bootstrap
+public: .venv
 	.venv/bin/nib --debug build
 
 .PHONY:
@@ -27,31 +25,6 @@ serve: local
 .PHONY:
 publish: clean public
 	rsync -avz --delete site/ $(puburi)
-
-.PHONY:
-bootstrap: bootstrap-build $(resources)
-	cd $(bootstrap) && git checkout -f
-
-.PHONY:
-bootstrap-build:
-	cd $(bootstrap) && npm install
-
-resources/css/bootstrap.css: $(sources)
-	cp $^ $(bootstrap)/less/
-	cd $(bootstrap) && grunt dist
-	cp $(bootstrap)/dist/css/bootstrap.css $@
-
-resources/css/bootstrap.min.css: $(sources)
-	cp $(bootstrap)/dist/css/bootstrap.min.css $@
-
-resources/css/bootstrap-theme.css: $(sources)
-	cp $(bootstrap)/dist/css/bootstrap-theme.css $@
-
-resources/css/bootstrap-theme.min.css: $(sources)
-	cp $(bootstrap)/dist/css/bootstrap-theme.min.css $@
-
-resources/js/bootstrap.min.js: $(sources)
-	cp $(bootstrap)/dist/js/bootstrap.min.js $@
 
 .PHONY:
 clean:
