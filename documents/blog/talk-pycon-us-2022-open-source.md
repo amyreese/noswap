@@ -51,9 +51,9 @@ It can't be this easy, right? Am I crazy?
     <p lang="en" dir="ltr">
     Seriously considering giving my PyCon talk using just an iPad and leaving my laptop at home. 👀
     </p>
-    <p>
-    <iframe src="https://giphy.com/embed/EmYq28W9UwjsMfvSan" width="480" height="206" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-    </p>
+    <div class="embedshort">
+        <iframe src="https://giphy.com/embed/EmYq28W9UwjsMfvSan" width="480" style="aspect-ratio: 480/206" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
     &mdash; Amethyst Reese ✊🏳️‍🌈🏳️‍⚧️ (@n7cmdr) <a href="https://archive.ph/JQxQS">March 29, 2022</a>
 </blockquote>
 

@@ -39,7 +39,7 @@
 
 	--size-logo: 72px;
 	--size-title: 42px;
-	--size-text: 24px;
+	--size-text: 20px;
 	--size-small: 18px;
 
 	--weight-logo: 600;
@@ -92,33 +92,43 @@
 	}
 }
 
-// (40em + 2x2em) * 24px == 1056 
+// (48em + 2x2em) * 20px == 1056 
 @media (min-width: 1057px) {
 	#wrapper {
-		width: 40em;
+		width: 48em;
 		margin: auto;
 	}
 }
 
 @media (max-width: 1056px) {
+	:root {
+		--size-title: 30px;
+		--size-text: 18px;
+		--size-small: 16px;
+	}
 	#wrapper {
 		width: 100%;
 		padding: 0 2em;
 	}
+	#header #logo #avatar img {
+		position: unset !important;
+		left: unset !important;
+	}
+	#footer {
+		flex-direction: column !important;
+		justify-content: flex-start !important;
+	}
 }
 
-// increase fonts, reduce padding for small, retina devices
-@media (max-device-width: 640px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media (max-width: 720px) {
 	:root {
-		--size-logo: 96px;
-		--size-title: 64px;
-		--size-text: 46px;
-		--size-small: 28px;
-		--weight-metatext: 400;
+		--size-logo: 36px;
 	}
-
 	#wrapper {
 		padding: 0 1em;
+	}
+	#header #logo {
+		margin-bottom: 0em !important;
 	}
 }
 
@@ -142,6 +152,7 @@ body {
 	font-size: var(--size-text);
 	font-weight: var(--weight-text);
 	line-height: 1.5em;
+	overflow-x: visible;
 
 	a {
 		color: var(--color-link);
@@ -168,8 +179,10 @@ body {
 	padding: 1em 0;
 
 	#logo {
+		display: block;
+		position: relative;
 		text-align: center;
-		margin: 0em 0em -0.8em;
+		margin: 0em -1em -0.8em;
 
 		a {
 			color: var(--color-logo);
@@ -177,6 +190,14 @@ body {
 			font-size: var(--size-logo);
 			font-weight: var(--weight-logo);
 			text-decoration: none;
+		}
+
+		#avatar img {
+			position: absolute;
+			left: 2em;
+			width: 128px;
+			border-radius: 64px;
+			border: 1px solid var(--color-metatext);
 		}
 	}
 
@@ -216,6 +237,9 @@ body {
 }
 
 #content {
+	margin: auto;
+	max-width: 40em;
+
 	.story {
 		margin: 2em 0em 3em;
 
@@ -356,6 +380,7 @@ body {
 		height: 0;
 		padding-bottom: 56%;
 		margin: 1em;
+		overflow-x: hidden;
 
 		iframe {
 			position: absolute;
@@ -371,11 +396,16 @@ body {
     .embedshort {
 		margin: 1em;
 
-        iframe, audio {
-			width: 100%;
+        iframe {
+			max-width: 100%;
 			.rounded(5px);
 			.drop-shadow(5px, 5px);
         }
+		audio {
+			width: 100%;
+			.rounded(5px);
+			.drop-shadow(5px, 5px);
+		}
     }
 
 	#pager {

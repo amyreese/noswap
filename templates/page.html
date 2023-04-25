@@ -6,6 +6,9 @@
     <title>{% if title %}{{ title }} - {% endif %}{{ site.title }}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+    <!-- mobile friendly viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/all.min.css" />
     <link rel="stylesheet" href="/bigfoot/bigfoot-default.css" />
@@ -22,7 +25,7 @@
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:url" content="{{ page.uri }}" />
     <meta property="og:image"
-        content="{{ site.uri }}{% if page.image %}{{ page.image }}{% else %}/media/noswap-256.png{% endif %}" />
+        content="{{ site.uri }}{% if page.image %}{{ page.image }}{% else %}/media/avatar.png{% endif %}" />
     {%- if page.date %}
     <meta property="og:type" content="article" />
     {%- if page.title %}
@@ -45,6 +48,7 @@
     <div id="wrapper">
         <div id="header">
             <div id="logo">
+                <div id="avatar"><img src="/media/avatar.png"/></div>
                 <h1><a href="{{ site.root }}">{{ site.title }}</a></h1>
             </div>
             <div id="tagline">
@@ -80,17 +84,15 @@
 
         <div id="footer">
             <ul>
-                <li><i class="fa fa-copyright"></i> Copyright {{ today.year }} {{ site.author }}</li>
+                <li><i class="fa fa-copyright"></i> Copyright {{ site.author }}</li>
                 <li><i class="fab fa-creative-commons"></i> Licensed under the <a rel="license"
                         href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons (CC BY-NC-SA 4.0)
                         License</a></li>
             </ul>
 
             <ul>
-                <li><a href="https://github.com/amyreese/nib"><i class="fa fa-pencil"></i> Built with Nib</a>
-                </li>
-                <li><a href="https://m.do.co/c/1518964d392d" title="Hosted with Digital Ocean"><i
-                            class="fab fa-linux"></i> Hosted with Digital Ocean</a></li>
+                <li>🏳️‍⚧️ Trans Rights Are Human Rights</li>
+                <li>✊ Black Lives Matter</li>
             </ul>
         </div>
     </div>
