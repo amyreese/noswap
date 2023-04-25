@@ -1,5 +1,5 @@
 
-# Copyright (C) 2010 John Reese
+# Copyright (C) Amethyst Reese
 # Licensed under the MIT license
 
 puburi=noswap.com:/srv/www/noswap/

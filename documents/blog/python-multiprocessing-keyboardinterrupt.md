@@ -28,7 +28,7 @@ The following example shows how to do this, and how it works with both idle and 
 
     #!/usr/bin/env python
 
-    # Copyright (c) 2011 John Reese
+    # Copyright (c) Amethyst Reese
     # Licensed under the MIT License
 
     import multiprocessing
