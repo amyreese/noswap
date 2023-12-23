@@ -10,7 +10,7 @@
             class="muted">&rarr;</span>{% endif %}</h2>
     <p class="metadata">
         <span class="authored">Posted on {{ page.date | longdate }}</span>
-        {%- if page.updated %}
+        {%- if page.updated -%}
         <span class="updated">, updated on {{ page.updated | longdate }}</span>
         {%- endif %}
         <span class="permalink"><a href="{{ page.uri }}">&raquo;</a></span>
