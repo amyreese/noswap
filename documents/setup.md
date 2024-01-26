@@ -172,8 +172,8 @@ Headphones
   Wireless USB over-ear gaming headphones that actually support ANC and
   _simultaneous_ mixing of bluetooth audio. Lets me play and hear audio from
   my games _while also_ listening to podcasts from my phone. Compatible with
-  PC and PS5. Sadly, does not seem to support the Steamdeck or Switch except
-  via bluetooth, at which point I'd rather use the XM4 or airpods.
+  PC and PS5. Weirdly, it only works with the Steamdeck when connected through
+  a dedicated USB-C hub.
 
 - [Apple AirPods Pro](https://www.apple.com/airpods-pro/)
   --
@@ -471,6 +471,11 @@ Utilities
 - [SoundSource](https://rogueamoeba.com/soundsource/)
   --
   Advanced, nit-picky control of audio levels and output devices.
+
+- [SteerMouse](https://plentycom.jp/en/steermouse/index.html)
+  --
+  Configurable, alternative mouse driver for Logitech and other brands.
+  Removes the need to use Logitech's invasive, awful driver software.
 
 
 
