@@ -1,8 +1,9 @@
 title: My Setup
 description: A rundown of the hardware and software that I use for both work and play.
+updated: 2025-05-20
 date: 2023-12-24
 tags: me, gear
-
+image: /media/rose-gold-everything.jpeg
 ---
 
 I am a software engineer by nature, and I focus on building tools for other
@@ -13,6 +14,14 @@ developers on every major OS.
 In my free time I play a lot of video games, on a variety of platforms, but
 I have strong opinions about which ones are "best". I have done my best to keep
 gaming-specific items in a separate section.
+
+<div class="fullbleed">
+  <img
+    alt=""
+    src="/media/rose-gold-everything.jpeg"
+    />
+  <div class="caption">Rose Gold Everything.</div>
+</div>
 
 I'm grateful and privileged to be well employed and capable of buying quality
 gear. I appreciate that not everyone can afford such luxuries. I hope that
@@ -37,6 +46,7 @@ that everyone could have the same opportunities. #unionize
     - [Consoles](#consoles)
     - [VR](#vr)
     - [Controllers](#controllers)
+- [Retired](#retired)
 
 
 <a name="hardware"></a>
@@ -53,26 +63,37 @@ Computers
 
     - [CalDigit TS3 Thunderbolt Dock](https://www.caldigit.com/ts3-plus/)
 
-- [iPad Pro 11"](https://www.apple.com/ipad-pro/)
-  (M2, 128GB, Silver)
+- [Macbook Air](https://www.apple.com/macbook-air/)
+  (M1, 16GB, 1TB, Gold)
   --
-  Media consumption device, "on the go" Mac replacement, and drawing tablet.
-  I've even given successful presentations with it.
-  Absolutely love this thing.
+  Everything great about the M1 Mac Mini, but portable, and it's gold.
+  My "working from the couch" computer that's also excellent for traveling to
+  conferences. This is the best feeling Macbook Air ever made, and it's a shame
+  they dropped this design for the M2 model. At this point, the only thing that
+  could make me upgrade would be a cellular version.
 
-    - [Apple Pencil 2nd Gen](https://www.apple.com/apple-pencil/)
-    - [Magic Keyboard](https://www.apple.com/ipad-keyboards/) (Black)
-    - [Smart Folio for iPad Air (5th Gen)](https://www.apple.com/shop/ipad/accessories) (Lavender)
-
-- [iPhone 15 Pro](https://www.apple.com/iphone-15-pro/)
-  (128GB, White Titanium)
+- [iPhone 16 Pro](https://www.apple.com/iphone-16-pro/)
+  (256GB, Desert Titanium)
   --
-  I miss the iPhone 13 Mini, but USB-C and optical 2X/3X zoom are too tempting.
-  Converted me to the caseless PopSocket lifestyle thanks to its size
-  and weight. I'd pay _even more_ for an iPhone Pro Mini.
+  I _still_ miss the iPhone 13 Mini, but USB-C and optical zooms are table
+  stakes at this point. I'd _happily_ pay _even more_ for an iPhone Pro Mini.
 
     - [PopGrip for MagSafe](https://www.popsockets.com/en-us/more/grips/magsafe)
-      (Pill shape, translucent purple)
+      (Pill shape, Bulbasaur succulent garden top with translucent pink base)
+
+- [iPad Pro 11"](https://www.apple.com/ipad-pro/)
+  (M4, 256GB, Silver)
+  --
+  Lightweight media consumption device and drawing tablet. Best-in-class OLED
+  display makes HDR video look incredible. Enough storage to download a
+  reasonable amount of media before getting on a plane.
+
+    - [Apple Pencil 2nd Gen](https://www.apple.com/apple-pencil/)
+    - [Smart Folio for iPad Air (5th Gen)](https://www.apple.com/shop/ipad/accessories) (White)
+
+- [Apple Vision Pro](https://www.apple.com/apple-vision-pro/)
+  --
+  lol why did I buy this
 
 
 <a name="desk"></a>
@@ -90,17 +111,35 @@ Desk
   Ergonomic, sturdy, dependable. Bought it from a local business liquidation
   outlet when I went full-time remote, and I haven't regretted it once.
 
-- [Dell UP2718Q](https://i.dell.com/sites/csdocuments/Product_Docs/en/dell_ultrasharp_27_4k_hdr_monitor_up2718q_product_spec_sheet.pdf)
-  (27", 4K, HDR10, 60Hz)
+- [Apple Studio Display](https://support.apple.com/en-us/111890)
+  (27", 5K, HDR, 60Hz)
   --
-  The only monitor I've found with HDR up to 1000nits with local dimming and
-  four full-speed inputs. I'd love a 5K or 6K version for proper retina
-  resolution, but as far as I can tell, Dell doesn't even sell a monitor
-  that matches this feature set, five years later. However, image retention
-  is getting worse with time, especially on the left-most edge.
-  If Apple made an HDR monitor with multiple inputs, I'd switch in a heartbeat.
+  A begrudging replacement for my failing [Dell UP2718Q](#retired).
+  Excellent color, resolution, viewing angles, and build quality.
+  I just wish it had more than one input — I don't understand why Apple can't
+  imagine having multiple Macs on a single desk with a shared monitor.
 
     - [Jarvis Monitor Arm](https://store.hermanmiller.com/office-furniture-desk-accessories-organization/jarvis-single-monitor-arm/2548325.html)
+
+- [iPhone 13 Mini](https://support.apple.com/en-us/111873)
+  (Pink, Continuity Camera)
+  --
+  I adore this phone. It still loyally serves me as a webcam, and performs that
+  role astoundingly well. Much better than any dedicated webcam I've tried, and
+  way better than the Studio Display's builtin webcam. Mounted with a Belkin
+  MagSafe adapter on a desk stand.
+
+- [Sabrent Thunderbolt 4 KVM Switch](https://sabrent.com/products/sb-tb4k)
+  --
+  One of the few reasonable options for switching a Studio Display between two
+  Macs. I wish this supported more upstream ports, so that I could also connect
+  my gaming PC.
+
+- [AIMOS 4 Port USB Switch](https://amzn.to/4av98Fp)
+  --
+  Simple USB switch for selecting which computer my keyboard and mouse are
+  connected to. More upstream options than my KVM, so I can drive my gaming PC
+  or a laptop when needed.
 
 - [Sonos Ray](https://www.sonos.com/en-us/shop/ray) + [Sub Mini](https://www.sonos.com/en-us/shop/sub-mini)
   --
@@ -122,24 +161,6 @@ Desk
   paired to three separate dongles or bluetooth devices, perfect for use at
   a desk or on the go with a laptop or iPad.
 
-- [AIMOS 4 Port USB Switch](https://amzn.to/4av98Fp)
-  --
-  Simple USB switch for selecting which computer my keyboard and mouse are
-  connected to. Far less fiddly (and cheaper) than using a KVM, especially
-  when dealing with 4K HDR video. Mirrors the four inputs on my monitor.
-
-- [Elgato Stream Deck v1](https://www.elgato.com/us/en/p/stream-deck-mk2-black)
-  --
-  Mostly used for controlling Apple Music on my Mac Mini when I'm working,
-  but also includes a couple other useful shortcuts and system controls.
-
-- [Elgato Facecam](https://www.elgato.com/us/en/p/facecam)
-  --
-  Good quality webcam that actually has a decent size sensor for indoor use.
-  Lets me look reasonably good without needing a bunch of key lights shining
-  in my face every time I'm in a meeting. It does not include a microphone,
-  for better or worse.
-
 - [Blue Yeti](https://www.logitechg.com/en-us/products/streaming-gear/yeti-premium-usb-microphone.988-000103.html)
   (10th Anniversary Edition)
   --
@@ -160,12 +181,14 @@ Desk
 <a name="headphones"></a>
 Headphones
 
-- [Sony WH-1000XM4](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4-s)
-  (Silver)
+- [Apple AirPods Max](https://www.apple.com/airpods-pro/)
+  (Purple, USB-C)
   --
-  Bluetooth ANC over-ear headphones. They sound great, but most importantly
-  they are extremely comfortable for long listening sessions, something I can't
-  say about most other headphones I've tried.
+  Good sounding over-ear headphones with excellent noise cancelling.
+  Best-in-class pairing and automatic device switching between all of my Apple
+  devices, that Just Works™ at least 99% of the time.
+  Heavy, but still quite comfortable.
+  They suck for travel due to weight and inability to fold down.
 
 - [Sony INZONE H9](https://www.sony.com/lr/electronics/gaming-headsets-headphones/inzone-h9)
   --
@@ -200,6 +223,20 @@ TV
   --
   The best soundbar I've ever heard, paired with a great subwoofer.
   Excellent integration with the TV and Apple TV when set up using HDMI eARC.
+
+<a name="network"></a>
+Network
+
+- [Unifi Dream Machine SE](https://techspecs.ui.com/unifi/cloud-gateways/udm-se)
+  --
+  Slightly overkill for a "router", but the Unifi management interface is top
+  tier for prosumer hardware, and the capabilities are just about endless.
+  Eight PoE ports means it integrates seamlessly with Unifi's entire hardware
+  lineup. Paired with:
+
+    - [U6 Mesh](https://techspecs.ui.com/unifi/wifi/u6-mesh) primary wifi access point
+    - [U6 Extender](https://techspecs.ui.com/unifi/wifi/u6-extender) for the garage
+    - [USW Flex Mini](https://techspecs.ui.com/unifi/switching/usw-flex-mini) switch for my desk
 
 
 <a name="home"></a>
@@ -492,6 +529,18 @@ Consoles
   with a desktop footprint no bigger than a Mac Studio or Xbox Series X.
   Since upgraded to a 2TB NVMe with a 2TB SSD for each extra storage.
 
+- [Steamdeck OLED](https://www.steamdeck.com/en/oled)
+  (Special Edition, 1TB)
+  --
+  For PC gaming on the go, or when I want to be on the couch. Excellent screen
+  panel, but it's a shame it's not higher resolution.
+
+    - [Deckmate](https://getmechanism.com/pages/steam-deck-shopping)
+      --
+      Excellent set of sturdy attachment mechanisms, allowing me to permanently
+      "dock" a USB hub and other devices to the back of my Steamdeck, including
+      my headphone receiver and external storage.
+
 - [Playstation 5](https://www.playstation.com/en-us/ps5/)
   (Disc model)
   --
@@ -509,16 +558,6 @@ Consoles
 - [Xbox Series X](https://www.xbox.com/en-US/consoles/xbox-series-x)
   --
   It's an Xbox hooked up to the TV.
-
-- [Steamdeck OLED](https://www.steamdeck.com/en/oled)
-  (Special Edition, 1TB)
-  --
-  For PC gaming on the go, or when I want to be on the couch. Excellent screen
-  panel, but it's a shame it's not higher resolution.
-
-    - [Steamdeck Dock](https://www.steamdeck.com/en/dock)
-      --
-      Great for playing PC games on the TV.
 
 
 <a name="vr"></a>
@@ -587,3 +626,78 @@ Controllers
     - [VPC WarBRD base](https://virpil-controls.eu/vpc-warbrd-d-base.html)
     - [VPC Constellation ALPHA-R grip](https://virpil-controls.eu/vpc-constellation-alpha-r.html)
     - [VPC MongoosT-50CM3 throttle](https://virpil-controls.eu/vpc-mongoost-50cm3-throttle.html)
+
+
+<a name="retired"></a>
+### Retired
+
+These are elements of my setup that I no longer use, either because they were
+replaced by newer/better alternatives, or because I no longer have a need for
+them in my life.
+
+
+- [Mac Pro](https://support.apple.com/en-us/112025)
+  (6 core, 64GB, 1TB)
+  --
+  [Replaced with M1 Mac Mini]
+  The most beautiful computer I will ever own. It had two GPUs, but of course
+  the one that drove the monitor died, and its twin wasn't allowed to take its
+  place. A replacement GPU would have cost more than my Mac Mini did.
+  Now serves as a monument and plinth to Apple hardware design.
+
+- [Dell UP2718Q](https://i.dell.com/sites/csdocuments/Product_Docs/en/dell_ultrasharp_27_4k_hdr_monitor_up2718q_product_spec_sheet.pdf)
+  (27", 4K, HDR10, 60Hz)
+  --
+  [Dead 😿, replaced with Studio Display]
+  The only monitor I've found with HDR up to 1000nits with local dimming and
+  four full-speed inputs. I'd love a 5K or 6K version for proper retina
+  resolution, but as far as I can tell, Dell doesn't even sell a monitor
+  that matches this feature set, five years later. However, image retention
+  is getting worse with time, especially on the left-most edge.
+  If Apple made an HDR monitor with multiple inputs, I'd switch in a heartbeat.
+
+    - [Jarvis Monitor Arm](https://store.hermanmiller.com/office-furniture-desk-accessories-organization/jarvis-single-monitor-arm/2548325.html)
+
+- [Sony WH-1000XM4](https://electronics.sony.com/audio/headphones/headband/p/wh1000xm4-s)
+  (Silver)
+  --
+  [Replaced with AirPods Max]
+  Bluetooth ANC over-ear headphones. They sound great, but most importantly
+  they are extremely comfortable for long listening sessions, something I can't
+  say about most other headphones I've tried.
+
+- [iPhone 15 Pro](https://www.apple.com/iphone-15-pro/)
+  (128GB, White Titanium)
+  --
+  [Upgraded to 16 Pro]
+  I miss the iPhone 13 Mini, but USB-C and optical 2X/3X zoom are too tempting.
+  Converted me to the caseless PopSocket lifestyle thanks to its size
+  and weight. I'd pay _even more_ for an iPhone Pro Mini.
+
+    - [PopGrip for MagSafe](https://www.popsockets.com/en-us/more/grips/magsafe)
+      (Pill shape, translucent purple)
+
+- [iPad Pro 11"](https://www.apple.com/ipad-pro/)
+  (M2, 128GB, Silver)
+  --
+  [Upgraded to M4 model]
+  Media consumption device, "on the go" Mac replacement, and drawing tablet.
+  I've even given successful presentations with it.
+  Absolutely love this thing.
+
+    - [Apple Pencil 2nd Gen](https://www.apple.com/apple-pencil/)
+    - [Magic Keyboard](https://www.apple.com/ipad-keyboards/) (Black)
+    - [Smart Folio for iPad Air (5th Gen)](https://www.apple.com/shop/ipad/accessories) (Lavender)
+
+- [Elgato Stream Deck v1](https://www.elgato.com/us/en/p/stream-deck-mk2-black)
+  --
+  Mostly used for controlling Apple Music on my Mac Mini when I'm working,
+  but also includes a couple other useful shortcuts and system controls.
+
+- [Elgato Facecam](https://www.elgato.com/us/en/p/facecam)
+  --
+  [Replaced with iPhone Mini continuity camera]
+  Good quality webcam that actually has a decent size sensor for indoor use.
+  Lets me look reasonably good without needing a bunch of key lights shining
+  in my face every time I'm in a meeting. It does not include a microphone,
+  for better or worse.
