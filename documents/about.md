@@ -18,8 +18,7 @@ the static link tree generator [Plinky][] to manage my [contact page][contact].
 
 I have a Bachelor of Science in Software Engineering from the
 [Rochester Institute of Technology][rit] in Rochester, New York.
-I now live in the sunny San Francisco Bay Area, in California, with my wonderful
-partner Ember and an adorable cat named Zero.
+I now live in the sunny San Francisco Bay Area with an adorable cat named Zero.
 
 <div class="thumbnails">
   <a href="/media/zero.jpg">
