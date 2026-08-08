@@ -7,7 +7,7 @@ puburi=noswap.com:/srv/www/noswap/
 sources=theme/variables.less theme/theme.less
 
 .venv: requirements.txt
-	python3 -m venv --clear --upgrade-deps .venv
+	uvx python -m venv --clear --upgrade-deps .venv
 	.venv/bin/python -m pip install -Ur requirements.txt
 
 .PHONY:
