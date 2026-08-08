@@ -23,6 +23,10 @@ serve: local
 	.venv/bin/nib serve
 
 .PHONY:
+watch:
+	find documents resources templates theme | entr -dd make local
+
+.PHONY:
 publish: clean public
 	rsync -avz --delete site/ $(puburi)
 
