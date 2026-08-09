@@ -314,7 +314,7 @@ took a turn at [#train tooting](https://toots.n7.gg/@amethyst/tagged/train).
 
 <a name="what-a-year-ending"></a>
 
-#### July 2025
+#### July 2026
 
 The owner of [Electric Turtle](https://www.caranddriver.com/features/a65177882/ev-lemons-endurance-racing/),
 the Lemons racing team I drive for,
