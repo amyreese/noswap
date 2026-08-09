@@ -15,7 +15,7 @@ world and what I've been dealing with...
 I generally don't like talking about myself — part of the reason this site goes
 untouched for so long, I don't know what I even want to say. I know I live
 an incredibly privileged life, so talking about me, even my problems, makes
-me feel... guilty?
+me feel... guilty? Perhaps normalizing this discussion is part of the solution.
 
 So I apologize for this long simmering catharsis, but I promise you there's some
 good news waiting for you [at the end](#what-a-year-ending), though if you
