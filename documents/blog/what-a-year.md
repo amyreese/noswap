@@ -126,7 +126,7 @@ including some major refactoring to treat fatal panics as diagnostics alongside
 lint errors. I would lose a morning or afternoon here and there to grief.
 That became the new normal.
 
-I began planning and design to implement new system for "ranged" suppression
+I began planning and design to implement a new system for "ranged" suppression
 comments. For so many reasons, this would take longer — and involve more
 back-and-forth discussions and code review — than any of us had ever expected.
 
@@ -252,7 +252,7 @@ call such an excellent group of colleagues my team mates.
 I got home just in time for my favorite regional barn cat conference,
 <strike>ExcavaCon</strike> [North Bay Python](https://pyvideo.org/events/north-bay-python-2026.html).
 The talks were excellent — clearly because I helped pick them — and cats were
-everywherew both in person and in slides, and the ice cream selfie included
+everywhere both in person and in slides, and the ice cream selfie included
 many amazing friends.
 
 The next day I celebrated my 41st birthday, and the day after that the Astral
@@ -278,7 +278,7 @@ I went to PyCon US, mercifully still on Astral's dime, thanks to the good graces
 of Charlie and prebooked travel reservations. I took the Coast Starlight train
 from San Jose to Long Beach, in the company of a friend, though the mood
 for the week was killed before I even boarded the train. The night before
-leaving, my spouse had informed that they wanted to start talking to lawyers...
+leaving, my spouse had informed me that they wanted to start talking to lawyers...
 and somehow thought it better to tell me before the conference rather than
 after. I almost didn't even go at all.
 
@@ -341,7 +341,7 @@ It's now just me and the cat in a house full of reminders.
 
 #### Now
 
-I got email from the startup CEO. He asked when was a good time for a phone call.
+I got an email from the startup CEO. He asked when was a good time for a phone call.
 I could only assume this was for a soft letdown.
 But I'm extremely excited to announce that they made me an offer, and that I've
 accepted their offer!
