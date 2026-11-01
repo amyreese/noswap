@@ -118,10 +118,11 @@ we were in couples therapy.
 #### October 2025
 
 They started working again, for the first time in over a decade. Therapy ended
-due to scheduling conflicts. They admitted to me that they had been cheating on
-me with someone from our car club. I'd never had a panic attack before.
+due to scheduling conflicts.
+<!-- They admitted to me that they had been cheating on me with someone from our car club. -->
+I'd never had a panic attack before.
 
-Through this, I was somehow shipping bug fixes and small features in Ruff, 
+Through this, I was somehow shipping bug fixes and small features in Ruff,
 including some major refactoring to treat fatal panics as diagnostics alongside
 lint errors. I would lose a morning or afternoon here and there to grief.
 That became the new normal.
@@ -156,13 +157,16 @@ distinct from other linters.
 
 Meanwhile, my spouse told me they wanted to try living on their own, and would
 start looking for places in the new year. I had another panic attack. I couldn't
-believe there wasn't a way to turn things around, to save our marriage. 
+believe there wasn't a way to turn things around, to save our marriage.
 
+<!--
 They were upset that I got them presents, because then they felt obligated to
 get me something in return. I spent most of Christmas day alone while they
 celebrated with the other one and his mother.
 I was trying everything I could to convince them to stay,
 to try and find a way forward together.
+-->
+I spent most of Christmas day alone.
 
 #### January 2026
 
@@ -267,7 +271,7 @@ This was the beginning of my "early retirement" moment. I was blessed with
 a healthy financial runway courtesy of my tenure at Meta, which while not
 enough to enable an *actual* retirement, gave me the space to take time off and
 not rush into an immediate job search, though I did apply for a couple roles
-at the PSF. 
+at the PSF.
 
 Unfortunately, I was forced to spend a significant amount of energy harrassing
 Astral/OpenAI to get my COBRA insurance set up, and I'm still *extremely*
@@ -279,8 +283,8 @@ of Charlie and prebooked travel reservations. I took the Coast Starlight train
 from San Jose to Long Beach, in the company of a friend, though the mood
 for the week was killed before I even boarded the train. The night before
 leaving, my spouse had informed me that they wanted to start talking to lawyers...
-and somehow thought it better to tell me before the conference rather than
-after. I almost didn't even go at all.
+<!-- and somehow thought it better to tell me before the conference rather than
+after.--> I almost didn't even go at all.
 
 This colored most of my week there, making for one hell of a roller coaster
 of emotions. If I looked or acted out of character, this is why. I'm sorry.
@@ -336,7 +340,7 @@ and would earn the job on my own terms.
 The week before this, my spouse stayed the night at their new place, a single
 rented room further away from where they work. They haven't lived here since
 then. It still hurts that they feel that is better than the house and life
-we spent all these years building together. 
+we spent all these years building together.
 It's now just me and the cat in a house full of reminders.
 
 #### Now
