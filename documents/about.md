@@ -11,8 +11,8 @@ I wrote the static site generator [Nib][] that powers this site, as well
 the static link tree generator [Plinky][] to manage my [contact page][contact].
 
 <div class="thumbnails">
-  <a href="/media/portrait.jpg">
-   <img alt="" src="/media/portrait.jpg" />
+  <a href="/media/selfie-road-america.jpg">
+   <img alt="" src="/media/selfie-road-america.jpg" />
   </a>
 </div>
 
